@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ZeroOpsAI - AI Agents as a Service
+
+A modern website for ZeroOpsAI, an AI agency offering modular AI agents and service bundles for B2B businesses. Built with Next.js and Tailwind CSS.
+
+## Features
+
+- Modern, responsive design
+- Lead generation focused
+- SEO optimized
+- Fast page loads
+- Mobile-first approach
+
+## Tech Stack
+
+- **Framework**: Next.js 14
+- **Styling**: Tailwind CSS
+- **Language**: TypeScript
+- **Deployment**: Vercel (recommended)
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+   ```bash
+   git clone https://github.com/yourusername/zero-ops-ai.git
+   cd zero-ops-ai
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Project Structure
+
+```
+src/
+├── app/                    # Next.js app directory
+│   ├── agents/            # AI agents page
+│   ├── solutions/         # Solution bundles page
+│   ├── use-cases/         # Use cases page
+│   ├── industries/        # Industry solutions page
+│   ├── contact/           # Contact/demo request page
+│   └── page.tsx           # Homepage
+├── components/            # React components
+│   ├── layout/           # Layout components
+│   ├── ui/               # UI components
+│   └── home/             # Homepage components
+└── lib/                  # Utility functions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run format` - Format code with Prettier
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deployment
 
-## Learn More
+The site is optimized for deployment on Vercel:
 
-To learn more about Next.js, take a look at the following resources:
+1. Push your code to GitHub
+2. Import the project in Vercel
+3. Deploy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contact
+
+Secret SaaS OÜ - [contact@zeroopsai.com](mailto:contact@zeroopsai.com)
+
+Project Link: [https://github.com/yourusername/zero-ops-ai](https://github.com/yourusername/zero-ops-ai)
