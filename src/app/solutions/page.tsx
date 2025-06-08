@@ -242,10 +242,10 @@ export default function Solutions() {
             We can create a tailored solution that perfectly matches your
             business requirements.
           </p>
-          <div className="button-container">
+          <div className="flex justify-center mt-8">
             <Link
               href="/contact"
-              className="btn-primary"
+              className="btn-primary w-auto"
             >
               Book a Demo
             </Link>
