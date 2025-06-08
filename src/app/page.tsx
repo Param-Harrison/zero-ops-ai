@@ -4,27 +4,27 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-white to-gray-50 py-20 md:py-32">
+      <section className="relative bg-gradient-to-b from-emerald-50 to-white py-20 md:py-32">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-emerald-900 mb-6">
               Transform Your Business with{' '}
-              <span className="text-blue-600">Private AI Agents</span>
+              <span className="gradient-text">Private AI Agents</span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl text-emerald-700 mb-8">
               Deploy secure, private AI agents that automate your business processes.
               Built on open-source technology, perfect for B2B SaaS, Healthcare, Finance, and Call Centers.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors text-lg font-medium"
+                className="btn-primary"
               >
                 Book a Demo
               </Link>
               <Link
                 href="/solutions"
-                className="bg-white text-gray-900 px-8 py-3 rounded-full border border-gray-200 hover:border-gray-300 transition-colors text-lg font-medium"
+                className="btn-secondary"
               >
                 Explore Solutions
               </Link>
@@ -34,9 +34,9 @@ export default function Home() {
       </section>
 
       {/* Trust Bar */}
-      <section className="bg-white py-8 border-y border-gray-100">
+      <section className="bg-white py-8 border-y border-emerald-100">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center items-center gap-8 text-gray-600">
+          <div className="flex flex-wrap justify-center items-center gap-8 text-emerald-700">
             <span className="flex items-center">
               <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
@@ -76,10 +76,10 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="section-title">
               Ready-to-Deploy Solutions
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="section-subtitle">
               Our pre-built solution bundles combine multiple AI agents to solve specific business challenges.
             </p>
           </div>
@@ -90,37 +90,55 @@ export default function Home() {
                 title: 'Sales Enablement Suite',
                 description: 'Boost sales team productivity with AI-powered tools for discovery, knowledge access, and call analysis.',
                 metrics: ['60% less research time', '40% more sales', '90% better prep'],
-                link: '/solutions#sales'
+                link: '/solutions#sales',
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                )
               },
               {
                 title: 'Support Automation Suite',
                 description: 'Transform customer support with AI-powered tools for ticket handling, call analysis, and knowledge management.',
                 metrics: ['70% fewer tickets', '90% faster response', '50% less training'],
-                link: '/solutions#support'
+                link: '/solutions#support',
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                )
               },
               {
                 title: 'Healthcare Ops AI',
                 description: 'Enhance healthcare operations with AI-powered tools for compliance monitoring and patient support.',
                 metrics: ['90% less violations', '70% faster processing', '50% less admin'],
-                link: '/solutions#healthcare'
+                link: '/solutions#healthcare',
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                )
               }
             ].map((solution, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 hover:shadow-lg transition-shadow"
+                className="card group hover:border-emerald-200"
               >
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                <div className="w-12 h-12 bg-emerald-50 rounded-lg flex items-center justify-center text-emerald-600 mb-4 group-hover:bg-emerald-100 transition-colors">
+                  {solution.icon}
+                </div>
+                <h3 className="text-xl font-bold text-emerald-900 mb-4">
                   {solution.title}
                 </h3>
-                <p className="text-gray-600 mb-6">{solution.description}</p>
+                <p className="text-emerald-700 mb-6">{solution.description}</p>
                 <div className="space-y-2 mb-6">
                   {solution.metrics.map((metric, metricIndex) => (
                     <div
                       key={metricIndex}
-                      className="flex items-center text-gray-600"
+                      className="flex items-center text-emerald-600"
                     >
                       <svg
-                        className="w-5 h-5 text-blue-600 mr-2"
+                        className="w-5 h-5 text-emerald-500 mr-2"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -138,7 +156,7 @@ export default function Home() {
                 </div>
                 <Link
                   href={solution.link}
-                  className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center"
+                  className="text-emerald-600 hover:text-emerald-700 font-medium inline-flex items-center group-hover:translate-x-1 transition-transform"
                 >
                   Learn More
                   <svg
@@ -162,13 +180,13 @@ export default function Home() {
       </section>
 
       {/* Industries Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-emerald-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="section-title">
               Industry-Specific Solutions
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="section-subtitle">
               We understand the unique challenges of your industry. Our AI solutions are tailored to address specific pain points.
             </p>
           </div>
@@ -214,15 +232,15 @@ export default function Home() {
             ].map((industry, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 hover:shadow-lg transition-shadow"
+                className="card group hover:border-emerald-200"
               >
-                <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600 mb-4">
+                <div className="w-12 h-12 bg-emerald-50 rounded-lg flex items-center justify-center text-emerald-600 mb-4 group-hover:bg-emerald-100 transition-colors">
                   {industry.icon}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                <h3 className="text-xl font-bold text-emerald-900 mb-2">
                   {industry.title}
                 </h3>
-                <p className="text-gray-600">{industry.description}</p>
+                <p className="text-emerald-700">{industry.description}</p>
               </div>
             ))}
           </div>
@@ -232,7 +250,7 @@ export default function Home() {
       {/* Key Features */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
+          <h2 className="section-title">
             Why Choose ZeroOpsAI?
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -255,32 +273,12 @@ export default function Home() {
                       d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
                     />
                   </svg>
-                ),
+                )
               },
               {
-                title: 'Fast Deployment',
+                title: 'Open Source',
                 description:
-                  'Get your AI agents up and running in days, not months. Our modular approach ensures quick setup.',
-                icon: (
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
-                    />
-                  </svg>
-                ),
-              },
-              {
-                title: 'Open Source Core',
-                description:
-                  'Built on proven open-source technology. No black box AI - you own and control your deployment.',
+                  'Built on open-source technology, giving you full control and transparency over your AI infrastructure.',
                 icon: (
                   <svg
                     className="w-6 h-6"
@@ -295,18 +293,40 @@ export default function Home() {
                       d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
                     />
                   </svg>
-                ),
+                )
               },
+              {
+                title: 'Enterprise Ready',
+                description:
+                  'Deploy in your private cloud with enterprise-grade security, compliance, and support.',
+                icon: (
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                    />
+                  </svg>
+                )
+              }
             ].map((feature, index) => (
               <div
                 key={index}
-                className="p-6 rounded-xl border border-gray-100 hover:border-blue-100 hover:shadow-lg transition-all"
+                className="card group hover:border-emerald-200"
               >
-                <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600 mb-4">
+                <div className="w-12 h-12 bg-emerald-50 rounded-lg flex items-center justify-center text-emerald-600 mb-4 group-hover:bg-emerald-100 transition-colors">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <h3 className="text-xl font-bold text-emerald-900 mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-emerald-700">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -314,21 +334,21 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-blue-600 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Join leading companies that trust ZeroOpsAI for their AI automation
-            needs. Book a demo today.
-          </p>
-          <Link
-            href="/contact"
-            className="bg-white text-blue-600 px-8 py-3 rounded-full hover:bg-blue-50 transition-colors text-lg font-medium inline-block"
-          >
-            Book a Demo
-          </Link>
+      <section className="py-20 bg-emerald-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="section-title">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="section-subtitle">
+              Book a demo today and see how ZeroOpsAI can help you automate your business processes securely.
+            </p>
+            <div className="mt-8">
+              <Link href="/contact" className="btn-primary">
+                Book a Demo
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </div>

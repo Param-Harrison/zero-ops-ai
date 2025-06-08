@@ -29,7 +29,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen py-20">
+    <div className="min-h-screen py-20 bg-gradient-to-b from-emerald-50 to-white">
       <div className="container mx-auto px-4">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -50,7 +50,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="card p-8 md:p-12"
+            className="card p-8 md:p-12 glass"
           >
             <form onSubmit={handleSubmit} className="space-y-8">
               <div className="grid md:grid-cols-2 gap-8">
@@ -289,6 +289,7 @@ export default function Contact() {
                     <option value="LI">Liechtenstein</option>
                     <option value="LT">Lithuania</option>
                     <option value="LU">Luxembourg</option>
+                    <option value="MK">Macedonia</option>
                     <option value="MG">Madagascar</option>
                     <option value="MW">Malawi</option>
                     <option value="MY">Malaysia</option>
@@ -353,6 +354,7 @@ export default function Contact() {
                     <option value="LK">Sri Lanka</option>
                     <option value="SD">Sudan</option>
                     <option value="SR">Suriname</option>
+                    <option value="SZ">Swaziland</option>
                     <option value="SE">Sweden</option>
                     <option value="CH">Switzerland</option>
                     <option value="SY">Syria</option>
@@ -390,7 +392,7 @@ export default function Contact() {
                     htmlFor="areaOfInterest"
                     className="block text-sm font-semibold text-emerald-900"
                   >
-                    Select your area of interest
+                    Area of Interest
                   </label>
                   <select
                     id="areaOfInterest"
@@ -404,37 +406,21 @@ export default function Contact() {
                     <option value="sales">Sales Enablement</option>
                     <option value="support">Customer Support</option>
                     <option value="healthcare">Healthcare Operations</option>
-                    <option value="data">Data Processing</option>
-                    <option value="custom">Custom Solution</option>
+                    <option value="other">Other</option>
                   </select>
                 </div>
               </div>
 
-              <div className="flex items-center justify-center pt-4">
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+              <div className="flex justify-center">
+                <button
                   type="submit"
-                  className="btn-primary"
+                  className="btn-primary w-full md:w-auto"
                 >
-                  Book a Demo
-                </motion.button>
+                  Book Demo
+                </button>
               </div>
             </form>
           </motion.div>
-
-          <div className="mt-12 text-center">
-            <p className="text-emerald-700">
-              By submitting this form, you agree to our{' '}
-              <a href="/privacy" className="text-emerald-600 hover:text-emerald-800 underline">
-                Privacy Policy
-              </a>{' '}
-              and{' '}
-              <a href="/terms" className="text-emerald-600 hover:text-emerald-800 underline">
-                Terms of Service
-              </a>
-            </p>
-          </div>
         </motion.div>
       </div>
     </div>

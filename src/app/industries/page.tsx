@@ -131,13 +131,13 @@ const industries = [
 
 export default function Industries() {
   return (
-    <div className="min-h-screen bg-gray-50 py-20">
+    <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="section-title">
             Industry-Specific Solutions
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="section-subtitle">
             We understand the unique challenges of your industry. Our AI solutions
             are tailored to address specific pain points and drive measurable
             results.
@@ -148,25 +148,25 @@ export default function Industries() {
           {industries.map((industry, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 hover:shadow-lg transition-shadow"
+              className="card group hover:border-emerald-200"
             >
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              <h2 className="text-2xl font-bold text-emerald-900 mb-4">
                 {industry.name}
               </h2>
-              <p className="text-gray-600 mb-6">{industry.description}</p>
+              <p className="text-emerald-700 mb-6">{industry.description}</p>
 
               <div className="mb-6">
-                <h3 className="text-sm font-semibold text-gray-900 mb-3">
+                <h3 className="text-sm font-semibold text-emerald-900 mb-3">
                   Key Challenges
                 </h3>
                 <ul className="space-y-2">
                   {industry.challenges.map((challenge, challengeIndex) => (
                     <li
                       key={challengeIndex}
-                      className="flex items-center text-gray-600"
+                      className="flex items-center text-emerald-700"
                     >
                       <svg
-                        className="w-5 h-5 text-blue-600 mr-2"
+                        className="w-5 h-5 text-emerald-500 mr-2"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -185,14 +185,14 @@ export default function Industries() {
               </div>
 
               <div className="mb-6">
-                <h3 className="text-sm font-semibold text-gray-900 mb-3">
+                <h3 className="text-sm font-semibold text-emerald-900 mb-3">
                   Our Solutions
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {industry.solutions.map((solution, solutionIndex) => (
                     <span
                       key={solutionIndex}
-                      className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm"
+                      className="px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full text-sm"
                     >
                       {solution}
                     </span>
@@ -201,17 +201,17 @@ export default function Industries() {
               </div>
 
               <div className="mb-6">
-                <h3 className="text-sm font-semibold text-gray-900 mb-3">
+                <h3 className="text-sm font-semibold text-emerald-900 mb-3">
                   Measurable Results
                 </h3>
                 <ul className="space-y-2">
                   {industry.metrics.map((metric, metricIndex) => (
                     <li
                       key={metricIndex}
-                      className="flex items-center text-gray-600"
+                      className="flex items-center text-emerald-700"
                     >
                       <svg
-                        className="w-5 h-5 text-blue-600 mr-2"
+                        className="w-5 h-5 text-emerald-500 mr-2"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -231,7 +231,7 @@ export default function Industries() {
 
               <Link
                 href="/contact"
-                className="inline-block bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors"
+                className="btn-primary w-full text-center"
               >
                 Get Industry Solution
               </Link>
@@ -240,19 +240,21 @@ export default function Industries() {
         </div>
 
         <div className="mt-16 text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          <h2 className="section-title">
             Don&apos;t See Your Industry?
           </h2>
-          <p className="text-gray-600 mb-8">
+          <p className="section-subtitle">
             We can create custom solutions for any industry. Let&apos;s discuss
             your specific challenges and requirements.
           </p>
-          <Link
-            href="/contact"
-            className="bg-white text-blue-600 px-8 py-3 rounded-full border border-blue-200 hover:border-blue-300 transition-colors text-lg font-medium inline-block"
-          >
-            Contact Us
-          </Link>
+          <div className="mt-8">
+            <Link
+              href="/contact"
+              className="btn-secondary"
+            >
+              Contact Us
+            </Link>
+          </div>
         </div>
       </div>
     </div>
