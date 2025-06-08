@@ -4,28 +4,22 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="section relative bg-gradient-to-b from-emerald-50 to-white">
+      <section className="hero-section">
         <div className="container">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="section-title">
+          <div className="hero-content">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-emerald-900 mb-6">
               Transform Your Business with{' '}
               <span className="gradient-text">Private AI Agents</span>
             </h1>
-            <p className="section-subtitle">
+            <p className="text-lg sm:text-xl text-emerald-700 mb-8 max-w-3xl mx-auto">
               Deploy secure, private AI agents that automate your business processes.
               Built on open-source technology, perfect for B2B SaaS, Healthcare, Finance, and Call Centers.
             </p>
-            <div className="button-container">
-              <Link
-                href="/contact"
-                className="btn-primary"
-              >
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="btn-primary">
                 Book a Demo
               </Link>
-              <Link
-                href="/solutions"
-                className="btn-secondary"
-              >
+              <Link href="/solutions" className="btn-secondary">
                 Explore Solutions
               </Link>
             </div>
@@ -75,7 +69,7 @@ export default function Home() {
       {/* Solutions Section */}
       <section className="section bg-white">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 sm:mb-16">
             <h2 className="section-title">
               Ready-to-Deploy Solutions
             </h2>
@@ -84,7 +78,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid-layout md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {[
               {
                 title: 'Sales Enablement Suite',
@@ -205,7 +199,7 @@ export default function Home() {
       {/* Industries Section */}
       <section className="section bg-emerald-50">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 sm:mb-16">
             <h2 className="section-title">
               Industry-Specific Solutions
             </h2>
@@ -214,7 +208,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid-layout md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {[
               {
                 title: 'B2B SaaS',
@@ -251,15 +245,6 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 )
-              },
-              {
-                title: 'Manufacturing',
-                description: 'Optimize production and quality control with AI-powered automation.',
-                icon: (
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                  </svg>
-                )
               }
             ].map((industry, index) => (
               <div
@@ -279,104 +264,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Key Features */}
-      <section className="section bg-white">
-        <div className="container">
-          <h2 className="section-title text-center">
-            Why Choose ZeroOpsAI?
-          </h2>
-          <div className="grid-layout md:grid-cols-3">
-            {[
-              {
-                title: 'Zero Data Risk',
-                description:
-                  'Deploy AI agents that never store or process sensitive data. Your data stays private and secure.',
-                icon: (
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-                    />
-                  </svg>
-                )
-              },
-              {
-                title: 'Open Source',
-                description:
-                  'Built on open-source technology, giving you full control and transparency over your AI infrastructure.',
-                icon: (
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                    />
-                  </svg>
-                )
-              },
-              {
-                title: 'Enterprise Ready',
-                description:
-                  'Deploy in your private cloud with enterprise-grade security, compliance, and support.',
-                icon: (
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                    />
-                  </svg>
-                )
-              }
-            ].map((feature, index) => (
-              <div
-                key={index}
-                className="card group hover-lift"
-              >
-                <div className="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-600 mb-6 group-hover:bg-emerald-100 transition-colors">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-bold text-emerald-900 mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-emerald-700">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="section bg-emerald-50">
+      <section className="section bg-white">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="section-title">
               Ready to Transform Your Business?
             </h2>
             <p className="section-subtitle">
-              Book a demo today and see how ZeroOpsAI can help you automate your business processes securely.
+              Book a demo to see how our AI agents can help you automate processes, reduce costs, and improve efficiency.
             </p>
-            <div className="flex justify-center mt-8">
-              <Link href="/contact" className="btn-primary w-auto">
+            <div className="cta-container">
+              <Link href="/contact" className="btn-primary">
                 Book a Demo
               </Link>
             </div>
