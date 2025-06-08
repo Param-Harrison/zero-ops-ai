@@ -375,8 +375,8 @@ export default function Home() {
             <p className="section-subtitle">
               Book a demo today and see how ZeroOpsAI can help you automate your business processes securely.
             </p>
-            <div className="mt-8">
-              <Link href="/contact" className="btn-primary">
+            <div className="flex justify-center mt-8">
+              <Link href="/contact" className="btn-primary w-auto">
                 Book a Demo
               </Link>
             </div>

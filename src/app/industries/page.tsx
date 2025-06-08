@@ -232,7 +232,7 @@ export default function Industries() {
               <div className="button-container">
                 <Link
                   href="/contact"
-                  className="btn-primary"
+                  className="btn-primary w-full"
                 >
                   Book a Demo
                 </Link>

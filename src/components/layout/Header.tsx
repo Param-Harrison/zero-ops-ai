@@ -36,7 +36,7 @@ export default function Header() {
               href="/agents" 
               className="text-emerald-900 hover:text-emerald-600 transition-colors font-medium"
             >
-              Agents
+              AI Agents
             </Link>
             <Link 
               href="/solutions" 
@@ -110,7 +110,7 @@ export default function Header() {
                   className="text-emerald-900 hover:text-emerald-600 transition-colors font-medium px-2 py-1"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Agents
+                  AI Agents
                 </Link>
                 <Link
                   href="/solutions"

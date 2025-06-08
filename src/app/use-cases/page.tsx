@@ -87,13 +87,10 @@ export default function UseCases() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white py-20">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h1 className="section-title">
-            Real Business Problems, AI Solutions
-          </h1>
+        <div className="text-center mb-12 sm:mb-16">
+          <h1 className="section-title">Use Cases</h1>
           <p className="section-subtitle">
-            Discover how our AI agents solve specific business challenges and
-            deliver measurable results across different industries.
+            Discover how ZeroOpsAI can solve your specific business challenges
           </p>
         </div>
 
