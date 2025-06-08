@@ -229,12 +229,14 @@ export default function Industries() {
                 </ul>
               </div>
 
-              <Link
-                href="/contact"
-                className="btn-primary w-full text-center"
-              >
-                Get Industry Solution
-              </Link>
+              <div className="button-container">
+                <Link
+                  href="/contact"
+                  className="btn-primary"
+                >
+                  Book a Demo
+                </Link>
+              </div>
             </div>
           ))}
         </div>

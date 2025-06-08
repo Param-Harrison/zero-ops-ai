@@ -222,12 +222,14 @@ export default function Solutions() {
                 </div>
               </div>
 
-              <Link
-                href="/contact"
-                className="btn-primary w-full text-center"
-              >
-                Get Solution Details
-              </Link>
+              <div className="button-container">
+                <Link
+                  href="/contact"
+                  className="btn-primary"
+                >
+                  Book a Demo
+                </Link>
+              </div>
             </div>
           ))}
         </div>
@@ -240,12 +242,12 @@ export default function Solutions() {
             We can create a tailored solution that perfectly matches your
             business requirements.
           </p>
-          <div className="mt-8">
+          <div className="button-container">
             <Link
               href="/contact"
-              className="btn-secondary"
+              className="btn-primary"
             >
-              Contact Us
+              Book a Demo
             </Link>
           </div>
         </div>
