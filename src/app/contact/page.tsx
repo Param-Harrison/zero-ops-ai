@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -28,25 +29,35 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-20">
+    <div className="min-h-screen py-20">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="max-w-4xl mx-auto"
+        >
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="section-title gradient-text">
               Book a Demo
             </h1>
-            <p className="text-xl text-gray-600">
-              Let&apos;s discuss how ZeroOpsAI can transform your business operations.
+            <p className="section-subtitle">
+              Experience how ZeroOpsAI can transform your business operations with our enterprise-ready AI solutions.
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="card p-8 md:p-12"
+          >
+            <form onSubmit={handleSubmit} className="space-y-8">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-2">
                   <label
                     htmlFor="firstName"
-                    className="block text-sm font-medium text-gray-700 mb-2"
+                    className="block text-sm font-semibold text-emerald-900"
                   >
                     First Name
                   </label>
@@ -57,15 +68,15 @@ export default function Contact() {
                     value={formData.firstName}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="input-field"
                     placeholder="John"
                   />
                 </div>
 
-                <div>
+                <div className="space-y-2">
                   <label
                     htmlFor="lastName"
-                    className="block text-sm font-medium text-gray-700 mb-2"
+                    className="block text-sm font-semibold text-emerald-900"
                   >
                     Last Name
                   </label>
@@ -76,17 +87,17 @@ export default function Contact() {
                     value={formData.lastName}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="input-field"
                     placeholder="Doe"
                   />
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-2">
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 mb-2"
+                    className="block text-sm font-semibold text-emerald-900"
                   >
                     Email Address
                   </label>
@@ -97,15 +108,15 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="input-field"
                     placeholder="john@company.com"
                   />
                 </div>
 
-                <div>
+                <div className="space-y-2">
                   <label
                     htmlFor="company"
-                    className="block text-sm font-medium text-gray-700 mb-2"
+                    className="block text-sm font-semibold text-emerald-900"
                   >
                     Company Name
                   </label>
@@ -116,17 +127,17 @@ export default function Contact() {
                     value={formData.company}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="input-field"
                     placeholder="Acme Inc."
                   />
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-2">
                   <label
                     htmlFor="phone"
-                    className="block text-sm font-medium text-gray-700 mb-2"
+                    className="block text-sm font-semibold text-emerald-900"
                   >
                     Phone Number
                   </label>
@@ -137,15 +148,15 @@ export default function Contact() {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="input-field"
                     placeholder="+1 (555) 000-0000"
                   />
                 </div>
 
-                <div>
+                <div className="space-y-2">
                   <label
                     htmlFor="jobTitle"
-                    className="block text-sm font-medium text-gray-700 mb-2"
+                    className="block text-sm font-semibold text-emerald-900"
                   >
                     Job Title
                   </label>
@@ -156,17 +167,17 @@ export default function Contact() {
                     value={formData.jobTitle}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="input-field"
                     placeholder="CTO"
                   />
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-2">
                   <label
                     htmlFor="country"
-                    className="block text-sm font-medium text-gray-700 mb-2"
+                    className="block text-sm font-semibold text-emerald-900"
                   >
                     Select your country
                   </label>
@@ -176,7 +187,7 @@ export default function Contact() {
                     value={formData.country}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="input-field"
                   >
                     <option value="">Select a country</option>
                     <option value="AF">Afghanistan</option>
@@ -374,10 +385,10 @@ export default function Contact() {
                   </select>
                 </div>
 
-                <div>
+                <div className="space-y-2">
                   <label
                     htmlFor="areaOfInterest"
-                    className="block text-sm font-medium text-gray-700 mb-2"
+                    className="block text-sm font-semibold text-emerald-900"
                   >
                     Select your area of interest
                   </label>
@@ -387,7 +398,7 @@ export default function Contact() {
                     value={formData.areaOfInterest}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="input-field"
                   >
                     <option value="">Select an area</option>
                     <option value="sales">Sales Enablement</option>
@@ -399,17 +410,32 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="flex items-center justify-center">
-                <button
+              <div className="flex items-center justify-center pt-4">
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                   type="submit"
-                  className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors text-lg font-medium"
+                  className="btn-primary"
                 >
                   Book a Demo
-                </button>
+                </motion.button>
               </div>
             </form>
+          </motion.div>
+
+          <div className="mt-12 text-center">
+            <p className="text-emerald-700">
+              By submitting this form, you agree to our{' '}
+              <a href="/privacy" className="text-emerald-600 hover:text-emerald-800 underline">
+                Privacy Policy
+              </a>{' '}
+              and{' '}
+              <a href="/terms" className="text-emerald-600 hover:text-emerald-800 underline">
+                Terms of Service
+              </a>
+            </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

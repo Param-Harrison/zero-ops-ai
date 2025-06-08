@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,32 +18,47 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-200 ${
-      isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm' : 'bg-white'
-    }`}>
+    <header 
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        isScrolled ? 'glass shadow-lg' : 'bg-transparent'
+      }`}
+    >
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold text-gray-900">
-            ZeroOps<span className="text-blue-600">AI</span>
+          <Link href="/" className="text-2xl font-bold">
+            <span className="gradient-text">ZeroOps</span>
+            <span className="text-emerald-600">AI</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/agents" className="text-gray-600 hover:text-gray-900 transition-colors">
+            <Link 
+              href="/agents" 
+              className="text-emerald-900 hover:text-emerald-600 transition-colors font-medium"
+            >
               Agents
             </Link>
-            <Link href="/solutions" className="text-gray-600 hover:text-gray-900 transition-colors">
+            <Link 
+              href="/solutions" 
+              className="text-emerald-900 hover:text-emerald-600 transition-colors font-medium"
+            >
               Solutions
             </Link>
-            <Link href="/use-cases" className="text-gray-600 hover:text-gray-900 transition-colors">
+            <Link 
+              href="/use-cases" 
+              className="text-emerald-900 hover:text-emerald-600 transition-colors font-medium"
+            >
               Use Cases
             </Link>
-            <Link href="/industries" className="text-gray-600 hover:text-gray-900 transition-colors">
+            <Link 
+              href="/industries" 
+              className="text-emerald-900 hover:text-emerald-600 transition-colors font-medium"
+            >
               Industries
             </Link>
             <Link
               href="/contact"
-              className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors"
+              className="btn-primary"
             >
               Book a Demo
             </Link>
@@ -50,12 +66,11 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
+            className="md:hidden p-2 rounded-lg hover:bg-emerald-50 transition-colors"
           >
             <svg
-              className="w-6 h-6"
+              className="w-6 h-6 text-emerald-900"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -79,52 +94,56 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
-        <div
-          className={`md:hidden transition-all duration-200 ease-in-out ${
-            isMenuOpen
-              ? 'max-h-96 opacity-100 mt-4'
-              : 'max-h-0 opacity-0 overflow-hidden'
-          }`}
-        >
-          <div className="flex flex-col space-y-4 pb-4">
-            <Link
-              href="/agents"
-              className="text-gray-600 hover:text-gray-900 transition-colors px-2 py-1"
-              onClick={() => setIsMenuOpen(false)}
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.2 }}
+              className="md:hidden overflow-hidden"
             >
-              Agents
-            </Link>
-            <Link
-              href="/solutions"
-              className="text-gray-600 hover:text-gray-900 transition-colors px-2 py-1"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Solutions
-            </Link>
-            <Link
-              href="/use-cases"
-              className="text-gray-600 hover:text-gray-900 transition-colors px-2 py-1"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Use Cases
-            </Link>
-            <Link
-              href="/industries"
-              className="text-gray-600 hover:text-gray-900 transition-colors px-2 py-1"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Industries
-            </Link>
-            <Link
-              href="/contact"
-              className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors inline-block text-center"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Book a Demo
-            </Link>
-          </div>
-        </div>
+              <div className="flex flex-col space-y-4 py-4">
+                <Link
+                  href="/agents"
+                  className="text-emerald-900 hover:text-emerald-600 transition-colors font-medium px-2 py-1"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Agents
+                </Link>
+                <Link
+                  href="/solutions"
+                  className="text-emerald-900 hover:text-emerald-600 transition-colors font-medium px-2 py-1"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Solutions
+                </Link>
+                <Link
+                  href="/use-cases"
+                  className="text-emerald-900 hover:text-emerald-600 transition-colors font-medium px-2 py-1"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Use Cases
+                </Link>
+                <Link
+                  href="/industries"
+                  className="text-emerald-900 hover:text-emerald-600 transition-colors font-medium px-2 py-1"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Industries
+                </Link>
+                <Link
+                  href="/contact"
+                  className="btn-primary text-center"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Book a Demo
+                </Link>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
     </header>
   );
