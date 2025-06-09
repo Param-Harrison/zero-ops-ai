@@ -155,7 +155,7 @@ export default function Contact() {
               </div>
 
               <div className="button-container">
-                <button type="submit" className="btn-primary">
+                <button type="submit" className="btn-primary w-full">
                   Book Demo
                 </button>
               </div>

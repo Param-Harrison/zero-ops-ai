@@ -131,111 +131,165 @@ const agents = [
 
 export default function Agents() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white py-20">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h1 className="section-title">
-            AI Agents That Drive Results
-          </h1>
-          <p className="section-subtitle">
-            Deploy our modular AI agents to automate your business processes.
-            Each agent is designed to solve specific challenges and deliver measurable results.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-8">
-          {agents.map((agent, index) => (
-            <div
-              key={index}
-              className="card group hover:border-emerald-200"
-            >
-              <h2 className="text-2xl font-bold text-emerald-900 mb-4">
-                {agent.name}
-              </h2>
-              <p className="text-emerald-700 mb-6">{agent.description}</p>
-
-              <div className="mb-6">
-                <h3 className="text-sm font-semibold text-emerald-900 mb-3">
-                  What It Does
-                </h3>
-                <p className="text-emerald-700">{agent.what}</p>
-              </div>
-
-              <div className="mb-6">
-                <h3 className="text-sm font-semibold text-emerald-900 mb-3">
-                  Why You Need It
-                </h3>
-                <ul className="space-y-2">
-                  {agent.why.map((reason, reasonIndex) => (
-                    <li
-                      key={reasonIndex}
-                      className="flex items-center text-emerald-700"
-                    >
-                      <svg
-                        className="w-5 h-5 text-emerald-500 mr-2"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                      {reason}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="mb-6">
-                <h3 className="text-sm font-semibold text-emerald-900 mb-3">
-                  How It Works
-                </h3>
-                <ul className="space-y-2">
-                  {agent.how.map((step, stepIndex) => (
-                    <li
-                      key={stepIndex}
-                      className="flex items-center text-emerald-700"
-                    >
-                      <span className="w-6 h-6 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center text-sm font-medium mr-2">
-                        {stepIndex + 1}
-                      </span>
-                      {step}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
+    <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
+      {/* Hero Section */}
+      <section className="relative py-12 sm:py-16 lg:py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-emerald-900 mb-4 sm:mb-6">
+              AI Agents for Every Business Need
+            </h1>
+            <p className="text-base sm:text-lg lg:text-xl text-emerald-700 mb-8 sm:mb-12 max-w-3xl mx-auto">
+              Our suite of specialized AI agents can be deployed individually or
+              combined to create powerful solutions for your specific business
+              challenges.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
                 href="/contact"
-                className="btn-primary w-full text-center"
+                className="btn-primary w-full sm:w-auto"
               >
-                Request Demo
+                Book a Demo
+              </Link>
+              <Link
+                href="/solutions"
+                className="btn-secondary w-full sm:w-auto"
+              >
+                View Solutions
               </Link>
             </div>
-          ))}
-        </div>
-
-        <div className="mt-16 text-center">
-          <h2 className="section-title">
-            Need a Custom Solution?
-          </h2>
-          <p className="section-subtitle">
-            We can build custom AI agents tailored to your specific business needs.
-          </p>
-          <div className="mt-8">
-            <Link
-              href="/contact"
-              className="btn-secondary"
-            >
-              Contact Us
-            </Link>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Agents Grid */}
+      <section className="py-12 sm:py-16 lg:py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            {agents.map((agent, index) => (
+              <div
+                key={index}
+                className="card group hover:border-emerald-200 flex flex-col h-full bg-white/50 backdrop-blur-sm"
+              >
+                <div className="flex-grow p-6 sm:p-8">
+                  <h2 className="text-xl sm:text-2xl font-bold text-emerald-900 mb-4">
+                    {agent.name}
+                  </h2>
+                  <p className="text-emerald-700 mb-6">{agent.description}</p>
+
+                  <div className="mb-6">
+                    <h3 className="text-sm font-semibold text-emerald-900 mb-3">
+                      What It Is
+                    </h3>
+                    <p className="text-emerald-700">{agent.what}</p>
+                  </div>
+
+                  <div className="mb-6">
+                    <h3 className="text-sm font-semibold text-emerald-900 mb-3">
+                      Why Use It
+                    </h3>
+                    <ul className="space-y-2">
+                      {agent.why.map((reason, reasonIndex) => (
+                        <li
+                          key={reasonIndex}
+                          className="flex items-center text-emerald-700"
+                        >
+                          <svg
+                            className="w-5 h-5 text-emerald-500 mr-2 flex-shrink-0"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M5 13l4 4L19 7"
+                            />
+                          </svg>
+                          <span className="text-sm sm:text-base">{reason}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mb-6">
+                    <h3 className="text-sm font-semibold text-emerald-900 mb-3">
+                      How It Works
+                    </h3>
+                    <ul className="space-y-2">
+                      {agent.how.map((step, stepIndex) => (
+                        <li
+                          key={stepIndex}
+                          className="flex items-center text-emerald-700"
+                        >
+                          <svg
+                            className="w-5 h-5 text-emerald-500 mr-2 flex-shrink-0"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                            />
+                          </svg>
+                          <span className="text-sm sm:text-base">{step}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="p-6 sm:p-8 border-t border-emerald-100">
+                  <Link
+                    href="/contact"
+                    className="btn-primary w-full text-center"
+                  >
+                    Get Started
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-emerald-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="card bg-white border-emerald-200">
+              <div className="text-center px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-emerald-900 mb-4 sm:mb-6">
+                  Ready to Deploy AI Agents?
+                </h2>
+                <p className="text-base sm:text-lg text-emerald-700 mb-8 sm:mb-12 max-w-2xl mx-auto">
+                  Let&apos;s discuss how our AI agents can help you achieve your
+                  business goals. Our team will guide you through the deployment
+                  process.
+                </p>
+                <div className="flex flex-col sm:flex-row justify-center gap-4">
+                  <Link
+                    href="/contact"
+                    className="btn-primary w-full sm:w-auto"
+                  >
+                    Book a Demo
+                  </Link>
+                  <Link
+                    href="/solutions"
+                    className="btn-secondary w-full sm:w-auto"
+                  >
+                    Explore Solutions
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 } 

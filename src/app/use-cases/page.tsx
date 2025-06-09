@@ -116,7 +116,7 @@ export default function UseCases() {
 
                   <div className="mb-6">
                     <h3 className="text-sm font-semibold text-emerald-900 mb-3">
-                      The Solution
+                      Our Solution
                     </h3>
                     <ul className="space-y-2">
                       {useCase.solution.map((step, stepIndex) => (
@@ -124,29 +124,8 @@ export default function UseCases() {
                           key={stepIndex}
                           className="flex items-center text-emerald-700"
                         >
-                          <span className="w-6 h-6 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center text-sm font-medium mr-2">
-                            {stepIndex + 1}
-                          </span>
-                          {step}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                <div>
-                  <div className="mb-6">
-                    <h3 className="text-sm font-semibold text-emerald-900 mb-3">
-                      Results
-                    </h3>
-                    <ul className="space-y-4">
-                      {useCase.results.map((result, resultIndex) => (
-                        <li
-                          key={resultIndex}
-                          className="flex items-start text-emerald-700"
-                        >
                           <svg
-                            className="w-5 h-5 text-emerald-500 mr-2 mt-1"
+                            className="w-5 h-5 text-emerald-500 mr-2"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -155,7 +134,38 @@ export default function UseCases() {
                               strokeLinecap="round"
                               strokeLinejoin="round"
                               strokeWidth={2}
-                              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                              d="M5 13l4 4L19 7"
+                            />
+                          </svg>
+                          {step}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="flex flex-col">
+                  <div className="mb-6">
+                    <h3 className="text-sm font-semibold text-emerald-900 mb-3">
+                      Measurable Results
+                    </h3>
+                    <ul className="space-y-2">
+                      {useCase.results.map((result, resultIndex) => (
+                        <li
+                          key={resultIndex}
+                          className="flex items-center text-emerald-700"
+                        >
+                          <svg
+                            className="w-5 h-5 text-emerald-500 mr-2"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
                             />
                           </svg>
                           {result}
@@ -164,10 +174,10 @@ export default function UseCases() {
                     </ul>
                   </div>
 
-                  <div className="mt-8">
+                  <div className="mt-auto">
                     <Link
                       href="/contact"
-                      className="btn-primary w-full text-center"
+                      className="btn-primary w-full"
                     >
                       Get Started
                     </Link>
@@ -178,21 +188,32 @@ export default function UseCases() {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <h2 className="section-title">
-            Have a Different Challenge?
-          </h2>
-          <p className="section-subtitle">
-            We can create custom AI solutions for your specific business
-            challenges. Let&apos;s discuss your needs.
-          </p>
-          <div className="mt-8">
-            <Link
-              href="/contact"
-              className="btn-secondary"
-            >
-              Contact Us
-            </Link>
+        <div className="mt-16">
+          <div className="card bg-emerald-50 border-emerald-200">
+            <div className="text-center max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-emerald-900 mb-4">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-emerald-700 mb-8">
+                Let&apos;s discuss how ZeroOpsAI can help you achieve similar results.
+                Our team will work with you to create a customized solution that
+                addresses your specific challenges.
+              </p>
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="btn-primary w-full sm:w-auto"
+                >
+                  Book a Demo
+                </Link>
+                <Link
+                  href="/solutions"
+                  className="btn-secondary w-full sm:w-auto"
+                >
+                  Explore Solutions
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>

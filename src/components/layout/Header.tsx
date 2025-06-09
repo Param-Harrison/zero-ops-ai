@@ -1,64 +1,68 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const isActive = (path: string) => pathname === path;
 
   return (
-    <header 
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'glass shadow-lg' : 'bg-transparent'
-      }`}
-    >
-      <nav className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold">
-            <span className="gradient-text">ZeroOps</span>
-            <span className="text-emerald-600">AI</span>
+    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-emerald-100">
+      <nav className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
+          <Link href="/" className="flex items-center space-x-2">
+            <span className="text-2xl font-bold text-emerald-600">ZeroOpsAI</span>
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <Link 
               href="/agents" 
-              className="text-emerald-900 hover:text-emerald-600 transition-colors font-medium"
+              className={`transition-colors font-medium ${
+                isActive('/agents') 
+                  ? 'text-emerald-600 border-b-2 border-emerald-600' 
+                  : 'text-emerald-900 hover:text-emerald-600'
+              }`}
             >
               AI Agents
             </Link>
             <Link 
               href="/solutions" 
-              className="text-emerald-900 hover:text-emerald-600 transition-colors font-medium"
+              className={`transition-colors font-medium ${
+                isActive('/solutions') 
+                  ? 'text-emerald-600 border-b-2 border-emerald-600' 
+                  : 'text-emerald-900 hover:text-emerald-600'
+              }`}
             >
               Solutions
             </Link>
             <Link 
               href="/use-cases" 
-              className="text-emerald-900 hover:text-emerald-600 transition-colors font-medium"
+              className={`transition-colors font-medium ${
+                isActive('/use-cases') 
+                  ? 'text-emerald-600 border-b-2 border-emerald-600' 
+                  : 'text-emerald-900 hover:text-emerald-600'
+              }`}
             >
               Use Cases
             </Link>
             <Link 
               href="/industries" 
-              className="text-emerald-900 hover:text-emerald-600 transition-colors font-medium"
+              className={`transition-colors font-medium ${
+                isActive('/industries') 
+                  ? 'text-emerald-600 border-b-2 border-emerald-600' 
+                  : 'text-emerald-900 hover:text-emerald-600'
+              }`}
             >
               Industries
             </Link>
             <Link
               href="/contact"
-              className="btn-primary"
+              className="btn-primary h-9 px-6 flex items-center text-sm font-medium rounded-lg shadow-sm hover:shadow-md transition-all duration-200 bg-emerald-600 hover:bg-emerald-700 text-white"
             >
               Book a Demo
             </Link>
@@ -107,35 +111,51 @@ export default function Header() {
               <div className="flex flex-col space-y-4 py-4">
                 <Link
                   href="/agents"
-                  className="text-emerald-900 hover:text-emerald-600 transition-colors font-medium px-2 py-1"
+                  className={`transition-colors font-medium px-2 py-1 ${
+                    isActive('/agents') 
+                      ? 'text-emerald-600 bg-emerald-50' 
+                      : 'text-emerald-900 hover:text-emerald-600'
+                  }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   AI Agents
                 </Link>
                 <Link
                   href="/solutions"
-                  className="text-emerald-900 hover:text-emerald-600 transition-colors font-medium px-2 py-1"
+                  className={`transition-colors font-medium px-2 py-1 ${
+                    isActive('/solutions') 
+                      ? 'text-emerald-600 bg-emerald-50' 
+                      : 'text-emerald-900 hover:text-emerald-600'
+                  }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Solutions
                 </Link>
                 <Link
                   href="/use-cases"
-                  className="text-emerald-900 hover:text-emerald-600 transition-colors font-medium px-2 py-1"
+                  className={`transition-colors font-medium px-2 py-1 ${
+                    isActive('/use-cases') 
+                      ? 'text-emerald-600 bg-emerald-50' 
+                      : 'text-emerald-900 hover:text-emerald-600'
+                  }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Use Cases
                 </Link>
                 <Link
                   href="/industries"
-                  className="text-emerald-900 hover:text-emerald-600 transition-colors font-medium px-2 py-1"
+                  className={`transition-colors font-medium px-2 py-1 ${
+                    isActive('/industries') 
+                      ? 'text-emerald-600 bg-emerald-50' 
+                      : 'text-emerald-900 hover:text-emerald-600'
+                  }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Industries
                 </Link>
                 <Link
                   href="/contact"
-                  className="btn-primary text-center"
+                  className="btn-primary h-9 px-6 flex items-center justify-center text-sm font-medium rounded-lg shadow-sm hover:shadow-md transition-all duration-200 bg-emerald-600 hover:bg-emerald-700 text-white"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Book a Demo

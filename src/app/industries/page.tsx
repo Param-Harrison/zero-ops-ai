@@ -131,134 +131,173 @@ const industries = [
 
 export default function Industries() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white py-20">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h1 className="section-title">
-            Industry-Specific Solutions
-          </h1>
-          <p className="section-subtitle">
-            We understand the unique challenges of your industry. Our AI solutions
-            are tailored to address specific pain points and drive measurable
-            results.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-8">
-          {industries.map((industry, index) => (
-            <div
-              key={index}
-              className="card group hover:border-emerald-200"
-            >
-              <h2 className="text-2xl font-bold text-emerald-900 mb-4">
-                {industry.name}
-              </h2>
-              <p className="text-emerald-700 mb-6">{industry.description}</p>
-
-              <div className="mb-6">
-                <h3 className="text-sm font-semibold text-emerald-900 mb-3">
-                  Key Challenges
-                </h3>
-                <ul className="space-y-2">
-                  {industry.challenges.map((challenge, challengeIndex) => (
-                    <li
-                      key={challengeIndex}
-                      className="flex items-center text-emerald-700"
-                    >
-                      <svg
-                        className="w-5 h-5 text-emerald-500 mr-2"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                      {challenge}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="mb-6">
-                <h3 className="text-sm font-semibold text-emerald-900 mb-3">
-                  Our Solutions
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {industry.solutions.map((solution, solutionIndex) => (
-                    <span
-                      key={solutionIndex}
-                      className="px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full text-sm"
-                    >
-                      {solution}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mb-6">
-                <h3 className="text-sm font-semibold text-emerald-900 mb-3">
-                  Measurable Results
-                </h3>
-                <ul className="space-y-2">
-                  {industry.metrics.map((metric, metricIndex) => (
-                    <li
-                      key={metricIndex}
-                      className="flex items-center text-emerald-700"
-                    >
-                      <svg
-                        className="w-5 h-5 text-emerald-500 mr-2"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-                        />
-                      </svg>
-                      {metric}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="button-container">
-                <Link
-                  href="/contact"
-                  className="btn-primary w-full"
-                >
-                  Book a Demo
-                </Link>
-              </div>
+    <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
+      {/* Hero Section */}
+      <section className="relative py-12 sm:py-16 lg:py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-emerald-900 mb-4 sm:mb-6">
+              Industry-Specific Solutions
+            </h1>
+            <p className="text-base sm:text-lg lg:text-xl text-emerald-700 mb-8 sm:mb-12 max-w-3xl mx-auto">
+              We understand the unique challenges of your industry. Our AI solutions
+              are tailored to address specific pain points and drive measurable
+              results.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link
+                href="/contact"
+                className="btn-primary w-full sm:w-auto"
+              >
+                Book a Demo
+              </Link>
+              <Link
+                href="/solutions"
+                className="btn-secondary w-full sm:w-auto"
+              >
+                View Solutions
+              </Link>
             </div>
-          ))}
-        </div>
-
-        <div className="mt-16 text-center">
-          <h2 className="section-title">
-            Don&apos;t See Your Industry?
-          </h2>
-          <p className="section-subtitle">
-            We can create custom solutions for any industry. Let&apos;s discuss
-            your specific challenges and requirements.
-          </p>
-          <div className="mt-8">
-            <Link
-              href="/contact"
-              className="btn-secondary"
-            >
-              Contact Us
-            </Link>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Industries Grid */}
+      <section className="py-12 sm:py-16 lg:py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            {industries.map((industry, index) => (
+              <div
+                key={index}
+                className="card group hover:border-emerald-200 flex flex-col h-full"
+              >
+                <div className="flex-grow">
+                  <h2 className="text-xl sm:text-2xl font-bold text-emerald-900 mb-4">
+                    {industry.name}
+                  </h2>
+                  <p className="text-emerald-700 mb-6">{industry.description}</p>
+
+                  <div className="mb-6">
+                    <h3 className="text-sm font-semibold text-emerald-900 mb-3">
+                      Key Challenges
+                    </h3>
+                    <ul className="space-y-2">
+                      {industry.challenges.map((challenge, challengeIndex) => (
+                        <li
+                          key={challengeIndex}
+                          className="flex items-center text-emerald-700"
+                        >
+                          <svg
+                            className="w-5 h-5 text-emerald-500 mr-2 flex-shrink-0"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M5 13l4 4L19 7"
+                            />
+                          </svg>
+                          <span className="text-sm sm:text-base">{challenge}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mb-6">
+                    <h3 className="text-sm font-semibold text-emerald-900 mb-3">
+                      Our Solutions
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {industry.solutions.map((solution, solutionIndex) => (
+                        <span
+                          key={solutionIndex}
+                          className="px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full text-sm"
+                        >
+                          {solution}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="mb-6">
+                    <h3 className="text-sm font-semibold text-emerald-900 mb-3">
+                      Measurable Results
+                    </h3>
+                    <ul className="space-y-2">
+                      {industry.metrics.map((metric, metricIndex) => (
+                        <li
+                          key={metricIndex}
+                          className="flex items-center text-emerald-700"
+                        >
+                          <svg
+                            className="w-5 h-5 text-emerald-500 mr-2 flex-shrink-0"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                            />
+                          </svg>
+                          <span className="text-sm sm:text-base">{metric}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="mt-auto pt-6">
+                  <Link
+                    href="/contact"
+                    className="btn-primary w-full"
+                  >
+                    Book a Demo
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-emerald-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="card bg-white border-emerald-200">
+              <div className="text-center px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-emerald-900 mb-4 sm:mb-6">
+                  Don&apos;t See Your Industry?
+                </h2>
+                <p className="text-base sm:text-lg text-emerald-700 mb-8 sm:mb-12 max-w-2xl mx-auto">
+                  We can create custom solutions for any industry. Let&apos;s discuss
+                  your specific challenges and requirements.
+                </p>
+                <div className="flex flex-col sm:flex-row justify-center gap-4">
+                  <Link
+                    href="/contact"
+                    className="btn-primary w-full sm:w-auto"
+                  >
+                    Contact Us
+                  </Link>
+                  <Link
+                    href="/use-cases"
+                    className="btn-secondary w-full sm:w-auto"
+                  >
+                    View Use Cases
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 } 
