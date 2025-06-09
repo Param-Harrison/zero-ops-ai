@@ -2,106 +2,343 @@ import Link from 'next/link';
 
 const services = [
   {
-    name: 'Implementation & Integration',
-    description: 'End-to-end implementation and integration of our AI products into your existing systems.',
+    name: 'Private AI Chatbot Deployment',
+    description: 'Deploy PrivateGPT for internal knowledge search and document Q&A',
     features: [
-      'Custom deployment architecture',
-      'System integration',
-      'Data migration',
-      'Security configuration'
+      'Secure deployment',
+      'Custom training',
+      'Ongoing support',
     ],
     benefits: [
-      'Faster time to value',
-      'Reduced implementation risk',
-      'Seamless integration',
-      'Enterprise-grade security'
+      'Faster knowledge access',
+      'Reduced search time',
+      'Secure document handling',
+      'Custom knowledge base'
     ],
-    industries: ['Enterprise', 'Healthcare', 'Finance', 'Legal']
+    industries: ['Enterprise', 'Legal', 'Healthcare', 'Finance']
   },
   {
-    name: 'Custom Development',
-    description: 'Custom development and fine-tuning of AI models for your specific use cases.',
+    name: 'Enterprise AI Assistant Service',
+    description: 'Manage Onyx for real-time access to Google Drive, Slack, Jira, and more',
     features: [
-      'Model fine-tuning',
-      'Custom feature development',
-      'Integration customization',
-      'Performance optimization'
+      'Multi-platform integration',
+      'Custom workflows',
+      '24/7 monitoring',
+      'Security controls'
     ],
     benefits: [
-      'Tailored solutions',
-      'Higher accuracy',
-      'Better performance',
+      'Unified workspace access',
+      'Automated workflows',
+      'Enhanced productivity',
+      'Enterprise security'
+    ],
+    industries: ['Enterprise', 'Technology', 'Consulting', 'Professional Services']
+  },
+  {
+    name: 'Document ETL Pipeline Service',
+    description: 'Extract and clean document sets using Unstructured.io',
+    features: [
+      'Automated processing',
+      'Data validation',
+      'Custom pipelines',
+      'Format conversion'
+    ],
+    benefits: [
+      'Clean, structured data',
+      'Reduced manual work',
+      'Consistent formatting',
+      'Scalable processing'
+    ],
+    industries: ['Finance', 'Legal', 'Healthcare', 'Insurance']
+  },
+  {
+    name: 'Meeting Intelligence Service',
+    description: 'Transcribe and summarize client meetings with Meetily',
+    features: [
+      'Real-time transcription',
+      'Action item extraction',
+      'Meeting analytics',
+      'Custom summaries'
+    ],
+    benefits: [
+      'Automated note-taking',
+      'Action item tracking',
+      'Meeting insights',
+      'Time savings'
+    ],
+    industries: ['Consulting', 'Professional Services', 'Enterprise', 'Legal']
+  },
+  {
+    name: 'Resume Filtering as a Service',
+    description: 'Rank hundreds of resumes per job automatically',
+    features: [
+      'Automated screening',
+      'Custom criteria',
+      'Candidate ranking',
+      'Skill matching'
+    ],
+    benefits: [
+      'Faster hiring',
+      'Reduced bias',
+      'Better matches',
+      'Scalable screening'
+    ],
+    industries: ['HR', 'Recruitment', 'Enterprise', 'Professional Services']
+  },
+  {
+    name: 'Legal Risk Flagging Agent',
+    description: 'Scan contracts for compliance and risk patterns',
+    features: [
+      'Risk detection',
+      'Compliance checking',
+      'Custom rules',
+      'Automated review'
+    ],
+    benefits: [
+      'Faster review',
+      'Risk reduction',
+      'Consistent checking',
+      'Cost savings'
+    ],
+    industries: ['Legal', 'Finance', 'Real Estate', 'Healthcare']
+  },
+  {
+    name: 'Invoice Processing Automation',
+    description: 'OCR and JSON output of invoices for accounting APIs',
+    features: [
+      'Automated extraction',
+      'API integration',
+      'Data validation',
+      'Format conversion'
+    ],
+    benefits: [
+      'Faster processing',
+      'Reduced errors',
+      'Automated entry',
+      'Cost savings'
+    ],
+    industries: ['Finance', 'Accounting', 'Enterprise', 'Retail']
+  },
+  {
+    name: 'Financial Analysis Bot',
+    description: 'Chat with FinGPT about company reports and stock data',
+    features: [
+      'Financial analysis',
+      'Market insights',
+      'Custom reporting',
+      'Data visualization'
+    ],
+    benefits: [
+      'Faster analysis',
+      'Better insights',
+      'Automated reporting',
+      'Data-driven decisions'
+    ],
+    industries: ['Finance', 'Investment', 'Banking', 'Consulting']
+  },
+  {
+    name: 'Marketing Research Agent',
+    description: 'Auto-GPT to research competitors or generate insights',
+    features: [
+      'Competitor analysis',
+      'Market research',
+      'Insight generation',
+      'Trend tracking'
+    ],
+    benefits: [
+      'Faster research',
+      'Better insights',
+      'Automated analysis',
       'Competitive advantage'
     ],
-    industries: ['Technology', 'Manufacturing', 'Retail', 'Insurance']
+    industries: ['Marketing', 'Consulting', 'Enterprise', 'Agency']
   },
   {
-    name: 'Training & Support',
-    description: 'Comprehensive training and ongoing support to ensure successful AI adoption.',
+    name: 'Natural Language BI Agent',
+    description: 'NL to SQL bot to query client dashboards and data',
     features: [
-      'User training programs',
-      'Technical documentation',
+      'Query generation',
+      'Dashboard integration',
+      'Custom analytics',
+      'Data visualization'
+    ],
+    benefits: [
+      'Easier data access',
+      'Faster insights',
+      'Reduced SQL knowledge needed',
+      'Better decisions'
+    ],
+    industries: ['Enterprise', 'Finance', 'Healthcare', 'Retail']
+  },
+  {
+    name: 'Voice QA Dashboard',
+    description: 'Transcribe support calls and detect tone/compliance issues',
+    features: [
+      'Call analysis',
+      'Compliance monitoring',
+      'Performance metrics',
+      'Quality scoring'
+    ],
+    benefits: [
+      'Better quality control',
+      'Compliance assurance',
+      'Performance insights',
+      'Training opportunities'
+    ],
+    industries: ['Customer Support', 'Healthcare', 'Finance', 'Insurance']
+  },
+  {
+    name: 'Custom Support Chatbot Hosting',
+    description: 'Host and train Haystack chatbot for client FAQs or docs',
+    features: [
+      'Custom training',
+      'Multi-channel support',
+      'Analytics dashboard',
+      'Continuous learning'
+    ],
+    benefits: [
       '24/7 support',
-      'Regular updates'
+      'Reduced response time',
+      'Cost savings',
+      'Scalable support'
     ],
-    benefits: [
-      'Faster user adoption',
-      'Reduced support tickets',
-      'Continuous improvement',
-      'Peace of mind'
-    ],
-    industries: ['All Industries']
+    industries: ['E-commerce', 'SaaS', 'Enterprise', 'Healthcare']
   },
   {
-    name: 'Data Engineering',
-    description: 'Data pipeline development and optimization for AI model training and deployment.',
+    name: 'Data Redaction Pipeline',
+    description: 'PII detection and anonymization via Presidio for compliance',
     features: [
-      'Data pipeline design',
-      'ETL development',
-      'Data quality assurance',
-      'Performance optimization'
+      'PII detection',
+      'Data redaction',
+      'Compliance reporting',
+      'Custom rules'
     ],
     benefits: [
-      'Clean, reliable data',
-      'Faster processing',
-      'Reduced costs',
-      'Better insights'
+      'Compliance assurance',
+      'Data protection',
+      'Automated processing',
+      'Risk reduction'
     ],
-    industries: ['Technology', 'Finance', 'Healthcare', 'Manufacturing']
+    industries: ['Healthcare', 'Finance', 'Legal', 'Insurance']
   },
   {
-    name: 'AI Strategy & Consulting',
-    description: 'Strategic guidance and consulting to maximize the value of your AI investments.',
+    name: 'AI Coding Assistant Setup',
+    description: 'Local Copilot alternative, secured to private repos',
     features: [
-      'AI readiness assessment',
-      'ROI analysis',
-      'Implementation planning',
-      'Change management'
+      'Code assistance',
+      'Security controls',
+      'Custom training',
+      'Private deployment'
     ],
     benefits: [
-      'Clear AI roadmap',
-      'Measurable outcomes',
-      'Reduced risk',
-      'Faster adoption'
+      'Faster development',
+      'Code quality',
+      'Security assurance',
+      'Cost savings'
     ],
-    industries: ['Enterprise', 'Healthcare', 'Finance', 'Legal']
+    industries: ['Technology', 'Enterprise', 'Startups', 'Agency']
   },
   {
-    name: 'Managed Services',
-    description: 'Fully managed AI operations and maintenance for worry-free deployment.',
+    name: 'Creative Asset Generation',
+    description: 'Use Stable Diffusion to generate visuals for campaigns',
     features: [
-      '24/7 monitoring',
-      'Proactive maintenance',
-      'Performance optimization',
-      'Security management'
+      'Image generation',
+      'Style customization',
+      'Batch processing',
+      'Brand consistency'
     ],
     benefits: [
-      'Reduced operational burden',
-      'Consistent performance',
-      'Lower total cost',
-      'Focus on core business'
+      'Faster creation',
+      'Cost savings',
+      'Consistent branding',
+      'Scalable production'
     ],
-    industries: ['All Industries']
+    industries: ['Marketing', 'E-commerce', 'Agency', 'Retail']
+  },
+  {
+    name: 'Branded Voice Agent Creator',
+    description: 'Clone CEO/brand voice with Coqui and deploy in IVRs or content',
+    features: [
+      'Voice cloning',
+      'Content generation',
+      'Multi-platform deployment',
+      'Custom training'
+    ],
+    benefits: [
+      'Brand consistency',
+      'Content automation',
+      'Multi-channel presence',
+      'Cost savings'
+    ],
+    industries: ['Marketing', 'Entertainment', 'Agency', 'Enterprise']
+  },
+  {
+    name: 'Auto-Tag & Caption Media',
+    description: 'Use BLIP to auto-tag product photos or stock libraries',
+    features: [
+      'Image analysis',
+      'Auto-tagging',
+      'Content organization',
+      'Metadata generation'
+    ],
+    benefits: [
+      'Faster organization',
+      'Better searchability',
+      'Consistent tagging',
+      'Time savings'
+    ],
+    industries: ['E-commerce', 'Media', 'Retail', 'Agency']
+  },
+  {
+    name: 'Visual QA Automation',
+    description: 'AI defect detector on assembly line footage or images',
+    features: [
+      'Defect detection',
+      'Quality control',
+      'Real-time monitoring',
+      'Custom thresholds'
+    ],
+    benefits: [
+      'Better quality',
+      'Cost reduction',
+      'Faster inspection',
+      '24/7 monitoring'
+    ],
+    industries: ['Manufacturing', 'Automotive', 'Electronics', 'Pharmaceuticals']
+  },
+  {
+    name: 'Inbox Zero AI Agent',
+    description: 'Auto-email generator for leads, support, recruiting',
+    features: [
+      'Email automation',
+      'Response generation',
+      'Template management',
+      'Custom workflows'
+    ],
+    benefits: [
+      'Faster responses',
+      'Better organization',
+      'Time savings',
+      'Consistent communication'
+    ],
+    industries: ['Sales', 'HR', 'Customer Support', 'Enterprise']
+  },
+  {
+    name: 'Auto Social Publishing Bot',
+    description: 'Scheduled LinkedIn/X/IG post generator from prompts or RSS',
+    features: [
+      'Content generation',
+      'Multi-platform posting',
+      'Analytics tracking',
+      'Schedule management'
+    ],
+    benefits: [
+      'Consistent posting',
+      'Time savings',
+      'Better engagement',
+      'Content automation'
+    ],
+    industries: ['Marketing', 'Agency', 'Enterprise', 'E-commerce']
   }
 ];
 

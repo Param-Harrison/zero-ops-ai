@@ -4,222 +4,242 @@ const products = [
   {
     name: 'PrivateGPT',
     description: 'Local document Q&A bot for PDFs and Word documents',
-    github: 'https://github.com/imartinez/privateGPT',
     features: [
       'Secure document processing',
       'Local deployment',
       'Custom knowledge base',
+      'Multi-format support'
     ],
-    useCase: 'Internal knowledge search and document Q&A',
+    problem: 'Organizations struggle with finding information across thousands of documents, leading to wasted time and missed insights.',
+    useCase: 'Deploy a secure, local AI assistant that can instantly answer questions about your internal documents, policies, and knowledge base.'
   },
   {
     name: 'Onyx AI Chat',
     description: 'Secure enterprise AI assistant with multi-platform integration',
-    github: 'https://github.com/onyx-dot-app/onyx',
     features: [
-      'Enterprise-grade security',
-      'Multi-platform integration',
-      'Custom training',
+      'Enterprise security',
+      'Multi-platform access',
+      'Custom workflows',
+      'Real-time integration'
     ],
-    useCase: 'Enterprise-wide AI assistance',
+    problem: 'Teams waste time switching between different tools and platforms, leading to fragmented information and reduced productivity.',
+    useCase: 'Provide a unified AI assistant that works across Google Drive, Slack, Jira, and other enterprise tools, streamlining workflows and improving efficiency.'
   },
   {
     name: 'Unstructured Parser',
-    description: 'Convert PDF/HTML documents into clean, structured text chunks',
-    github: 'https://github.com/Unstructured-IO/unstructured',
+    description: 'PDF/HTML to clean text chunks for AI processing',
     features: [
       'Multi-format support',
       'Clean text extraction',
       'Structured output',
+      'Batch processing'
     ],
-    useCase: 'Document processing and ETL',
+    problem: 'Organizations struggle to extract usable data from various document formats, making it difficult to leverage AI for document analysis.',
+    useCase: 'Transform messy documents into clean, structured data ready for AI processing, enabling better document understanding and analysis.'
   },
   {
     name: 'Meetily',
-    description: 'AI-powered meeting transcription and summarization',
-    github: 'https://github.com/meetily/meetily',
+    description: 'AI meeting transcriber and summarizer',
     features: [
       'Real-time transcription',
-      'Meeting summaries',
       'Action item extraction',
+      'Meeting summaries',
+      'Speaker diarization'
     ],
-    useCase: 'Meeting intelligence and documentation',
+    problem: 'Important meeting insights and action items are often lost or forgotten, leading to missed opportunities and follow-ups.',
+    useCase: 'Automatically capture, transcribe, and summarize meetings, ensuring no important information or action items are missed.'
   },
   {
     name: 'ResumeGPT',
-    description: 'AI-powered resume screening and job matching',
-    github: 'https://github.com/Ashutosh00710/ResumeAI',
+    description: 'Resume to job match scorer',
     features: [
       'Automated screening',
-      'Job matching',
+      'Skill matching',
       'Candidate ranking',
+      'Custom criteria'
     ],
-    useCase: 'Recruitment and HR automation',
+    problem: 'HR teams spend countless hours manually screening resumes, leading to slow hiring processes and potential bias.',
+    useCase: 'Automatically screen and rank resumes against job requirements, significantly reducing hiring time and improving candidate matching.'
   },
   {
     name: 'ContractCheckGPT',
-    description: 'Automated contract analysis and risk detection',
-    github: 'https://github.com/gptlab-ai/ContractCheckGPT',
+    description: 'Risky clause detector for legal documents',
     features: [
       'Risk detection',
-      'Clause analysis',
       'Compliance checking',
+      'Custom rules',
+      'Automated review'
     ],
-    useCase: 'Legal document review',
+    problem: 'Legal teams struggle to review contracts quickly while ensuring all risks and compliance requirements are caught.',
+    useCase: 'Automatically identify potential risks and compliance issues in contracts, enabling faster and more thorough legal reviews.'
   },
   {
     name: 'Invoiceable',
-    description: 'OCR and invoice data extraction system',
-    github: 'https://github.com/invoicenator/invoiceable',
+    description: 'OCR and invoice data extractor',
     features: [
       'Automated extraction',
+      'Multi-format support',
       'Data validation',
-      'API integration',
+      'API integration'
     ],
-    useCase: 'Invoice processing automation',
+    problem: 'Manual invoice processing is time-consuming, error-prone, and delays financial operations.',
+    useCase: 'Automatically extract and validate invoice data, streamlining accounting processes and reducing errors.'
   },
   {
     name: 'FinGPT',
-    description: 'Financial report analysis and chatbot',
-    github: 'https://github.com/AI4Finance-Foundation/FinGPT',
+    description: 'Financial report and chatbot analyst',
     features: [
       'Financial analysis',
-      'Report generation',
       'Market insights',
+      'Custom reporting',
+      'Data visualization'
     ],
-    useCase: 'Financial intelligence',
+    problem: 'Financial teams need quick access to insights from complex reports and market data.',
+    useCase: 'Enable natural language queries about financial data, making complex information easily accessible and actionable.'
   },
   {
     name: 'Auto-GPT',
-    description: 'Autonomous task execution agent',
-    github: 'https://github.com/Significant-Gravitas/Auto-GPT',
+    description: 'Autonomous task agent',
     features: [
       'Task automation',
-      'Research capabilities',
-      'Decision making',
+      'Goal-oriented actions',
+      'Multi-step planning',
+      'Self-improvement'
     ],
-    useCase: 'Business process automation',
+    problem: 'Teams spend too much time on repetitive tasks and research, reducing focus on strategic work.',
+    useCase: 'Automate complex tasks and research processes, freeing up time for more valuable work.'
   },
   {
     name: 'NL2SQL Agent',
-    description: 'Natural language to SQL query conversion',
-    github: 'https://github.com/salesforce/TabularLang',
+    description: 'Natural language to SQL query converter',
     features: [
       'Query generation',
       'Database integration',
-      'Natural language interface',
+      'Custom analytics',
+      'Data visualization'
     ],
-    useCase: 'Business intelligence',
+    problem: 'Business users struggle to access data due to technical SQL knowledge requirements.',
+    useCase: 'Enable anyone to query databases using natural language, democratizing data access across the organization.'
   },
   {
     name: 'Voice QA Agent',
-    description: 'Speaker diarization and transcription system',
-    github: 'https://github.com/m-bain/whisperX',
+    description: 'Speaker diarization and transcript analyzer',
     features: [
-      'Real-time transcription',
+      'Call analysis',
       'Speaker identification',
-      'Quality analysis',
+      'Quality scoring',
+      'Compliance monitoring'
     ],
-    useCase: 'Call center analytics',
+    problem: 'Call centers struggle to monitor and improve call quality while ensuring compliance.',
+    useCase: 'Automatically analyze calls for quality, compliance, and improvement opportunities.'
   },
   {
     name: 'Haystack Chatbot',
-    description: 'GPT-powered support chatbot system',
-    github: 'https://github.com/deepset-ai/haystack',
+    description: 'GPT-powered support chatbot',
     features: [
       'Custom training',
       'Multi-channel support',
-      'Knowledge integration',
+      'Analytics dashboard',
+      'Continuous learning'
     ],
-    useCase: 'Customer support automation',
+    problem: 'Customer support teams are overwhelmed with repetitive questions, leading to slow response times.',
+    useCase: 'Provide instant, accurate responses to common questions, improving customer satisfaction and reducing support costs.'
   },
   {
     name: 'Presidio Redactor',
-    description: 'PII detection and redaction system',
-    github: 'https://github.com/microsoft/presidio',
+    description: 'PII redaction for privacy compliance',
     features: [
       'PII detection',
       'Data redaction',
-      'Compliance tools',
+      'Compliance reporting',
+      'Custom rules'
     ],
-    useCase: 'Data privacy and compliance',
+    problem: 'Organizations risk privacy violations when handling sensitive data across systems.',
+    useCase: 'Automatically detect and redact sensitive information, ensuring privacy compliance across all data.'
   },
   {
     name: 'Code Llama IDE Assistant',
     description: 'Self-hosted AI code assistant',
-    github: 'https://github.com/facebookresearch/codellama',
     features: [
-      'Code completion',
-      'Documentation generation',
-      'Bug detection',
+      'Code assistance',
+      'Security controls',
+      'Custom training',
+      'Private deployment'
     ],
-    useCase: 'Development productivity',
+    problem: 'Development teams need AI assistance while maintaining code security and privacy.',
+    useCase: 'Provide secure, private AI coding assistance that understands your codebase and security requirements.'
   },
   {
     name: 'Stable Diffusion UI',
-    description: 'AI-powered text to image generation',
-    github: 'https://github.com/AUTOMATIC1111/stable-diffusion-webui',
+    description: 'AI text to image generator',
     features: [
       'Image generation',
       'Style customization',
       'Batch processing',
+      'Brand consistency'
     ],
-    useCase: 'Creative asset generation',
+    problem: 'Creating custom visuals is time-consuming and expensive, limiting marketing and design capabilities.',
+    useCase: 'Generate custom visuals on demand, reducing design costs and accelerating content creation.'
   },
   {
     name: 'Coqui Voice Clone',
-    description: 'Voice cloning and synthesis system',
-    github: 'https://github.com/coqui-ai/TTS',
+    description: 'Voice cloning and synthesis',
     features: [
       'Voice cloning',
-      'Text-to-speech',
-      'Custom voices',
+      'Content generation',
+      'Multi-platform deployment',
+      'Custom training'
     ],
-    useCase: 'Voice content creation',
+    problem: 'Creating consistent voice content across channels is challenging and resource-intensive.',
+    useCase: 'Clone and deploy brand voices across various platforms, ensuring consistent communication.'
   },
   {
     name: 'BLIP Captioner',
-    description: 'Image captioning and tagging system',
-    github: 'https://github.com/salesforce/BLIP',
+    description: 'Image to text caption and tagging',
     features: [
       'Image analysis',
       'Auto-tagging',
-      'Caption generation',
+      'Content organization',
+      'Metadata generation'
     ],
-    useCase: 'Media asset management',
+    problem: 'Managing large image libraries is time-consuming and often leads to poor organization.',
+    useCase: 'Automatically tag and organize images, making them easily searchable and manageable.'
   },
   {
     name: 'Open Visual QA',
-    description: 'AI-powered visual inspection system',
-    github: 'https://github.com/openvinotoolkit/training_extensions',
+    description: 'AI defect detector',
     features: [
       'Defect detection',
       'Quality control',
       'Real-time monitoring',
+      'Custom thresholds'
     ],
-    useCase: 'Manufacturing quality control',
+    problem: 'Manual quality inspection is slow, inconsistent, and can miss defects.',
+    useCase: 'Automatically detect defects in products, improving quality control and reducing costs.'
   },
   {
     name: 'AI Email Responder',
     description: 'Automated email response system',
-    github: 'https://github.com/karthik8628/auto-email-gpt',
     features: [
+      'Email automation',
       'Response generation',
       'Template management',
-      'Email automation',
+      'Custom workflows'
     ],
-    useCase: 'Email management',
+    problem: 'Teams spend too much time on email management, leading to delayed responses and missed opportunities.',
+    useCase: 'Automatically handle routine emails, ensuring quick responses and better communication.'
   },
   {
     name: 'n8n AI Social Poster',
-    description: 'Automated social media content generation and posting',
-    github: 'https://github.com/n8n-io/n8n',
+    description: 'Automated social media content generator',
     features: [
       'Content generation',
-      'Scheduling',
       'Multi-platform posting',
+      'Analytics tracking',
+      'Schedule management'
     ],
-    useCase: 'Social media automation',
+    problem: 'Maintaining consistent social media presence is time-consuming and resource-intensive.',
+    useCase: 'Automatically generate and post social content, maintaining consistent brand presence across platforms.'
   }
 ];
 
@@ -230,11 +250,11 @@ export default function Products() {
         <div className="text-center mb-12 sm:mb-16">
           <h1 className="section-title">AI Products</h1>
           <p className="section-subtitle">
-            Deployable, self-hosted AI solutions built on proven open-source technology
+            Deployable, self-hosted AI solutions for enterprise
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {products.map((product, index) => (
             <div
               key={index}
@@ -248,7 +268,7 @@ export default function Products() {
 
                 <div className="mb-6">
                   <h3 className="text-sm font-semibold text-emerald-900 mb-3">
-                    Key Features
+                    Features
                   </h3>
                   <ul className="space-y-2">
                     {product.features.map((feature, featureIndex) => (
@@ -277,20 +297,25 @@ export default function Products() {
 
                 <div className="mb-6">
                   <h3 className="text-sm font-semibold text-emerald-900 mb-3">
+                    Problem Solved
+                  </h3>
+                  <p className="text-emerald-700">{product.problem}</p>
+                </div>
+
+                <div className="mb-6">
+                  <h3 className="text-sm font-semibold text-emerald-900 mb-3">
                     Use Case
                   </h3>
                   <p className="text-emerald-700">{product.useCase}</p>
                 </div>
 
                 <div className="mt-auto">
-                  <a
-                    href={product.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-secondary w-full"
+                  <Link
+                    href="/contact"
+                    className="btn-primary w-full"
                   >
-                    View on GitHub
-                  </a>
+                    Get Started
+                  </Link>
                 </div>
               </div>
             </div>
@@ -304,8 +329,8 @@ export default function Products() {
                 Need a Custom AI Solution?
               </h2>
               <p className="text-emerald-700 mb-8">
-                We can customize any of these products to your specific needs or create a new solution from scratch.
-                Our team handles deployment, training, and ongoing support.
+                We can customize any of our products to your specific needs or build a completely new solution.
+                Our team handles everything from deployment to ongoing support.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link

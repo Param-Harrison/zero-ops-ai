@@ -415,15 +415,6 @@ export default function UseCases() {
                     ))}
                   </ul>
                 </div>
-
-                <div className="mt-auto">
-                  <Link
-                    href="/contact"
-                    className="btn-primary w-full"
-                  >
-                    Get Started
-                  </Link>
-                </div>
               </div>
             </div>
           ))}
