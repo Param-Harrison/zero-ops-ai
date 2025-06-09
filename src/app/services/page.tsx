@@ -344,170 +344,157 @@ const services = [
 
 export default function Services() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
-      {/* Hero Section */}
-      <section className="relative py-12 sm:py-16 lg:py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-emerald-900 mb-4 sm:mb-6">
-              Professional Services
-            </h1>
-            <p className="text-base sm:text-lg lg:text-xl text-emerald-700 mb-8 sm:mb-12 max-w-3xl mx-auto">
-              Our comprehensive services ensure successful implementation and ongoing success of your AI initiatives.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link
-                href="/contact"
-                className="btn-primary w-full sm:w-auto"
-              >
-                Book a Consultation
-              </Link>
-              <Link
-                href="/products"
-                className="btn-secondary w-full sm:w-auto"
-              >
-                View Products
-              </Link>
-            </div>
+    <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h1 className="section-title">AI Implementation Services</h1>
+          <p className="section-subtitle max-w-3xl mx-auto">
+            Let our experts handle your AI deployment. We manage everything from setup to support,
+            ensuring you get maximum value from your AI investment. Start seeing results in weeks.
+          </p>
+          <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+            <Link
+              href="/contact"
+              className="btn-primary w-full sm:w-auto"
+            >
+              Schedule Consultation
+            </Link>
+            <Link
+              href="/products"
+              className="btn-secondary w-full sm:w-auto"
+            >
+              View Products
+            </Link>
           </div>
         </div>
-      </section>
 
-      {/* Services Grid */}
-      <section className="py-12 sm:py-16 lg:py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="card group hover:border-emerald-200 flex flex-col h-full bg-white/50 backdrop-blur-sm"
-              >
-                <div className="flex-grow p-6 sm:p-8">
-                  <h2 className="text-xl sm:text-2xl font-bold text-emerald-900 mb-4">
-                    {service.name}
-                  </h2>
-                  <p className="text-emerald-700 mb-6">{service.description}</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="card group hover:border-emerald-200"
+            >
+              <div className="flex flex-col h-full">
+                <h2 className="text-xl font-bold text-emerald-900 mb-4">
+                  {service.name}
+                </h2>
+                <p className="text-emerald-700 mb-6">{service.description}</p>
 
-                  <div className="mb-6">
-                    <h3 className="text-sm font-semibold text-emerald-900 mb-3">
-                      Service Features
-                    </h3>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <li
-                          key={featureIndex}
-                          className="flex items-center text-emerald-700"
+                <div className="mb-6">
+                  <h3 className="text-sm font-semibold text-emerald-900 mb-3">
+                    Features
+                  </h3>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <li
+                        key={featureIndex}
+                        className="flex items-center text-emerald-700"
+                      >
+                        <svg
+                          className="w-5 h-5 text-emerald-500 mr-2"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
                         >
-                          <svg
-                            className="w-5 h-5 text-emerald-500 mr-2 flex-shrink-0"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M5 13l4 4L19 7"
-                            />
-                          </svg>
-                          <span className="text-sm sm:text-base">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-                  <div className="mb-6">
-                    <h3 className="text-sm font-semibold text-emerald-900 mb-3">
-                      Key Benefits
-                    </h3>
-                    <ul className="space-y-2">
-                      {service.benefits.map((benefit, benefitIndex) => (
-                        <li
-                          key={benefitIndex}
-                          className="flex items-center text-emerald-700"
+                <div className="mb-6">
+                  <h3 className="text-sm font-semibold text-emerald-900 mb-3">
+                    Benefits
+                  </h3>
+                  <ul className="space-y-2">
+                    {service.benefits.map((benefit, benefitIndex) => (
+                      <li
+                        key={benefitIndex}
+                        className="flex items-center text-emerald-700"
+                      >
+                        <svg
+                          className="w-5 h-5 text-emerald-500 mr-2"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
                         >
-                          <svg
-                            className="w-5 h-5 text-emerald-500 mr-2 flex-shrink-0"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-                            />
-                          </svg>
-                          <span className="text-sm sm:text-base">{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                          />
+                        </svg>
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-                  <div className="mb-6">
-                    <h3 className="text-sm font-semibold text-emerald-900 mb-3">
-                      Ideal For
-                    </h3>
-                    <div className="flex flex-wrap gap-2">
-                      {service.industries.map((industry, industryIndex) => (
-                        <span
-                          key={industryIndex}
-                          className="px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full text-sm"
-                        >
-                          {industry}
-                        </span>
-                      ))}
-                    </div>
+                <div className="mb-6">
+                  <h3 className="text-sm font-semibold text-emerald-900 mb-3">
+                    Ideal For
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {service.industries.map((industry, industryIndex) => (
+                      <span
+                        key={industryIndex}
+                        className="px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full text-sm"
+                      >
+                        {industry}
+                      </span>
+                    ))}
                   </div>
                 </div>
 
-                <div className="border-t border-emerald-100">
+                <div className="mt-auto">
                   <Link
                     href="/contact"
-                    className="btn-primary w-full text-center"
+                    className="btn-primary w-full"
                   >
                     Get Started
                   </Link>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-12 sm:py-16 lg:py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <div className="card bg-emerald-50 border-emerald-200">
-              <div className="text-center p-8">
-                <h2 className="text-2xl sm:text-3xl font-bold text-emerald-900 mb-4">
-                  Ready to Get Started?
-                </h2>
-                <p className="text-emerald-700 mb-8">
-                  Our team of AI experts is ready to help you implement and optimize your AI solutions. From initial setup to ongoing support, we&apos;ll ensure your success every step of the way.
-                </p>
-                <div className="flex flex-col sm:flex-row justify-center gap-4">
-                  <Link
-                    href="/contact"
-                    className="btn-primary w-full sm:w-auto"
-                  >
-                    Schedule Consultation
-                  </Link>
-                  <Link
-                    href="/products"
-                    className="btn-secondary w-full sm:w-auto"
-                  >
-                    View Products
-                  </Link>
-                </div>
+        <div className="mt-16">
+          <div className="card bg-emerald-50 border-emerald-200">
+            <div className="text-center max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-emerald-900 mb-4">
+                Ready to Get Started?
+              </h2>
+              <p className="text-emerald-700 mb-8">
+                Our team handles everything from deployment to ongoing support.
+                We can customize any service to your specific needs.
+              </p>
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="btn-primary w-full sm:w-auto"
+                >
+                  Schedule Consultation
+                </Link>
+                <Link
+                  href="/products"
+                  className="btn-secondary w-full sm:w-auto"
+                >
+                  View Products
+                </Link>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 } 

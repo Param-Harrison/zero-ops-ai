@@ -2,8 +2,8 @@ import Link from 'next/link';
 
 const products = [
   {
-    name: 'PrivateGPT',
-    description: 'Local document Q&A bot for PDFs and Word documents',
+    name: 'ZeroDocs AI',
+    description: 'Enterprise-grade document intelligence platform that enables secure, local Q&A across PDFs, Word docs, and internal knowledge bases with advanced semantic search and context-aware responses.',
     features: [
       'Secure document processing',
       'Local deployment',
@@ -14,8 +14,8 @@ const products = [
     useCase: 'Deploy a secure, local AI assistant that can instantly answer questions about your internal documents, policies, and knowledge base.'
   },
   {
-    name: 'Onyx AI Chat',
-    description: 'Secure enterprise AI assistant with multi-platform integration',
+    name: 'ZeroWork AI',
+    description: 'Enterprise workflow automation platform that seamlessly integrates with Google Drive, Slack, Jira, and other enterprise tools, providing a unified AI assistant for cross-platform operations.',
     features: [
       'Enterprise security',
       'Multi-platform access',
@@ -26,8 +26,8 @@ const products = [
     useCase: 'Provide a unified AI assistant that works across Google Drive, Slack, Jira, and other enterprise tools, streamlining workflows and improving efficiency.'
   },
   {
-    name: 'Unstructured Parser',
-    description: 'PDF/HTML to clean text chunks for AI processing',
+    name: 'ZeroParse AI',
+    description: 'Advanced document processing engine that transforms PDFs, HTML, and other formats into clean, structured text chunks optimized for AI processing and analysis.',
     features: [
       'Multi-format support',
       'Clean text extraction',
@@ -38,8 +38,8 @@ const products = [
     useCase: 'Transform messy documents into clean, structured data ready for AI processing, enabling better document understanding and analysis.'
   },
   {
-    name: 'Meetily',
-    description: 'AI meeting transcriber and summarizer',
+    name: 'ZeroMeet AI',
+    description: 'Enterprise meeting intelligence platform that provides real-time transcription, speaker identification, action item extraction, and automated meeting summaries with AI-powered insights.',
     features: [
       'Real-time transcription',
       'Action item extraction',
@@ -50,8 +50,8 @@ const products = [
     useCase: 'Automatically capture, transcribe, and summarize meetings, ensuring no important information or action items are missed.'
   },
   {
-    name: 'ResumeGPT',
-    description: 'Resume to job match scorer',
+    name: 'ZeroHire AI',
+    description: 'AI-powered recruitment platform that analyzes resumes against job requirements, providing intelligent candidate matching, skill assessment, and automated screening with customizable criteria.',
     features: [
       'Automated screening',
       'Skill matching',
@@ -62,8 +62,8 @@ const products = [
     useCase: 'Automatically screen and rank resumes against job requirements, significantly reducing hiring time and improving candidate matching.'
   },
   {
-    name: 'ContractCheckGPT',
-    description: 'Risky clause detector for legal documents',
+    name: 'ZeroLegal AI',
+    description: 'Enterprise legal document analysis platform that identifies risky clauses, compliance issues, and potential legal risks in contracts using advanced NLP and legal expertise.',
     features: [
       'Risk detection',
       'Compliance checking',
@@ -74,8 +74,8 @@ const products = [
     useCase: 'Automatically identify potential risks and compliance issues in contracts, enabling faster and more thorough legal reviews.'
   },
   {
-    name: 'Invoiceable',
-    description: 'OCR and invoice data extractor',
+    name: 'ZeroInvoice AI',
+    description: 'Enterprise invoice processing platform that combines advanced OCR with AI to extract, validate, and process invoice data with high accuracy and automated reconciliation.',
     features: [
       'Automated extraction',
       'Multi-format support',
@@ -86,8 +86,8 @@ const products = [
     useCase: 'Automatically extract and validate invoice data, streamlining accounting processes and reducing errors.'
   },
   {
-    name: 'FinGPT',
-    description: 'Financial report and chatbot analyst',
+    name: 'ZeroFinance AI',
+    description: 'Financial intelligence platform that analyzes reports, market data, and financial statements to provide actionable insights through natural language queries and automated reporting.',
     features: [
       'Financial analysis',
       'Market insights',
@@ -98,8 +98,8 @@ const products = [
     useCase: 'Enable natural language queries about financial data, making complex information easily accessible and actionable.'
   },
   {
-    name: 'Auto-GPT',
-    description: 'Autonomous task agent',
+    name: 'ZeroTask AI',
+    description: 'Enterprise task automation platform that combines AI planning with autonomous execution to handle complex, multi-step tasks and research processes.',
     features: [
       'Task automation',
       'Goal-oriented actions',
@@ -110,8 +110,8 @@ const products = [
     useCase: 'Automate complex tasks and research processes, freeing up time for more valuable work.'
   },
   {
-    name: 'NL2SQL Agent',
-    description: 'Natural language to SQL query converter',
+    name: 'ZeroQuery AI',
+    description: 'Natural language to SQL conversion platform that enables business users to query databases using plain English, with advanced query optimization and data visualization.',
     features: [
       'Query generation',
       'Database integration',
@@ -122,8 +122,8 @@ const products = [
     useCase: 'Enable anyone to query databases using natural language, democratizing data access across the organization.'
   },
   {
-    name: 'Voice QA Agent',
-    description: 'Speaker diarization and transcript analyzer',
+    name: 'ZeroCall AI',
+    description: 'Enterprise call analysis platform that provides real-time speaker identification, sentiment analysis, and quality scoring for customer service and sales calls.',
     features: [
       'Call analysis',
       'Speaker identification',
@@ -134,8 +134,8 @@ const products = [
     useCase: 'Automatically analyze calls for quality, compliance, and improvement opportunities.'
   },
   {
-    name: 'Haystack Chatbot',
-    description: 'GPT-powered support chatbot',
+    name: 'ZeroSupport AI',
+    description: 'Enterprise support automation platform that combines GPT with custom knowledge bases to provide instant, accurate responses to customer inquiries across multiple channels.',
     features: [
       'Custom training',
       'Multi-channel support',
@@ -146,8 +146,8 @@ const products = [
     useCase: 'Provide instant, accurate responses to common questions, improving customer satisfaction and reducing support costs.'
   },
   {
-    name: 'Presidio Redactor',
-    description: 'PII redaction for privacy compliance',
+    name: 'ZeroPrivacy AI',
+    description: 'Enterprise privacy compliance platform that automatically detects and redacts sensitive information across documents, emails, and data streams.',
     features: [
       'PII detection',
       'Data redaction',
@@ -158,8 +158,8 @@ const products = [
     useCase: 'Automatically detect and redact sensitive information, ensuring privacy compliance across all data.'
   },
   {
-    name: 'Code Llama IDE Assistant',
-    description: 'Self-hosted AI code assistant',
+    name: 'ZeroCode AI',
+    description: 'Enterprise development platform that provides secure, private AI coding assistance with deep understanding of your codebase and security requirements.',
     features: [
       'Code assistance',
       'Security controls',
@@ -170,8 +170,8 @@ const products = [
     useCase: 'Provide secure, private AI coding assistance that understands your codebase and security requirements.'
   },
   {
-    name: 'Stable Diffusion UI',
-    description: 'AI text to image generator',
+    name: 'ZeroImage AI',
+    description: 'Enterprise image generation platform that creates custom visuals based on text descriptions, with brand consistency and style customization.',
     features: [
       'Image generation',
       'Style customization',
@@ -182,8 +182,8 @@ const products = [
     useCase: 'Generate custom visuals on demand, reducing design costs and accelerating content creation.'
   },
   {
-    name: 'Coqui Voice Clone',
-    description: 'Voice cloning and synthesis',
+    name: 'ZeroVoice AI',
+    description: 'Enterprise voice synthesis platform that creates and deploys custom voice clones for consistent brand communication across channels.',
     features: [
       'Voice cloning',
       'Content generation',
@@ -194,8 +194,8 @@ const products = [
     useCase: 'Clone and deploy brand voices across various platforms, ensuring consistent communication.'
   },
   {
-    name: 'BLIP Captioner',
-    description: 'Image to text caption and tagging',
+    name: 'ZeroMedia AI',
+    description: 'Enterprise media management platform that automatically analyzes, tags, and organizes images with AI-powered metadata generation.',
     features: [
       'Image analysis',
       'Auto-tagging',
@@ -206,8 +206,8 @@ const products = [
     useCase: 'Automatically tag and organize images, making them easily searchable and manageable.'
   },
   {
-    name: 'Open Visual QA',
-    description: 'AI defect detector',
+    name: 'ZeroQuality AI',
+    description: 'Enterprise quality control platform that uses computer vision to detect defects and ensure product quality in manufacturing processes.',
     features: [
       'Defect detection',
       'Quality control',
@@ -218,8 +218,8 @@ const products = [
     useCase: 'Automatically detect defects in products, improving quality control and reducing costs.'
   },
   {
-    name: 'AI Email Responder',
-    description: 'Automated email response system',
+    name: 'ZeroMail AI',
+    description: 'Enterprise email automation platform that generates context-aware responses and manages email workflows with AI-powered intelligence.',
     features: [
       'Email automation',
       'Response generation',
@@ -230,8 +230,8 @@ const products = [
     useCase: 'Automatically handle routine emails, ensuring quick responses and better communication.'
   },
   {
-    name: 'n8n AI Social Poster',
-    description: 'Automated social media content generator',
+    name: 'ZeroSocial AI',
+    description: 'Enterprise social media platform that generates and manages content across channels with AI-powered scheduling and analytics.',
     features: [
       'Content generation',
       'Multi-platform posting',
@@ -248,10 +248,25 @@ export default function Products() {
     <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 sm:mb-16">
-          <h1 className="section-title">AI Products</h1>
-          <p className="section-subtitle">
-            Deployable, self-hosted AI solutions for enterprise
+          <h1 className="section-title">Enterprise AI Products</h1>
+          <p className="section-subtitle max-w-3xl mx-auto">
+            Deploy proven AI solutions in your environment. Get started in days, not months.
+            From document analysis to customer support, our products deliver immediate value.
           </p>
+          <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+            <Link
+              href="/contact"
+              className="btn-primary w-full sm:w-auto"
+            >
+              Book a Demo
+            </Link>
+            <Link
+              href="/services"
+              className="btn-secondary w-full sm:w-auto"
+            >
+              View Services
+            </Link>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

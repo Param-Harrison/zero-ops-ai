@@ -328,10 +328,26 @@ export default function UseCases() {
     <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 sm:mb-16">
-          <h1 className="section-title">Industry Solutions</h1>
-          <p className="section-subtitle">
-            Discover how ZeroOpsAI solves real-world challenges across industries with proven AI solutions
+          <h1 className="section-title">AI Use Cases by Industry</h1>
+          <p className="section-subtitle max-w-3xl mx-auto">
+            See how leading companies are using AI to solve real business challenges.
+            Each use case includes specific tools, implementation steps, and measurable results.
+            Ready to transform your business?
           </p>
+          <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+            <Link
+              href="/contact"
+              className="btn-primary w-full sm:w-auto"
+            >
+              Book a Strategy Call
+            </Link>
+            <Link
+              href="/products"
+              className="btn-secondary w-full sm:w-auto"
+            >
+              Explore Products
+            </Link>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

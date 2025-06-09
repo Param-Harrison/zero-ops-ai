@@ -148,10 +148,26 @@ export default function Industries() {
     <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 sm:mb-16">
-          <h1 className="section-title">Industries We Serve</h1>
-          <p className="section-subtitle">
-            Discover how ZeroOpsAI transforms operations across 20+ industries with proven AI solutions
+          <h1 className="section-title">AI Solutions by Industry</h1>
+          <p className="section-subtitle max-w-3xl mx-auto">
+            Every industry has unique challenges. We've built specialized AI solutions
+            for 20+ industries, each delivering measurable results. Find your industry
+            and see how we can help.
           </p>
+          <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+            <Link
+              href="/contact"
+              className="btn-primary w-full sm:w-auto"
+            >
+              Get Industry Analysis
+            </Link>
+            <Link
+              href="/use-cases"
+              className="btn-secondary w-full sm:w-auto"
+            >
+              View Use Cases
+            </Link>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
