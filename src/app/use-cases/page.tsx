@@ -2,83 +2,99 @@ import Link from 'next/link';
 
 const useCases = [
   {
-    title: 'Reduce Support Ticket Volume',
-    description:
-      'Automate common support queries and provide instant answers to customer questions using your product documentation.',
-    problem: 'High support ticket volume leading to slow response times and customer dissatisfaction.',
+    industry: 'Healthcare',
+    title: 'Medical Records Analysis & Compliance',
+    description: 'Automate medical record analysis, ensure HIPAA compliance, and improve patient care coordination.',
+    problem: 'Healthcare providers struggle with manual medical record review, compliance monitoring, and care coordination across departments.',
     solution: [
-      'Deploy Product Knowledge Agent',
-      'Index product documentation',
-      'Integrate with support channels',
+      'Deploy Medical Records Analysis Agent',
+      'Implement HIPAA Compliance Monitor',
+      'Set up Care Coordination Assistant',
     ],
     results: [
-      '60% reduction in support tickets',
-      '90% faster response times',
-      'Improved customer satisfaction',
+      '85% reduction in record review time',
+      '99.9% HIPAA compliance rate',
+      '40% improvement in care coordination',
     ],
   },
   {
-    title: 'Improve Sales Team Productivity',
-    description:
-      'Automate research and briefing preparation, allowing sales teams to focus on building relationships and closing deals.',
-    problem: 'Sales teams spend too much time on research and preparation instead of selling.',
+    industry: 'Legal',
+    title: 'Contract Analysis & Due Diligence',
+    description: 'Automate contract review, risk assessment, and due diligence processes for legal teams.',
+    problem: 'Legal teams spend excessive time on manual contract review and risk assessment, leading to delays and potential oversights.',
     solution: [
-      'Deploy Sales Discovery Agent',
-      'Connect to CRM and data sources',
-      'Configure briefing templates',
+      'Deploy Contract Analysis Agent',
+      'Implement Risk Assessment Engine',
+      'Set up Due Diligence Assistant',
     ],
     results: [
-      '40% increase in sales productivity',
-      '50% reduction in research time',
-      'More consistent sales briefings',
+      '75% faster contract review',
+      '90% accuracy in risk detection',
+      '60% reduction in due diligence time',
     ],
   },
   {
-    title: 'Ensure Call Center Compliance',
-    description:
-      'Automatically monitor calls for compliance issues and provide real-time feedback to agents.',
-    problem: 'Manual call monitoring is time-consuming and often misses compliance issues.',
+    industry: 'Financial Services',
+    title: 'Fraud Detection & Compliance',
+    description: 'Real-time transaction monitoring, fraud detection, and regulatory compliance automation.',
+    problem: 'Financial institutions face increasing fraud risks and complex regulatory requirements, requiring constant monitoring.',
     solution: [
-      'Deploy Call QA Agent',
-      'Configure compliance rules',
-      'Set up real-time alerts',
+      'Deploy Fraud Detection Agent',
+      'Implement Compliance Monitor',
+      'Set up Transaction Analysis Engine',
     ],
     results: [
-      '90% reduction in compliance violations',
-      '70% faster QA review process',
-      'Improved agent training',
+      '95% fraud detection accuracy',
+      '80% reduction in false positives',
+      '70% faster compliance reporting',
     ],
   },
   {
-    title: 'Streamline Document Processing',
-    description:
-      'Automatically process and analyze documents, extracting key information and preparing them for AI use.',
-    problem: 'Manual document processing is slow, error-prone, and resource-intensive.',
+    industry: 'Manufacturing',
+    title: 'Quality Control & Predictive Maintenance',
+    description: 'Automate quality control processes and implement predictive maintenance for manufacturing equipment.',
+    problem: 'Manufacturers struggle with quality control consistency and unexpected equipment failures.',
     solution: [
-      'Deploy Document Preprocessing Agent',
-      'Configure document types',
-      'Set up processing rules',
+      'Deploy Quality Control Agent',
+      'Implement Predictive Maintenance System',
+      'Set up Production Analytics Engine',
     ],
     results: [
-      '75% reduction in processing time',
-      '90% accuracy in data extraction',
-      'Reduced manual errors',
+      '90% reduction in quality defects',
+      '60% decrease in unplanned downtime',
+      '40% improvement in production efficiency',
     ],
   },
   {
-    title: 'Accelerate Employee Onboarding',
-    description:
-      'Provide instant answers to new hire questions and automate the onboarding process.',
-    problem: 'Slow onboarding process leads to delayed productivity and poor employee experience.',
+    industry: 'Retail',
+    title: 'Customer Experience & Inventory Management',
+    description: 'Enhance customer experience and optimize inventory management with AI-powered insights.',
+    problem: 'Retailers face challenges in personalizing customer experiences and maintaining optimal inventory levels.',
     solution: [
-      'Deploy Onboarding Assistant Agent',
-      'Index HR documentation',
-      'Configure onboarding workflows',
+      'Deploy Customer Experience Agent',
+      'Implement Inventory Optimization System',
+      'Set up Demand Forecasting Engine',
     ],
     results: [
-      '50% faster onboarding process',
-      '80% reduction in HR queries',
-      'Improved employee satisfaction',
+      '45% increase in customer satisfaction',
+      '30% reduction in inventory costs',
+      '50% improvement in demand forecasting',
+    ],
+  },
+  {
+    industry: 'Insurance',
+    title: 'Claims Processing & Risk Assessment',
+    description: 'Automate claims processing and enhance risk assessment with AI-powered analysis.',
+    problem: 'Insurance companies struggle with slow claims processing and inaccurate risk assessment.',
+    solution: [
+      'Deploy Claims Processing Agent',
+      'Implement Risk Assessment Engine',
+      'Set up Fraud Detection System',
+    ],
+    results: [
+      '70% faster claims processing',
+      '85% accuracy in risk assessment',
+      '60% reduction in fraudulent claims',
     ],
   },
 ];
@@ -88,9 +104,9 @@ export default function UseCases() {
     <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 sm:mb-16">
-          <h1 className="section-title">Use Cases</h1>
+          <h1 className="section-title">Industry Solutions</h1>
           <p className="section-subtitle">
-            Discover how ZeroOpsAI can solve your specific business challenges
+            Discover how ZeroOpsAI solves real-world challenges across industries
           </p>
         </div>
 
@@ -102,6 +118,11 @@ export default function UseCases() {
             >
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
+                  <div className="mb-4">
+                    <span className="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-sm font-medium">
+                      {useCase.industry}
+                    </span>
+                  </div>
                   <h2 className="text-2xl font-bold text-emerald-900 mb-4">
                     {useCase.title}
                   </h2>
@@ -109,7 +130,7 @@ export default function UseCases() {
 
                   <div className="mb-6">
                     <h3 className="text-sm font-semibold text-emerald-900 mb-3">
-                      The Problem
+                      The Challenge
                     </h3>
                     <p className="text-emerald-700">{useCase.problem}</p>
                   </div>
@@ -192,12 +213,11 @@ export default function UseCases() {
           <div className="card bg-emerald-50 border-emerald-200">
             <div className="text-center max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
               <h2 className="text-2xl sm:text-3xl font-bold text-emerald-900 mb-4">
-                Ready to Transform Your Business?
+                Ready to Transform Your Industry?
               </h2>
               <p className="text-emerald-700 mb-8">
-                Let&apos;s discuss how ZeroOpsAI can help you achieve similar results.
-                Our team will work with you to create a customized solution that
-                addresses your specific challenges.
+                Let&apos;s discuss how ZeroOpsAI can help you achieve similar results in your industry.
+                Our team will work with you to create a customized solution that addresses your specific challenges.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link
@@ -207,10 +227,10 @@ export default function UseCases() {
                   Book a Demo
                 </Link>
                 <Link
-                  href="/solutions"
+                  href="/products"
                   className="btn-secondary w-full sm:w-auto"
                 >
-                  Explore Solutions
+                  Explore Products
                 </Link>
               </div>
             </div>

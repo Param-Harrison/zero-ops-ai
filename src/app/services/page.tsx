@@ -1,128 +1,111 @@
 import Link from 'next/link';
 
-const solutions = [
+const services = [
   {
-    name: 'Data Processing Suite',
-    description:
-      'Streamline your AI data pipeline with automated data processing, cleaning, and preparation tools.',
+    name: 'Implementation & Integration',
+    description: 'End-to-end implementation and integration of our AI products into your existing systems.',
     features: [
-      'Automated data cleaning',
-      'Format standardization',
-      'Data validation',
-      'Quality assurance'
+      'Custom deployment architecture',
+      'System integration',
+      'Data migration',
+      'Security configuration'
     ],
     benefits: [
-      '80% reduction in data prep time',
-      '90% improvement in data quality',
-      '70% faster AI model deployment'
+      'Faster time to value',
+      'Reduced implementation risk',
+      'Seamless integration',
+      'Enterprise-grade security'
     ],
-    industries: ['High Tech', 'Healthcare', 'Banking']
+    industries: ['Enterprise', 'Healthcare', 'Finance', 'Legal']
   },
   {
-    name: 'Agent Assistant',
-    description:
-      'Empower your support agents with real-time assistance, knowledge access, and performance insights.',
+    name: 'Custom Development',
+    description: 'Custom development and fine-tuning of AI models for your specific use cases.',
     features: [
-      'Real-time agent guidance',
-      'Knowledge base integration',
-      'Performance analytics',
-      'Training recommendations'
+      'Model fine-tuning',
+      'Custom feature development',
+      'Integration customization',
+      'Performance optimization'
     ],
     benefits: [
-      '60% reduction in resolution time',
-      '40% increase in first-call resolution',
-      '50% reduction in training time'
+      'Tailored solutions',
+      'Higher accuracy',
+      'Better performance',
+      'Competitive advantage'
     ],
-    industries: ['B2B Tech Support', 'Healthcare', 'Telecom']
+    industries: ['Technology', 'Manufacturing', 'Retail', 'Insurance']
   },
   {
-    name: 'Communication Recorder',
-    description:
-      'Capture, analyze, and optimize all customer interactions with enterprise-grade recording and analytics.',
+    name: 'Training & Support',
+    description: 'Comprehensive training and ongoing support to ensure successful AI adoption.',
     features: [
-      'Multi-channel recording',
-      'Compliance monitoring',
-      'Quality assurance',
-      'Performance analytics'
+      'User training programs',
+      'Technical documentation',
+      '24/7 support',
+      'Regular updates'
     ],
     benefits: [
-      '90% reduction in compliance violations',
-      '70% faster quality reviews',
-      '80% improvement in agent performance'
+      'Faster user adoption',
+      'Reduced support tickets',
+      'Continuous improvement',
+      'Peace of mind'
     ],
-    industries: ['Banking', 'Telecom', 'Healthcare']
+    industries: ['All Industries']
   },
   {
-    name: 'Conversation Intelligence',
-    description:
-      'Transform customer interactions into actionable insights with GenAI-powered conversation analysis.',
+    name: 'Data Engineering',
+    description: 'Data pipeline development and optimization for AI model training and deployment.',
     features: [
-      'Sentiment analysis',
-      'Topic detection',
-      'Customer journey mapping',
-      'Predictive analytics'
+      'Data pipeline design',
+      'ETL development',
+      'Data quality assurance',
+      'Performance optimization'
     ],
     benefits: [
-      '45% increase in customer satisfaction',
-      '60% reduction in churn',
-      '70% improvement in sales conversion'
+      'Clean, reliable data',
+      'Faster processing',
+      'Reduced costs',
+      'Better insights'
     ],
-    industries: ['High Tech', 'Travel & Hospitality', 'Banking']
+    industries: ['Technology', 'Finance', 'Healthcare', 'Manufacturing']
   },
   {
-    name: 'Knowledge Manager',
-    description:
-      'Centralize and optimize your organization&apos;s knowledge with AI-powered content management.',
+    name: 'AI Strategy & Consulting',
+    description: 'Strategic guidance and consulting to maximize the value of your AI investments.',
     features: [
-      'Content organization',
-      'Smart search',
-      'Version control',
-      'Access management'
+      'AI readiness assessment',
+      'ROI analysis',
+      'Implementation planning',
+      'Change management'
     ],
     benefits: [
-      '50% reduction in content creation time',
-      '70% faster information retrieval',
-      '90% improvement in content accuracy'
+      'Clear AI roadmap',
+      'Measurable outcomes',
+      'Reduced risk',
+      'Faster adoption'
     ],
-    industries: ['B2B Tech Support', 'Healthcare', 'High Tech']
+    industries: ['Enterprise', 'Healthcare', 'Finance', 'Legal']
   },
   {
-    name: 'Sales Assistant',
-    description:
-      'Boost sales performance with AI-powered tools for research, qualification, and deal management.',
+    name: 'Managed Services',
+    description: 'Fully managed AI operations and maintenance for worry-free deployment.',
     features: [
-      'Lead qualification',
-      'Deal intelligence',
-      'Competitor analysis',
-      'Sales coaching'
+      '24/7 monitoring',
+      'Proactive maintenance',
+      'Performance optimization',
+      'Security management'
     ],
     benefits: [
-      '45% increase in sales productivity',
-      '60% reduction in research time',
-      '70% improvement in win rates'
+      'Reduced operational burden',
+      'Consistent performance',
+      'Lower total cost',
+      'Focus on core business'
     ],
-    industries: ['High Tech', 'B2B Tech Support', 'Banking']
-  },
-  {
-    name: 'Virtual Assistant',
-    description:
-      'Deliver exceptional self-service experiences with intelligent virtual assistants.',
-    features: [
-      'Natural language processing',
-      'Multi-channel support',
-      'Contextual understanding',
-      'Seamless handoff'
-    ],
-    benefits: [
-      '60% reduction in response time',
-      '45% increase in self-service resolution',
-      '50% improvement in customer satisfaction'
-    ],
-    industries: ['Travel & Hospitality', 'Healthcare', 'Banking']
+    industries: ['All Industries']
   }
 ];
 
-export default function Solutions() {
+export default function Services() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
       {/* Hero Section */}
@@ -130,52 +113,50 @@ export default function Solutions() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-emerald-900 mb-4 sm:mb-6">
-              Ready-to-Deploy Solutions
+              Professional Services
             </h1>
             <p className="text-base sm:text-lg lg:text-xl text-emerald-700 mb-8 sm:mb-12 max-w-3xl mx-auto">
-              Our pre-built solution bundles address specific business challenges
-              with proven results. Each solution can be customized to your unique
-              requirements.
+              Our comprehensive services ensure successful implementation and ongoing success of your AI initiatives.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
                 href="/contact"
                 className="btn-primary w-full sm:w-auto"
               >
-                Book a Demo
+                Book a Consultation
               </Link>
               <Link
-                href="/use-cases"
+                href="/products"
                 className="btn-secondary w-full sm:w-auto"
               >
-                View Use Cases
+                View Products
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Solutions Grid */}
+      {/* Services Grid */}
       <section className="py-12 sm:py-16 lg:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-            {solutions.map((solution, index) => (
+            {services.map((service, index) => (
               <div
                 key={index}
                 className="card group hover:border-emerald-200 flex flex-col h-full bg-white/50 backdrop-blur-sm"
               >
                 <div className="flex-grow p-6 sm:p-8">
                   <h2 className="text-xl sm:text-2xl font-bold text-emerald-900 mb-4">
-                    {solution.name}
+                    {service.name}
                   </h2>
-                  <p className="text-emerald-700 mb-6">{solution.description}</p>
+                  <p className="text-emerald-700 mb-6">{service.description}</p>
 
                   <div className="mb-6">
                     <h3 className="text-sm font-semibold text-emerald-900 mb-3">
-                      Key Features
+                      Service Features
                     </h3>
                     <ul className="space-y-2">
-                      {solution.features.map((feature, featureIndex) => (
+                      {service.features.map((feature, featureIndex) => (
                         <li
                           key={featureIndex}
                           className="flex items-center text-emerald-700"
@@ -201,10 +182,10 @@ export default function Solutions() {
 
                   <div className="mb-6">
                     <h3 className="text-sm font-semibold text-emerald-900 mb-3">
-                      Measurable Benefits
+                      Key Benefits
                     </h3>
                     <ul className="space-y-2">
-                      {solution.benefits.map((benefit, benefitIndex) => (
+                      {service.benefits.map((benefit, benefitIndex) => (
                         <li
                           key={benefitIndex}
                           className="flex items-center text-emerald-700"
@@ -233,7 +214,7 @@ export default function Solutions() {
                       Ideal For
                     </h3>
                     <div className="flex flex-wrap gap-2">
-                      {solution.industries.map((industry, industryIndex) => (
+                      {service.industries.map((industry, industryIndex) => (
                         <span
                           key={industryIndex}
                           className="px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full text-sm"
@@ -245,7 +226,7 @@ export default function Solutions() {
                   </div>
                 </div>
 
-                <div className="p-6 sm:p-8 border-t border-emerald-100">
+                <div className="border-t border-emerald-100">
                   <Link
                     href="/contact"
                     className="btn-primary w-full text-center"
@@ -260,30 +241,29 @@ export default function Solutions() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-emerald-50">
+      <section className="py-12 sm:py-16 lg:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="card bg-white border-emerald-200">
-              <div className="text-center px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-emerald-900 mb-4 sm:mb-6">
-                  Need a Custom Solution?
+          <div className="max-w-3xl mx-auto">
+            <div className="card bg-emerald-50 border-emerald-200">
+              <div className="text-center p-8">
+                <h2 className="text-2xl sm:text-3xl font-bold text-emerald-900 mb-4">
+                  Ready to Get Started?
                 </h2>
-                <p className="text-base sm:text-lg text-emerald-700 mb-8 sm:mb-12 max-w-2xl mx-auto">
-                  We can create a tailored solution that perfectly matches your
-                  business requirements. Let&apos;s discuss your specific needs.
+                <p className="text-emerald-700 mb-8">
+                  Our team of AI experts is ready to help you implement and optimize your AI solutions. From initial setup to ongoing support, we&apos;ll ensure your success every step of the way.
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                   <Link
                     href="/contact"
                     className="btn-primary w-full sm:w-auto"
                   >
-                    Book a Demo
+                    Schedule Consultation
                   </Link>
                   <Link
-                    href="/industries"
+                    href="/products"
                     className="btn-secondary w-full sm:w-auto"
                   >
-                    View Industries
+                    View Products
                   </Link>
                 </div>
               </div>

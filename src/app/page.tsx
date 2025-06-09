@@ -19,7 +19,7 @@ export default function Home() {
               <Link href="/contact" className="btn-primary">
                 Book a Demo
               </Link>
-              <Link href="/solutions" className="btn-secondary">
+              <Link href="/services" className="btn-secondary">
                 Explore Solutions
               </Link>
             </div>
@@ -84,7 +84,7 @@ export default function Home() {
                 title: 'Sales Enablement Suite',
                 description: 'Boost sales team productivity with AI-powered tools for discovery, knowledge access, and call analysis.',
                 metrics: ['60% less research time', '40% more sales', '90% better prep'],
-                link: '/solutions#sales',
+                link: '/services#sales',
                 icon: (
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
@@ -95,7 +95,7 @@ export default function Home() {
                 title: 'Support Automation Suite',
                 description: 'Transform customer support with AI-powered tools for ticket handling, call analysis, and knowledge management.',
                 metrics: ['70% fewer tickets', '90% faster response', '50% less training'],
-                link: '/solutions#support',
+                link: '/services#support',
                 icon: (
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -106,7 +106,7 @@ export default function Home() {
                 title: 'Healthcare Ops AI',
                 description: 'Enhance healthcare operations with AI-powered tools for compliance monitoring and patient support.',
                 metrics: ['90% less violations', '70% faster processing', '50% less admin'],
-                link: '/solutions#healthcare',
+                link: '/services#healthcare',
                 icon: (
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
@@ -117,7 +117,7 @@ export default function Home() {
                 title: 'Object Identification AI',
                 description: 'Automate quality control and inventory management with AI-powered object detection.',
                 metrics: ['95% accuracy', '80% faster inspection', '60% cost reduction'],
-                link: '/solutions#object-id',
+                link: '/services#object-id',
                 icon: (
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -129,7 +129,7 @@ export default function Home() {
                 title: 'Compliance LLM Suite',
                 description: 'Ensure regulatory compliance with AI-powered document analysis and monitoring.',
                 metrics: ['99% compliance rate', '85% faster audits', '70% risk reduction'],
-                link: '/solutions#compliance',
+                link: '/services#compliance',
                 icon: (
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />

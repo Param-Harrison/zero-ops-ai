@@ -58,12 +58,12 @@ export default function Footer() {
             <h4 className="font-semibold text-emerald-900 mb-4">Products</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/agents" className="text-emerald-700 hover:text-emerald-900 transition-colors">
+                <Link href="/products" className="text-emerald-700 hover:text-emerald-900 transition-colors">
                   AI Agents
                 </Link>
               </li>
               <li>
-                <Link href="/solutions" className="text-emerald-700 hover:text-emerald-900 transition-colors">
+                <Link href="/services" className="text-emerald-700 hover:text-emerald-900 transition-colors">
                   Solutions
                 </Link>
               </li>

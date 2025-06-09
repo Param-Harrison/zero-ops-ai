@@ -21,9 +21,9 @@ export default function Header() {
 
           <div className="hidden md:flex items-center space-x-8">
             <Link 
-              href="/agents" 
+              href="/products" 
               className={`transition-colors font-medium ${
-                isActive('/agents') 
+                isActive('/products') 
                   ? 'text-emerald-600 border-b-2 border-emerald-600' 
                   : 'text-emerald-900 hover:text-emerald-600'
               }`}
@@ -31,9 +31,9 @@ export default function Header() {
               AI Agents
             </Link>
             <Link 
-              href="/solutions" 
+              href="/services" 
               className={`transition-colors font-medium ${
-                isActive('/solutions') 
+                isActive('/services') 
                   ? 'text-emerald-600 border-b-2 border-emerald-600' 
                   : 'text-emerald-900 hover:text-emerald-600'
               }`}
@@ -110,9 +110,9 @@ export default function Header() {
             >
               <div className="flex flex-col space-y-4 py-4">
                 <Link
-                  href="/agents"
+                  href="/products"
                   className={`transition-colors font-medium px-2 py-1 ${
-                    isActive('/agents') 
+                    isActive('/products') 
                       ? 'text-emerald-600 bg-emerald-50' 
                       : 'text-emerald-900 hover:text-emerald-600'
                   }`}
@@ -121,9 +121,9 @@ export default function Header() {
                   AI Agents
                 </Link>
                 <Link
-                  href="/solutions"
+                  href="/services"
                   className={`transition-colors font-medium px-2 py-1 ${
-                    isActive('/solutions') 
+                    isActive('/services') 
                       ? 'text-emerald-600 bg-emerald-50' 
                       : 'text-emerald-900 hover:text-emerald-600'
                   }`}

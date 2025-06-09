@@ -152,7 +152,7 @@ export default function Industries() {
                 Book a Demo
               </Link>
               <Link
-                href="/solutions"
+                href="/services"
                 className="btn-secondary w-full sm:w-auto"
               >
                 View Solutions
