@@ -10,6 +10,10 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "ZeroOpsAI - Private AI Agents for Work That Matters",
   description: "Deploy secure, private AI agents built on open-source technology. Perfect for B2B SaaS, Healthcare, Finance, and Call Centers.",
+  icons: {
+    icon: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({
