@@ -254,73 +254,73 @@ export default function Products() {
             From document analysis to customer support, our products deliver immediate value.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-            <Link
-              href="/contact"
-              className="btn-primary w-full sm:w-auto"
-            >
-              Book a Demo
-            </Link>
-            <Link
-              href="/services"
-              className="btn-secondary w-full sm:w-auto"
-            >
-              View Services
-            </Link>
+              <Link
+                href="/contact"
+                className="btn-primary w-full sm:w-auto"
+              >
+                Book a Demo
+              </Link>
+              <Link
+                href="/services"
+                className="btn-secondary w-full sm:w-auto"
+              >
+                View Services
+              </Link>
+            </div>
           </div>
-        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {products.map((product, index) => (
-            <div
-              key={index}
+            {products.map((product, index) => (
+              <div
+                key={index}
               className="card group hover:border-emerald-200"
-            >
+              >
               <div className="flex flex-col h-full">
                 <h2 className="text-xl font-bold text-emerald-900 mb-4">
-                  {product.name}
-                </h2>
-                <p className="text-emerald-700 mb-6">{product.description}</p>
+                    {product.name}
+                  </h2>
+                  <p className="text-emerald-700 mb-6">{product.description}</p>
 
-                <div className="mb-6">
-                  <h3 className="text-sm font-semibold text-emerald-900 mb-3">
+                  <div className="mb-6">
+                    <h3 className="text-sm font-semibold text-emerald-900 mb-3">
                     Features
-                  </h3>
-                  <ul className="space-y-2">
+                    </h3>
+                    <ul className="space-y-2">
                     {product.features.map((feature, featureIndex) => (
-                      <li
+                        <li
                         key={featureIndex}
-                        className="flex items-center text-emerald-700"
-                      >
-                        <svg
-                          className="w-5 h-5 text-emerald-500 mr-2"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
+                          className="flex items-center text-emerald-700"
                         >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
+                          <svg
+                          className="w-5 h-5 text-emerald-500 mr-2"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M5 13l4 4L19 7"
+                            />
+                          </svg>
                         {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
-                <div className="mb-6">
-                  <h3 className="text-sm font-semibold text-emerald-900 mb-3">
+                  <div className="mb-6">
+                    <h3 className="text-sm font-semibold text-emerald-900 mb-3">
                     Problem Solved
-                  </h3>
+                    </h3>
                   <p className="text-emerald-700">{product.problem}</p>
-                </div>
+                  </div>
 
-                <div className="mb-6">
-                  <h3 className="text-sm font-semibold text-emerald-900 mb-3">
+                  <div className="mb-6">
+                    <h3 className="text-sm font-semibold text-emerald-900 mb-3">
                     Use Case
-                  </h3>
+                    </h3>
                   <p className="text-emerald-700">{product.useCase}</p>
                 </div>
 
@@ -332,9 +332,9 @@ export default function Products() {
                     Get Started
                   </Link>
                 </div>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
 
         <div className="mt-16">

@@ -363,73 +363,73 @@ export default function UseCases() {
                   </span>
                 </div>
                 <h2 className="text-xl font-bold text-emerald-900 mb-4">
-                  {useCase.title}
-                </h2>
-                <p className="text-emerald-700 mb-6">{useCase.description}</p>
+                    {useCase.title}
+                  </h2>
+                  <p className="text-emerald-700 mb-6">{useCase.description}</p>
 
-                <div className="mb-6">
-                  <h3 className="text-sm font-semibold text-emerald-900 mb-3">
+                  <div className="mb-6">
+                    <h3 className="text-sm font-semibold text-emerald-900 mb-3">
                     The Challenge
-                  </h3>
-                  <p className="text-emerald-700">{useCase.problem}</p>
+                    </h3>
+                    <p className="text-emerald-700">{useCase.problem}</p>
+                  </div>
+
+                  <div className="mb-6">
+                    <h3 className="text-sm font-semibold text-emerald-900 mb-3">
+                      Our Solution
+                    </h3>
+                    <ul className="space-y-2">
+                      {useCase.solution.map((step, stepIndex) => (
+                        <li
+                          key={stepIndex}
+                          className="flex items-center text-emerald-700"
+                        >
+                          <svg
+                            className="w-5 h-5 text-emerald-500 mr-2"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M5 13l4 4L19 7"
+                            />
+                          </svg>
+                          {step}
+                        </li>
+                      ))}
+                    </ul>
                 </div>
 
-                <div className="mb-6">
-                  <h3 className="text-sm font-semibold text-emerald-900 mb-3">
-                    Our Solution
-                  </h3>
-                  <ul className="space-y-2">
-                    {useCase.solution.map((step, stepIndex) => (
-                      <li
-                        key={stepIndex}
-                        className="flex items-center text-emerald-700"
-                      >
-                        <svg
-                          className="w-5 h-5 text-emerald-500 mr-2"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
+                  <div className="mb-6">
+                    <h3 className="text-sm font-semibold text-emerald-900 mb-3">
+                      Measurable Results
+                    </h3>
+                    <ul className="space-y-2">
+                      {useCase.results.map((result, resultIndex) => (
+                        <li
+                          key={resultIndex}
+                          className="flex items-center text-emerald-700"
                         >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                        {step}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="mb-6">
-                  <h3 className="text-sm font-semibold text-emerald-900 mb-3">
-                    Measurable Results
-                  </h3>
-                  <ul className="space-y-2">
-                    {useCase.results.map((result, resultIndex) => (
-                      <li
-                        key={resultIndex}
-                        className="flex items-center text-emerald-700"
-                      >
-                        <svg
-                          className="w-5 h-5 text-emerald-500 mr-2"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-                          />
-                        </svg>
-                        {result}
-                      </li>
-                    ))}
-                  </ul>
+                          <svg
+                            className="w-5 h-5 text-emerald-500 mr-2"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                            />
+                          </svg>
+                          {result}
+                        </li>
+                      ))}
+                    </ul>
                 </div>
               </div>
             </div>

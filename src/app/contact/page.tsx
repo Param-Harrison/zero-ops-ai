@@ -1,19 +1,138 @@
 'use client';
 
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
+
+const interestCategories = [
+  {
+    id: 'product',
+    name: 'AI Products',
+    description: 'Ready-to-deploy AI solutions for specific business needs'
+  },
+  {
+    id: 'service',
+    name: 'AI Services',
+    description: 'Custom AI development and implementation services'
+  },
+  {
+    id: 'custom',
+    name: 'Custom Solution',
+    description: 'Need something specific? Let\'s build it together'
+  }
+];
+
+const products = [
+  {
+    id: 'zerodocs',
+    name: 'ZeroDocs AI',
+    description: 'Document processing and intelligent Q&A system'
+  },
+  {
+    id: 'zerowork',
+    name: 'ZeroWork AI',
+    description: 'Workflow automation and process optimization'
+  },
+  {
+    id: 'zeroparse',
+    name: 'ZeroParse AI',
+    description: 'Intelligent text extraction and data parsing'
+  },
+  {
+    id: 'zeromeet',
+    name: 'ZeroMeet AI',
+    description: 'Meeting intelligence and transcription'
+  },
+  {
+    id: 'zerohire',
+    name: 'ZeroHire AI',
+    description: 'AI-powered recruitment and candidate screening'
+  },
+  {
+    id: 'zerolegal',
+    name: 'ZeroLegal AI',
+    description: 'Legal document analysis and contract review'
+  },
+  {
+    id: 'zeroinvoice',
+    name: 'ZeroInvoice AI',
+    description: 'Automated invoice processing and data extraction'
+  },
+  {
+    id: 'zerofinance',
+    name: 'ZeroFinance AI',
+    description: 'Financial document processing and analysis'
+  },
+  {
+    id: 'zerotask',
+    name: 'ZeroTask AI',
+    description: 'Task automation and workflow management'
+  },
+  {
+    id: 'zeroquery',
+    name: 'ZeroQuery AI',
+    description: 'Natural language database querying'
+  },
+  {
+    id: 'zerocall',
+    name: 'ZeroCall AI',
+    description: 'Call center automation and analytics'
+  },
+  {
+    id: 'zerosupport',
+    name: 'ZeroSupport AI',
+    description: 'Customer support automation and ticket routing'
+  },
+  {
+    id: 'zeroprivacy',
+    name: 'ZeroPrivacy AI',
+    description: 'Data privacy and compliance automation'
+  },
+  {
+    id: 'zerocode',
+    name: 'ZeroCode AI',
+    description: 'Code generation and development automation'
+  },
+  {
+    id: 'zeroimage',
+    name: 'ZeroImage AI',
+    description: 'Image processing and analysis'
+  },
+  {
+    id: 'zerovoice',
+    name: 'ZeroVoice AI',
+    description: 'Voice processing and speech recognition'
+  },
+  {
+    id: 'zeromedia',
+    name: 'ZeroMedia AI',
+    description: 'Media content analysis and processing'
+  },
+  {
+    id: 'zeroquality',
+    name: 'ZeroQuality AI',
+    description: 'Quality assurance and testing automation'
+  },
+  {
+    id: 'zeromail',
+    name: 'ZeroMail AI',
+    description: 'Email processing and response automation'
+  },
+  {
+    id: 'zerosocial',
+    name: 'ZeroSocial AI',
+    description: 'Social media monitoring and engagement'
+  }
+];
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
+    name: '',
     email: '',
     company: '',
-    phone: '',
     jobTitle: '',
-    country: '',
-    areaOfInterest: '',
+    interestCategory: '',
+    product: '',
+    message: ''
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -37,7 +156,7 @@ export default function Contact() {
             <div className="form-header">
               <h1 className="form-title">Book a Demo</h1>
               <p className="form-description">
-                Let's discuss how ZeroOpsAI can transform your business operations.
+                Let&apos;s discuss how ZeroOpsAI can transform your business operations.
               </p>
             </div>
 
@@ -53,6 +172,7 @@ export default function Contact() {
                   className="input-field"
                   placeholder="John Doe"
                   required
+                  onChange={handleChange}
                 />
               </div>
 
@@ -64,10 +184,16 @@ export default function Contact() {
                   type="email"
                   id="email"
                   name="email"
+                  pattern="^[a-zA-Z0-9._%+-]+@(?!gmail\.com)(?!yahoo\.com)(?!hotmail\.com)(?!.*@.*\.com)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                  title="Please use your company email address"
                   className="input-field"
                   placeholder="john@company.com"
                   required
+                  onChange={handleChange}
                 />
+                <p className="mt-1 text-sm text-gray-500">
+                  Please use your company email address
+                </p>
               </div>
 
               <div className="form-group">
@@ -81,62 +207,66 @@ export default function Contact() {
                   className="input-field"
                   placeholder="Acme Inc."
                   required
+                  onChange={handleChange}
                 />
               </div>
 
               <div className="form-group">
-                <label htmlFor="role" className="form-label">
+                <label htmlFor="jobTitle" className="form-label">
                   Job Title
                 </label>
                 <input
                   type="text"
-                  id="role"
-                  name="role"
+                  id="jobTitle"
+                  name="jobTitle"
                   className="input-field"
                   placeholder="CTO"
                   required
+                  onChange={handleChange}
                 />
               </div>
 
               <div className="form-group">
-                <label htmlFor="industry" className="form-label">
-                  Industry
+                <label htmlFor="interestCategory" className="form-label">
+                  What are you interested in?
                 </label>
                 <select
-                  id="industry"
-                  name="industry"
+                  id="interestCategory"
+                  name="interestCategory"
                   className="input-field"
                   required
+                  onChange={handleChange}
                 >
-                  <option value="">Select your industry</option>
-                  <option value="b2b-saas">B2B SaaS</option>
-                  <option value="healthcare">Healthcare</option>
-                  <option value="financial">Financial Services</option>
-                  <option value="call-center">Call Center</option>
-                  <option value="manufacturing">Manufacturing</option>
-                  <option value="other">Other</option>
+                  <option value="">Select an option</option>
+                  {interestCategories.map((category) => (
+                    <option key={category.id} value={category.id}>
+                      {category.name} - {category.description}
+                    </option>
+                  ))}
                 </select>
               </div>
 
-              <div className="form-group">
-                <label htmlFor="interest" className="form-label">
-                  Area of Interest
-                </label>
-                <select
-                  id="interest"
-                  name="interest"
-                  className="input-field"
-                  required
-                >
-                  <option value="">Select your interest</option>
-                  <option value="sales">Sales Enablement</option>
-                  <option value="support">Support Automation</option>
-                  <option value="healthcare">Healthcare Operations</option>
-                  <option value="object-id">Object Identification</option>
-                  <option value="compliance">Compliance & LLM</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
+              {formData.interestCategory === 'product' && (
+                <div className="form-group">
+                  <label htmlFor="product" className="form-label">
+                    Which product interests you?
+                  </label>
+                  <select
+                    id="product"
+                    name="product"
+                    className="input-field"
+                    required
+                    onChange={handleChange}
+                  >
+                    <option value="">Select a product</option>
+                    {products.map((product) => (
+                      <option key={product.id} value={product.id}>
+                        {product.name} - {product.description}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              )}
 
               <div className="form-group">
                 <label htmlFor="message" className="form-label">
@@ -148,6 +278,7 @@ export default function Contact() {
                   rows={4}
                   className="input-field"
                   placeholder="Tell us about your specific needs or challenges..."
+                  onChange={handleChange}
                 />
                 <p className="form-hint">
                   Optional: Share any specific requirements or questions you have.
