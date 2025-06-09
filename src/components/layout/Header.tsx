@@ -28,7 +28,7 @@ export default function Header() {
                   : 'text-emerald-900 hover:text-emerald-600'
               }`}
             >
-              AI Agents
+              Products
             </Link>
             <Link 
               href="/services" 
@@ -38,7 +38,7 @@ export default function Header() {
                   : 'text-emerald-900 hover:text-emerald-600'
               }`}
             >
-              Solutions
+              Services
             </Link>
             <Link 
               href="/use-cases" 
@@ -118,7 +118,7 @@ export default function Header() {
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  AI Agents
+                  Products
                 </Link>
                 <Link
                   href="/services"
@@ -129,7 +129,7 @@ export default function Header() {
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Solutions
+                  Services
                 </Link>
                 <Link
                   href="/use-cases"
