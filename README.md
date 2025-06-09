@@ -22,7 +22,7 @@ A modern website for ZeroOpsAI, an AI agency offering modular AI agents and serv
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/zero-ops-ai.git
+   git clone https://github.com/Param-Harrison/zero-ops-ai.git
    cd zero-ops-ai
    ```
 
@@ -68,11 +68,32 @@ src/
 
 ## Deployment
 
+### Option 1: Vercel (Recommended)
+
 The site is optimized for deployment on Vercel:
 
 1. Push your code to GitHub
 2. Import the project in Vercel
 3. Deploy
+
+### Option 2: Coolify
+
+To deploy on Coolify:
+
+1. Create a new service in Coolify
+2. Select "Application" as the service type
+3. Connect your GitHub repository
+4. Configure the following settings:
+   - Build Command: `npm run build`
+   - Start Command: `npm start`
+   - Node.js version: 18 (or higher)
+   - Environment Variables (if needed):
+     ```
+     NODE_ENV=production
+     ```
+5. Deploy the service
+
+Note: Make sure your Coolify instance has sufficient resources allocated for the build process.
 
 ## Contributing
 
@@ -82,12 +103,8 @@ The site is optimized for deployment on Vercel:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Contact
 
 Secret SaaS OÜ - [contact@zeroopsai.com](mailto:contact@zeroopsai.com)
 
-Project Link: [https://github.com/yourusername/zero-ops-ai](https://github.com/yourusername/zero-ops-ai)
+Project Link: [https://github.com/yourusername/zero-ops-ai](https://github.com/Param-Harrison/zero-ops-ai)
