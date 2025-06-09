@@ -79,7 +79,7 @@ export default function PrivacyPage() {
           <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
           <p className="mb-4">
             If you have any questions about this privacy policy or our privacy practices, please contact us
-            at privacy@zeroopsai.com.
+            at support@zeroopsai.com.
           </p>
         </section>
       </div>
