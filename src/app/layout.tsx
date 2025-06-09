@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import HashScroll from "./components/HashScroll";
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +26,9 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={inter.className}>
         <Header />
-        <HashScroll />
+        <Suspense fallback={null}>
+          <HashScroll />
+        </Suspense>
         <main>
           {children}
         </main>
