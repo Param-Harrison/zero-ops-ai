@@ -273,7 +273,8 @@ export default function Products() {
             {products.map((product, index) => (
               <div
                 key={index}
-              className="card group hover:border-emerald-200"
+                id={product.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}
+                className="card group hover:border-emerald-200"
               >
               <div className="flex flex-col h-full">
                 <h2 className="text-xl font-bold text-emerald-900 mb-4">

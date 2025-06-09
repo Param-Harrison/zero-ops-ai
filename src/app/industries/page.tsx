@@ -255,6 +255,7 @@ export default function Industries() {
           {industries.map((industry, index) => (
             <div
               key={index}
+              id={industry.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}
               className="card group hover:border-emerald-200 transition-all duration-200 hover:shadow-lg"
             >
               <div className="flex items-center mb-4">

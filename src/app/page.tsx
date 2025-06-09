@@ -156,6 +156,36 @@ export default function Home() {
                 description: 'AI-powered automation of complex business processes.',
                 features: ['Process analysis', 'Custom integration', 'Performance monitoring'],
                 link: '/services#workflow-automation'
+              },
+              {
+                name: 'Private AI Chatbot Deployment',
+                description: 'Deploy PrivateGPT for internal knowledge search and document Q&A',
+                features: [
+                  'Secure deployment',
+                  'Custom training',
+                  'Ongoing support'
+                ],
+                link: '/services#private-ai-chatbot-deployment'
+              },
+              {
+                name: 'Document ETL Pipeline',
+                description: 'Extract and clean document sets using Unstructured.io',
+                features: [
+                  'Automated processing',
+                  'Data validation',
+                  'Custom pipelines'
+                ],
+                link: '/services#document-etl-pipeline-service'
+              },
+              {
+                name: 'Enterprise AI Assistant',
+                description: 'Manage Onyx for real-time access to Google Drive, Slack, Jira, and more',
+                features: [
+                  'Multi-platform integration',
+                  'Custom workflows',
+                  '24/7 monitoring'
+                ],
+                link: '/services#enterprise-ai-assistant-service'
               }
             ].map((service, index) => (
               <Link key={index} href={service.link} className="card p-8 hover-lift">
@@ -257,7 +287,7 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
                   </svg>
                 ),
-                link: '/industries#education'
+                link: '/industries#education-edtech'
               },
               {
                 name: 'Real Estate',

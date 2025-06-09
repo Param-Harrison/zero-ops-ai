@@ -372,6 +372,7 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={index}
+              id={service.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}
               className="card group hover:border-emerald-200"
             >
               <div className="flex flex-col h-full">
