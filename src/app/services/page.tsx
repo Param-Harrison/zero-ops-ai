@@ -3,105 +3,113 @@ import Link from 'next/link';
 const services = [
   {
     name: 'RAG-as-a-Service',
-    description: 'Transform your business with enterprise-grade Retrieval Augmented Generation solutions.',
+    description: 'Transform your business with practical Retrieval Augmented Generation solutions that make your company knowledge instantly accessible.',
     features: [
-      'Custom knowledge base integration',
-      'Advanced RAG capabilities',
-      'Enterprise-grade security',
-      '24/7 support'
+      'Advanced knowledge base integration',
+      'Intelligent document processing',
+      'Semantic search optimization',
+      'Real-time API integration',
+      'Custom embedding models',
+      'Multi-format support'
     ],
     benefits: [
-      'Quick access to company knowledge',
-      'Instant answers to customer queries',
-      'Accelerated research capabilities'
+      'Faster access to company information',
+      'Improved customer support',
+      'Efficient research capabilities',
+      'Enhanced decision making',
+      'Reduced training time',
+      'Better knowledge retention'
     ],
-    industries: ['Legal', 'Healthcare', 'Financial Services', 'SaaS'],
+    industries: ['Legal', 'Healthcare', 'Financial Services', 'SaaS', 'Manufacturing', 'Education'],
     link: '/services/rag-as-a-service'
   },
   {
     name: 'AI Agents',
-    description: 'Deploy intelligent AI agents to automate and enhance your business operations.',
+    description: 'Deploy practical AI agents that automate routine tasks and enhance your business operations.',
     features: [
-      'Custom AI agent development',
+      'Intelligent task automation',
+      'Process optimization',
+      'Advanced data processing',
+      'Workflow integration',
       'Multi-agent orchestration',
-      'Process automation',
-      'Real-time monitoring'
+      'Custom agent development'
     ],
     benefits: [
       'Increased operational efficiency',
-      'Reduced manual workload',
-      'Enhanced decision-making'
+      'Reduced manual work',
+      'Better data handling',
+      'Improved accuracy',
+      '24/7 operation',
+      'Scalable automation'
     ],
-    industries: ['Manufacturing', 'Healthcare', 'Finance', 'Technology'],
+    industries: ['Manufacturing', 'Healthcare', 'Finance', 'Technology', 'Retail', 'Logistics'],
     link: '/services/ai-agents'
   },
   {
     name: 'MVP as a Service',
-    description: 'Launch your product faster with our comprehensive MVP development service.',
+    description: 'Launch your product faster with our streamlined MVP development service.',
     features: [
       'Rapid prototyping',
       'Market validation',
+      'User feedback integration',
       'Scalable architecture',
-      'User feedback integration'
+      'Continuous deployment',
+      'Performance monitoring'
     ],
     benefits: [
       'Faster time to market',
-      'Reduced development costs',
-      'Validated product-market fit'
+      'Cost-effective development',
+      'Validated product-market fit',
+      'Reduced development risk',
+      'Early user feedback',
+      'Foundation for scaling'
     ],
-    industries: ['Startups', 'SaaS', 'E-commerce', 'FinTech'],
+    industries: ['Startups', 'SaaS', 'E-commerce', 'FinTech', 'Healthcare', 'Education'],
     link: '/services/mvp-as-a-service'
   },
   {
-    name: 'Custom AI Model Development',
-    description: 'Build cutting-edge AI models tailored to your specific business needs.',
+    name: 'AI Training & Workshops',
+    description: 'Empower your team with practical AI knowledge and skills through hands-on training.',
     features: [
-      'State-of-the-art algorithms',
-      'MLOps integration',
-      'Model optimization',
-      'Continuous monitoring'
+      'Custom training programs',
+      'Hands-on workshops',
+      'Best practices implementation',
+      'Technical deep-dives',
+      'Use case development',
+      'Integration guidance'
     ],
     benefits: [
-      'Competitive advantage',
-      'Improved accuracy',
-      'Scalable solutions'
+      'Enhanced team capabilities',
+      'Practical AI knowledge',
+      'Better tool utilization',
+      'Improved decision making',
+      'Faster implementation',
+      'Reduced dependency'
     ],
-    industries: ['Healthcare', 'Finance', 'Manufacturing', 'Technology'],
-    link: '/services/custom-ai-models'
+    industries: ['Technology', 'Education', 'Healthcare', 'Finance', 'Manufacturing', 'Retail'],
+    link: '/services/training'
   },
   {
-    name: 'LLM Integration & Customization',
-    description: 'Integrate and customize large language models to enhance your operations.',
+    name: 'Custom App Development',
+    description: 'Build tailored applications that solve your specific business challenges.',
     features: [
-      'GPT-4 integration',
-      'Custom fine-tuning',
-      'Multi-language support',
-      'Cloud deployment'
+      'Custom development',
+      'Integration services',
+      'UI/UX design',
+      'Quality assurance',
+      'Cloud deployment',
+      'Maintenance & support'
     ],
     benefits: [
-      'Enhanced customer support',
-      'Automated content generation',
-      'Improved text analysis'
+      'Tailored solutions',
+      'Seamless integration',
+      'Modern user experience',
+      'Scalable architecture',
+      'Ongoing support',
+      'Future-proof technology'
     ],
-    industries: ['Customer Support', 'Marketing', 'Education', 'Legal'],
-    link: '/services/llm-integration'
-  },
-  {
-    name: 'AI Research & Development',
-    description: 'Explore cutting-edge AI research and frontier technologies.',
-    features: [
-      'AGI research',
-      'Novel algorithm development',
-      'Prototype development',
-      'Experimental design'
-    ],
-    benefits: [
-      'Technology leadership',
-      'Innovation acceleration',
-      'Future-proof solutions'
-    ],
-    industries: ['Research', 'Technology', 'Healthcare', 'Finance'],
-    link: '/services/ai-research'
+    industries: ['Technology', 'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Education'],
+    link: '/services/custom-apps'
   }
 ];
 
@@ -187,21 +195,21 @@ export default function Services() {
         </div>
 
         {/* CTA Section */}
-        <div className="relative overflow-hidden bg-gradient-to-br from-emerald-50 via-white to-emerald-50">
+        <div className="relative overflow-hidden bg-gradient-to-br from-emerald-50 via-white to-emerald-50 mt-20">
           <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
           <div className="container relative">
-            <div className="max-w-4xl mx-auto text-center py-20 sm:py-24">
-              <h2 className="text-4xl sm:text-5xl font-bold text-emerald-900 mb-6 sm:mb-8">
+            <div className="max-w-4xl mx-auto text-center py-24 sm:py-32">
+              <h2 className="text-4xl sm:text-5xl font-bold text-emerald-900 mb-8 sm:mb-10">
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-xl sm:text-2xl text-emerald-700 mb-8 sm:mb-12 max-w-3xl mx-auto">
+              <p className="text-xl sm:text-2xl text-emerald-700 mb-10 sm:mb-14 max-w-3xl mx-auto">
                 Choose from our comprehensive suite of AI services and start your transformation journey today.
                 Let&apos;s build your future together.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <Link
                   href="/contact"
-                  className="btn-primary text-lg px-8 py-4"
+                  className="btn-primary text-lg px-10 py-5"
                 >
                   Schedule a Consultation
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -210,7 +218,7 @@ export default function Services() {
                 </Link>
                 <Link
                   href="/use-cases"
-                  className="btn-secondary text-lg px-8 py-4"
+                  className="btn-secondary text-lg px-10 py-5"
                 >
                   View Use Cases
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

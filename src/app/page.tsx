@@ -14,7 +14,7 @@ export default function Home() {
               <span className="text-emerald-600">Built for Security & Scale</span>
             </h1>
             <p className="text-xl sm:text-2xl text-emerald-700 mb-8 sm:mb-12 max-w-3xl mx-auto">
-              Deploy secure, private AI solutions that transform your business operations while maintaining complete data control.
+              Transform your business with our comprehensive AI services, from rapid MVP development to enterprise-grade AI solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
@@ -140,52 +140,22 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {[
               {
-                name: 'Private AI Deployment',
-                description: 'Secure deployment of AI models within your infrastructure.',
-                features: ['Custom training', 'Security controls', 'Ongoing support'],
-                link: '/services#private-ai-deployment'
+                name: 'MVP as a Service',
+                description: 'Transform your idea into a production-ready AI product in weeks, not months.',
+                features: ['Rapid prototyping', 'Production deployment', 'Ongoing support'],
+                link: '/services/mvp'
               },
               {
-                name: 'Document Processing',
-                description: 'Custom document processing pipelines for your specific needs.',
-                features: ['Multi-format support', 'Data validation', 'Custom workflows'],
-                link: '/services#document-processing'
+                name: 'RAG as a Service',
+                description: 'Build intelligent document processing and knowledge management systems.',
+                features: ['Document processing', 'Knowledge base creation', 'Custom embeddings'],
+                link: '/services/rag'
               },
               {
-                name: 'Workflow Automation',
-                description: 'AI-powered automation of complex business processes.',
-                features: ['Process analysis', 'Custom integration', 'Performance monitoring'],
-                link: '/services#workflow-automation'
-              },
-              {
-                name: 'Private AI Chatbot Deployment',
-                description: 'Deploy PrivateGPT for internal knowledge search and document Q&A',
-                features: [
-                  'Secure deployment',
-                  'Custom training',
-                  'Ongoing support'
-                ],
-                link: '/services#private-ai-chatbot-deployment'
-              },
-              {
-                name: 'Document ETL Pipeline',
-                description: 'Extract and clean document sets using Unstructured.io',
-                features: [
-                  'Automated processing',
-                  'Data validation',
-                  'Custom pipelines'
-                ],
-                link: '/services#document-etl-pipeline-service'
-              },
-              {
-                name: 'Enterprise AI Assistant',
-                description: 'Manage Onyx for real-time access to Google Drive, Slack, Jira, and more',
-                features: [
-                  'Multi-platform integration',
-                  'Custom workflows',
-                  '24/7 monitoring'
-                ],
-                link: '/services#enterprise-ai-assistant-service'
+                name: 'AI Agents',
+                description: 'Deploy autonomous AI agents that integrate with your existing tools and workflows.',
+                features: ['Multi-platform integration', 'Custom workflows', 'Real-time monitoring'],
+                link: '/services/agents'
               }
             ].map((service, index) => (
               <Link key={index} href={service.link} className="card p-8 hover-lift">
