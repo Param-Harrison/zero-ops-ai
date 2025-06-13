@@ -78,7 +78,7 @@ export default function Home() {
                 name: 'MVP as a Service',
                 description: 'Transform your idea into a production-ready AI product in weeks, not months.',
                 features: ['Rapid prototyping', 'Production deployment', 'Ongoing support'],
-                link: '/services/mvp',
+                link: '/services/mvp-as-a-service',
                 icon: (
                   <svg className="w-12 h-12 text-emerald-500 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -89,7 +89,7 @@ export default function Home() {
                 name: 'RAG as a Service',
                 description: 'Build intelligent document processing and knowledge management systems.',
                 features: ['Document processing', 'Knowledge base creation', 'Custom embeddings'],
-                link: '/services/rag',
+                link: '/services/rag-as-a-service',
                 icon: (
                   <svg className="w-12 h-12 text-emerald-500 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -100,7 +100,7 @@ export default function Home() {
                 name: 'AI Agents',
                 description: 'Deploy autonomous AI agents that integrate with your existing tools and workflows.',
                 features: ['Multi-platform integration', 'Custom workflows', 'Real-time monitoring'],
-                link: '/services/agents',
+                link: '/services/ai-agent-solutions',
                 icon: (
                   <svg className="w-12 h-12 text-emerald-500 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -109,19 +109,19 @@ export default function Home() {
               }
             ].map((service, index) => (
               <Link key={index} href={service.link} className="card p-8 hover-lift group">
-                <div className="text-center">
+                <div className="flex flex-col items-center">
                   {service.icon}
                   <h3 className="text-2xl font-bold text-emerald-900 mb-4 group-hover:text-emerald-700">
                     {service.name}
                   </h3>
-                  <p className="text-emerald-700 mb-6">{service.description}</p>
-                  <ul className="space-y-3">
+                  <p className="text-emerald-700 mb-6 text-center">{service.description}</p>
+                  <ul className="space-y-3 w-full">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-emerald-700">
-                        <svg className="w-5 h-5 mr-3 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-5 h-5 mr-3 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
-                        {feature}
+                        <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
