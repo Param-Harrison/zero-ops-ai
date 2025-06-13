@@ -1,3 +1,5 @@
+'use client';
+
 export default function Contact() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white py-8 sm:py-12 md:py-16">
@@ -62,7 +64,7 @@ export default function Contact() {
 
           {/* Right Column - Contact Form */}
           <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8">
-            <form className="space-y-4" noValidate>
+            <form className="space-y-4" action="/api/contact" method="POST">
               <div className="form-group">
                 <label htmlFor="name" className="form-label">Name</label>
                 <input
@@ -88,8 +90,8 @@ export default function Contact() {
                   className="input-field"
                   placeholder="you@company.com"
                   required
-                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                  title="Please enter a valid work email address"
+                  pattern="[a-zA-Z0-9._%+-]+@(?!gmail\.com|yahoo\.com|hotmail\.com|outlook\.com|aol\.com|icloud\.com|mail\.com)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                  title="Please use your work email address"
                 />
               </div>
 
@@ -104,8 +106,6 @@ export default function Contact() {
                   required
                   minLength={2}
                   maxLength={100}
-                  pattern="[A-Za-z0-9\s\-&.,]+"
-                  title="Please enter a valid company name"
                 />
               </div>
 
@@ -144,7 +144,7 @@ export default function Contact() {
                   type="submit"
                   className="btn-primary w-full"
                 >
-                  Send Message
+                  Schedule Consultation
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
