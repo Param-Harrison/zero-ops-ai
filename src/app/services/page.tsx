@@ -362,15 +362,6 @@ export default function Services() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </Link>
-            <Link
-              href="/products"
-              className="btn-secondary w-full sm:w-auto"
-            >
-              View Products
-              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
           </div>
         </div>
 
@@ -460,15 +451,6 @@ export default function Services() {
                     ))}
                   </div>
                 </div>
-
-                <div className="mt-auto">
-                  <Link
-                    href="/contact"
-                    className="btn-primary w-full"
-                  >
-                    Get Started
-                  </Link>
-                </div>
               </div>
             </div>
           ))}
@@ -489,13 +471,10 @@ export default function Services() {
                   href="/contact"
                   className="btn-primary w-full sm:w-auto"
                 >
-                  Schedule Consultation
-                </Link>
-                <Link
-                  href="/products"
-                  className="btn-secondary w-full sm:w-auto"
-                >
-                  View Products
+                  Book a Call with Us
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
                 </Link>
               </div>
             </div>
