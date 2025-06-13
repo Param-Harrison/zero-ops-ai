@@ -59,7 +59,17 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="/services" className="text-emerald-700 hover:text-emerald-900 transition-colors">
-                  Services
+                  All Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/rag-as-a-service" className="text-emerald-700 hover:text-emerald-900 transition-colors">
+                  RAG-as-a-Service
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/ai-agent-solutions" className="text-emerald-700 hover:text-emerald-900 transition-colors">
+                  AI Agents
                 </Link>
               </li>
               <li>

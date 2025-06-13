@@ -2,324 +2,184 @@ import Link from 'next/link';
 
 const useCases = [
   {
-    industry: 'Legal',
-    title: 'Contract Analysis & Risk Assessment',
-    description: 'Automated contract review, risk flagging, and deadline tracking using AI.',
-    problem: 'Legal teams spend excessive time manually reviewing contracts and identifying risks.',
-    solution: [
-      'Deploy ContractCheckGPT for automated contract analysis',
-      'Implement PrivateGPT for secure document processing',
-      'Set up automated risk alerts and deadline tracking',
+    name: 'Document Processing',
+    description: 'Automate document analysis, extraction, and processing.',
+    features: [
+      'Contract review and analysis',
+      'Medical record processing',
+      'Financial document analysis',
+      'Policy document summarization'
     ],
-    results: [
-      '75% faster contract review',
-      '90% accuracy in risk detection',
-      'Automated deadline tracking',
-    ],
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      </svg>
+    )
   },
   {
-    industry: 'Healthcare',
-    title: 'Medical Documentation & Compliance',
-    description: 'Secure transcription, note summarization, and PII protection for healthcare providers.',
-    problem: 'Healthcare providers struggle with manual documentation and compliance requirements.',
-    solution: [
-      'Implement WhisperX for call transcription',
-      'Deploy Presidio for PII redaction',
-      'Set up Meetily for note summarization',
+    name: 'Call Center Automation',
+    description: 'Transform customer service with AI-powered call handling.',
+    features: [
+      'Real-time call transcription',
+      'Sentiment analysis',
+      'Automated responses',
+      'Performance monitoring'
     ],
-    results: [
-      '85% reduction in documentation time',
-      '99.9% HIPAA compliance',
-      '40% improvement in care coordination',
-    ],
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+      </svg>
+    )
   },
   {
-    industry: 'Recruiting / HR',
-    title: 'Intelligent Hiring & Onboarding',
-    description: 'Automated resume screening, interview analysis, and new hire onboarding.',
-    problem: 'HR teams struggle with high volume of applications and manual onboarding processes.',
-    solution: [
-      'Deploy ResumeGPT for automated screening',
-      'Implement Onboarding Agent for new hires',
-      'Set up Meetily for interview analysis',
+    name: 'Content Generation',
+    description: 'Create and manage content across multiple platforms.',
+    features: [
+      'Social media post generation',
+      'Product description writing',
+      'Marketing copy creation',
+      'Content summarization'
     ],
-    results: [
-      '80% faster resume screening',
-      '60% reduction in hiring time',
-      '90% new hire satisfaction',
-    ],
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+      </svg>
+    )
   },
   {
-    industry: 'Finance',
-    title: 'Financial Analysis & Compliance',
-    description: 'Automated financial analysis, earnings call processing, and sensitive data protection.',
-    problem: 'Financial institutions face challenges in data analysis and compliance.',
-    solution: [
-      'Deploy FinGPT for financial analysis',
-      'Implement Presidio for data protection',
-      'Set up Unstructured for document processing',
+    name: 'Knowledge Management',
+    description: 'Organize and access company knowledge efficiently.',
+    features: [
+      'Document search and retrieval',
+      'Knowledge base integration',
+      'Internal wiki management',
+      'Cross-platform search'
     ],
-    results: [
-      '70% faster financial analysis',
-      '95% accuracy in data extraction',
-      '100% compliance with regulations',
-    ],
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+      </svg>
+    )
   },
   {
-    industry: 'Customer Support',
-    title: 'Intelligent Support & Call Analysis',
-    description: 'Automated call transcription, sentiment analysis, and first-line support.',
-    problem: 'Support teams struggle with high call volumes and manual analysis.',
-    solution: [
-      'Deploy WhisperX for call transcription',
-      'Implement Haystack Chatbot',
-      'Set up Call QA Agent',
+    name: 'Quality Control',
+    description: 'Ensure product quality with AI-powered inspection.',
+    features: [
+      'Visual defect detection',
+      'Process monitoring',
+      'Quality assurance automation',
+      'Compliance checking'
     ],
-    results: [
-      '60% reduction in response time',
-      '45% increase in first-call resolution',
-      '50% improvement in customer satisfaction',
-    ],
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    )
   },
   {
-    industry: 'SaaS (B2B)',
-    title: 'Knowledge Management & Support',
-    description: 'Unified search and support across documentation, knowledge bases, and communication platforms.',
-    problem: 'B2B SaaS companies struggle with scattered knowledge and support efficiency.',
-    solution: [
-      'Implement Onyx for unified search',
-      'Deploy PrivateGPT for documentation',
-      'Set up automated support workflows',
+    name: 'Data Analysis',
+    description: 'Extract insights from complex data sets.',
+    features: [
+      'Financial data analysis',
+      'Performance metrics tracking',
+      'Trend identification',
+      'Report generation'
     ],
-    results: [
-      '90% reduction in search time',
-      '60% faster support resolution',
-      'Improved customer satisfaction',
-    ],
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+      </svg>
+    )
   },
   {
-    industry: 'Marketing',
-    title: 'Content Creation & Campaign Management',
-    description: 'Automated social media content generation, scheduling, and campaign image creation.',
-    problem: 'Marketing teams struggle with content creation and campaign management.',
-    solution: [
-      'Deploy n8n Social Poster',
-      'Implement Stable Diffusion UI',
-      'Set up automated publishing workflows',
+    name: 'Process Automation',
+    description: 'Streamline business operations with intelligent automation.',
+    features: [
+      'Workflow automation',
+      'Task scheduling',
+      'Process optimization',
+      'Resource allocation'
     ],
-    results: [
-      '70% faster content creation',
-      '50% reduction in campaign setup time',
-      '40% increase in engagement',
-    ],
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+      </svg>
+    )
   },
   {
-    industry: 'E-commerce',
-    title: 'Product Management & Customer Experience',
-    description: 'Automated product tagging, description generation, and visual content creation.',
-    problem: 'E-commerce businesses face challenges in product management and content creation.',
-    solution: [
-      'Implement BLIP for image analysis',
-      'Deploy Stable Diffusion for visuals',
-      'Set up PrivateGPT for descriptions',
+    name: 'Customer Support',
+    description: 'Enhance customer service with AI-powered solutions.',
+    features: [
+      'Automated responses',
+      'Ticket classification',
+      'Customer feedback analysis',
+      'Support knowledge base'
     ],
-    results: [
-      '80% faster product onboarding',
-      '70% reduction in content creation time',
-      '40% improvement in conversion rates',
-    ],
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+      </svg>
+    )
   },
   {
-    industry: 'Call Centers',
-    title: 'Real-time Call Analysis & Performance',
-    description: 'Real-time call transcription, performance monitoring, and compliance alerts.',
-    problem: 'Call centers struggle with quality monitoring and compliance.',
-    solution: [
-      'Deploy WhisperX for real-time transcription',
-      'Implement Voice QA Agent',
-      'Set up compliance monitoring',
+    name: 'Research & Development',
+    description: 'Accelerate research with AI-powered tools.',
+    features: [
+      'Literature review',
+      'Data analysis',
+      'Hypothesis testing',
+      'Research summarization'
     ],
-    results: [
-      '85% reduction in monitoring time',
-      '90% compliance accuracy',
-      '40% improvement in agent performance',
-    ],
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+      </svg>
+    )
   },
   {
-    industry: 'Education / EdTech',
-    title: 'Learning Content & Student Support',
-    description: 'Automated lesson summarization, student onboarding, and content captioning.',
-    problem: 'Educational institutions face challenges in content creation and student support.',
-    solution: [
-      'Implement Meetily for content management',
-      'Deploy Coqui for audio processing',
-      'Set up Caption Agent (BLIP)',
+    name: 'Security & Compliance',
+    description: 'Ensure data security and regulatory compliance.',
+    features: [
+      'Data redaction',
+      'Compliance monitoring',
+      'Security analysis',
+      'Audit automation'
     ],
-    results: [
-      '60% faster content creation',
-      '50% improvement in student engagement',
-      '70% reduction in support tickets',
-    ],
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+    )
   },
   {
-    industry: 'Manufacturing',
-    title: 'Quality Control & Defect Detection',
-    description: 'AI-powered visual inspection and quality control for manufacturing processes.',
-    problem: 'Manufacturers face challenges in maintaining consistent quality control.',
-    solution: [
-      'Deploy Open Visual QA system',
-      'Implement Whisper Alerts',
-      'Set up automated quality reporting',
+    name: 'Visual Content',
+    description: 'Create and manage visual content with AI.',
+    features: [
+      'Image generation',
+      'Content tagging',
+      'Visual asset management',
+      'Alt-text generation'
     ],
-    results: [
-      '90% reduction in defects',
-      '60% decrease in inspection time',
-      '40% improvement in quality',
-    ],
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+      </svg>
+    )
   },
   {
-    industry: 'Real Estate',
-    title: 'Listing Generation & Buyer Support',
-    description: 'Automated property listing creation, buyer inquiry handling, and virtual tours.',
-    problem: 'Real estate agencies struggle with listing management and buyer support.',
-    solution: [
-      'Implement PrivateGPT for listing generation',
-      'Deploy BLIP for image analysis',
-      'Set up Support AI Agent',
+    name: 'Code Assistance',
+    description: 'Enhance development with AI-powered tools.',
+    features: [
+      'Code completion',
+      'Documentation generation',
+      'Bug detection',
+      'Code review'
     ],
-    results: [
-      '75% faster listing creation',
-      '60% increase in buyer engagement',
-      '50% reduction in response time',
-    ],
-  },
-  {
-    industry: 'Media & Publishing',
-    title: 'Content Processing & Asset Management',
-    description: 'Automated interview transcription, media asset tagging, and alt-text generation.',
-    problem: 'Media companies face challenges in content processing and asset management.',
-    solution: [
-      'Deploy Whisper for transcription',
-      'Implement BLIP for image analysis',
-      'Set up Stable Diffusion',
-    ],
-    results: [
-      '80% faster content processing',
-      '90% accuracy in asset tagging',
-      '60% reduction in manual work',
-    ],
-  },
-  {
-    industry: 'Telecom',
-    title: 'Customer Service & NPS Monitoring',
-    description: 'Automated tier-1 query handling, NPS risk detection, and call analysis.',
-    problem: 'Telecom companies struggle with customer service efficiency and NPS monitoring.',
-    solution: [
-      'Implement Rasa for query handling',
-      'Deploy WhisperX for call analysis',
-      'Set up Presidio for data protection',
-    ],
-    results: [
-      '70% faster query resolution',
-      '85% accuracy in NPS prediction',
-      '50% improvement in customer satisfaction',
-    ],
-  },
-  {
-    industry: 'Insurance',
-    title: 'Claims Processing & Policy Analysis',
-    description: 'Automated claims processing, document analysis, and policy summarization.',
-    problem: 'Insurance companies struggle with manual claims processing and risk assessment.',
-    solution: [
-      'Implement Invoiceable for document processing',
-      'Deploy Presidio for data protection',
-      'Set up Meetily for policy analysis',
-    ],
-    results: [
-      '70% faster claims processing',
-      '85% accuracy in risk assessment',
-      '60% reduction in processing costs',
-    ],
-  },
-  {
-    industry: 'Consulting',
-    title: 'Report Generation & Client Support',
-    description: 'Automated report creation, client call analysis, and private chatbot deployment.',
-    problem: 'Consulting firms face challenges in report generation and client support.',
-    solution: [
-      'Deploy Auto-GPT for report generation',
-      'Implement Meetily for call analysis',
-      'Set up PrivateGPT for client data',
-    ],
-    results: [
-      '80% faster report generation',
-      '70% reduction in analysis time',
-      '90% client satisfaction',
-    ],
-  },
-  {
-    industry: 'Logistics',
-    title: 'Shipping Management & Communication',
-    description: 'Natural language database access and automated email response system.',
-    problem: 'Logistics companies struggle with shipping management and customer communication.',
-    solution: [
-      'Implement NL2SQL for database access',
-      'Deploy Email Agent',
-      'Set up automated tracking',
-    ],
-    results: [
-      '75% faster query resolution',
-      '60% reduction in email response time',
-      '85% improvement in tracking accuracy',
-    ],
-  },
-  {
-    industry: 'Travel & Hospitality',
-    title: 'Guest Support & Feedback Analysis',
-    description: 'Automated FAQ handling, booking management, and feedback analysis.',
-    problem: 'Travel companies face challenges in guest support and feedback management.',
-    solution: [
-      'Deploy Haystack for FAQ handling',
-      'Implement WhisperX for call analysis',
-      'Set up Journey Agent',
-    ],
-    results: [
-      '70% faster guest support',
-      '80% booking efficiency',
-      '60% improvement in guest satisfaction',
-    ],
-  },
-  {
-    industry: 'Government / Public Sector',
-    title: 'Document Processing & Report Generation',
-    description: 'Secure text redaction, PDF analysis, and automated report generation.',
-    problem: 'Government agencies struggle with document processing and reporting.',
-    solution: [
-      'Implement Presidio for text redaction',
-      'Deploy Unstructured for PDF processing',
-      'Set up FinGPT for analysis',
-    ],
-    results: [
-      '85% faster document processing',
-      '99.9% compliance accuracy',
-      '70% reduction in manual work',
-    ],
-  },
-  {
-    industry: 'Engineering / DevOps',
-    title: 'Code Assistance & Documentation',
-    description: 'Local code assistance, internal wiki integration, and documentation generation.',
-    problem: 'Engineering teams face challenges in code assistance and documentation.',
-    solution: [
-      'Deploy Code Llama for code assistance',
-      'Implement Onyx for wiki integration',
-      'Set up Internal GPT',
-    ],
-    results: [
-      '60% faster code completion',
-      '70% reduction in documentation time',
-      '50% improvement in code quality',
-    ],
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+      </svg>
+    )
   }
 ];
 
@@ -327,28 +187,28 @@ export default function UseCases() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white py-20">
       <div className="container mx-auto px-4">
+        {/* Hero Section */}
         <div className="text-center mb-12 sm:mb-16">
-          <h1 className="section-title">AI Use Cases by Industry</h1>
+          <h1 className="section-title">AI Use Cases</h1>
           <p className="section-subtitle max-w-3xl mx-auto">
-            See how leading companies are using AI to solve real business challenges.
-            Each use case includes specific tools, implementation steps, and measurable results.
-            Ready to transform your business?
+            Discover how AI can transform your business operations.
+            From document processing to customer support, we&apos;ve got you covered.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
             <Link
               href="/contact"
               className="btn-primary w-full sm:w-auto"
             >
-              Book a Strategy Call
+              Get Started
               <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </Link>
             <Link
-              href="/products"
+              href="/industries"
               className="btn-secondary w-full sm:w-auto"
             >
-              Explore Products
+              View Industries
               <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
@@ -356,113 +216,60 @@ export default function UseCases() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Use Cases Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {useCases.map((useCase, index) => (
             <div
               key={index}
-              className="card group hover:border-emerald-200"
+              id={useCase.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}
+              className="card group hover:border-emerald-200 transition-all duration-200 hover:shadow-lg"
             >
-              <div className="flex flex-col h-full">
-                <div className="mb-4">
-                  <span className="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-sm font-medium">
-                    {useCase.industry}
-                  </span>
+              <div className="flex items-center mb-4">
+                <div className="text-emerald-600 group-hover:text-emerald-700 mr-3">
+                  {useCase.icon}
                 </div>
-                <h2 className="text-xl font-bold text-emerald-900 mb-4">
-                    {useCase.title}
-                  </h2>
-                  <p className="text-emerald-700 mb-6">{useCase.description}</p>
-
-                  <div className="mb-6">
-                    <h3 className="text-sm font-semibold text-emerald-900 mb-3">
-                    The Challenge
-                    </h3>
-                    <p className="text-emerald-700">{useCase.problem}</p>
-                  </div>
-
-                  <div className="mb-6">
-                    <h3 className="text-sm font-semibold text-emerald-900 mb-3">
-                      Our Solution
-                    </h3>
-                    <ul className="space-y-2">
-                      {useCase.solution.map((step, stepIndex) => (
-                        <li
-                          key={stepIndex}
-                          className="flex items-center text-emerald-700"
-                        >
-                          <svg
-                            className="w-5 h-5 text-emerald-500 mr-2"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M5 13l4 4L19 7"
-                            />
-                          </svg>
-                          {step}
-                        </li>
-                      ))}
-                    </ul>
-                </div>
-
-                  <div className="mb-6">
-                    <h3 className="text-sm font-semibold text-emerald-900 mb-3">
-                      Measurable Results
-                    </h3>
-                    <ul className="space-y-2">
-                      {useCase.results.map((result, resultIndex) => (
-                        <li
-                          key={resultIndex}
-                          className="flex items-center text-emerald-700"
-                        >
-                          <svg
-                            className="w-5 h-5 text-emerald-500 mr-2"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-                            />
-                          </svg>
-                          {result}
-                        </li>
-                      ))}
-                    </ul>
-                </div>
+                <h2 className="text-xl font-bold text-emerald-900">
+                  {useCase.name}
+                </h2>
               </div>
+              <p className="text-emerald-700 mb-4">{useCase.description}</p>
+              <ul className="space-y-2">
+                {useCase.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-center text-emerald-700">
+                    <svg className="w-5 h-5 mr-3 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
 
+        {/* CTA Section */}
         <div className="mt-16">
           <div className="card bg-emerald-50 border-emerald-200">
             <div className="text-center max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
               <h2 className="text-2xl sm:text-3xl font-bold text-emerald-900 mb-4">
-                Don&apos;t See Your Industry?
+                Ready to Transform Your Business?
               </h2>
               <p className="text-emerald-700 mb-8">
-                We can create custom solutions for any industry. Let&apos;s discuss your specific challenges and requirements.
+                Join leading companies in leveraging AI for operational excellence.
+                Our solutions are proven, secure, and ready to deploy.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link
                   href="/contact"
                   className="btn-primary w-full sm:w-auto"
                 >
-                  Contact Us
+                  Get Started
                 </Link>
                 <Link
-                  href="/products"
+                  href="/industries"
                   className="btn-secondary w-full sm:w-auto"
                 >
-                  View Products
+                  View Industries
                 </Link>
               </div>
             </div>
