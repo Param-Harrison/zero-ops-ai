@@ -73,6 +73,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/services/mvp-as-a-service" className="text-emerald-700 hover:text-emerald-900 transition-colors">
+                  MVP as a Service
+                </Link>
+              </li>
+              <li>
                 <Link href="/use-cases" className="text-emerald-700 hover:text-emerald-900 transition-colors">
                   Use Cases
                 </Link>

@@ -67,6 +67,13 @@ export default function Header() {
                   >
                     AI Agents
                   </Link>
+                  <Link
+                    href="/services/mvp-as-a-service"
+                    className="block px-4 py-2 text-sm text-emerald-900 hover:bg-emerald-50"
+                    onClick={() => setIsServicesOpen(false)}
+                  >
+                    MVP as a Service
+                  </Link>
                 </div>
               </div>
             </div>
@@ -172,6 +179,13 @@ export default function Header() {
                         onClick={() => setIsMenuOpen(false)}
                       >
                         AI Agents
+                      </Link>
+                      <Link
+                        href="/services/mvp-as-a-service"
+                        className="block px-2 py-1 text-emerald-900 hover:text-emerald-600"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        MVP as a Service
                       </Link>
                     </div>
                   )}
