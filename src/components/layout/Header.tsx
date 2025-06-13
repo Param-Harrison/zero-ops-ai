@@ -20,16 +20,6 @@ export default function Header() {
 
           <div className="hidden md:flex items-center space-x-8">
             <Link 
-              href="/products" 
-              className={`transition-colors font-medium ${
-                isActive('/products') 
-                  ? 'text-emerald-600 border-b-2 border-emerald-600' 
-                  : 'text-emerald-900 hover:text-emerald-600'
-              }`}
-            >
-              Products
-            </Link>
-            <Link 
               href="/services" 
               className={`transition-colors font-medium ${
                 isActive('/services') 
@@ -108,17 +98,6 @@ export default function Header() {
               className="md:hidden overflow-hidden"
             >
               <div className="flex flex-col space-y-4 py-4">
-                <Link
-                  href="/products"
-                  className={`transition-colors font-medium px-2 py-1 ${
-                    isActive('/products') 
-                      ? 'text-emerald-600 bg-emerald-50' 
-                      : 'text-emerald-900 hover:text-emerald-600'
-                  }`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Products
-                </Link>
                 <Link
                   href="/services"
                   className={`transition-colors font-medium px-2 py-1 ${

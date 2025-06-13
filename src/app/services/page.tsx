@@ -3,7 +3,7 @@ import Link from 'next/link';
 const services = [
   {
     name: 'Private AI Chatbot Deployment',
-    description: 'Deploy PrivateGPT for internal knowledge search and document Q&A',
+    description: "Deploy a secure AI chatbot that instantly answers questions from your internal documents and knowledge bases while keeping your data private.",
     features: [
       'Secure deployment',
       'Custom training',
@@ -19,7 +19,7 @@ const services = [
   },
   {
     name: 'Enterprise AI Assistant Service',
-    description: 'Manage Onyx for real-time access to Google Drive, Slack, Jira, and more',
+    description: "Connect your team's tools with an AI assistant that automates tasks, finds information, and streamlines workflows with enterprise-grade security.",
     features: [
       'Multi-platform integration',
       'Custom workflows',
@@ -36,7 +36,7 @@ const services = [
   },
   {
     name: 'Document ETL Pipeline Service',
-    description: 'Extract and clean document sets using Unstructured.io',
+    description: "Transform documents into structured data automatically. Extract, organize, and prepare information from PDFs, Word docs, and emails for analysis.",
     features: [
       'Automated processing',
       'Data validation',
@@ -53,7 +53,7 @@ const services = [
   },
   {
     name: 'Meeting Intelligence Service',
-    description: 'Transcribe and summarize client meetings with Meetily',
+    description: "Capture meeting insights automatically with real-time transcription, action item tracking, and smart summaries of key decisions.",
     features: [
       'Real-time transcription',
       'Action item extraction',
@@ -70,7 +70,7 @@ const services = [
   },
   {
     name: 'Resume Filtering as a Service',
-    description: 'Rank hundreds of resumes per job automatically',
+    description: "Streamline hiring by automatically analyzing and ranking candidates based on your specific requirements and job criteria.",
     features: [
       'Automated screening',
       'Custom criteria',
@@ -87,7 +87,7 @@ const services = [
   },
   {
     name: 'Legal Risk Flagging Agent',
-    description: 'Scan contracts for compliance and risk patterns',
+    description: "Review contracts with AI-powered risk detection to identify compliance issues and ensure agreements meet regulatory standards.",
     features: [
       'Risk detection',
       'Compliance checking',
@@ -104,7 +104,7 @@ const services = [
   },
   {
     name: 'Invoice Processing Automation',
-    description: 'OCR and JSON output of invoices for accounting APIs',
+    description: "Process invoices automatically from receipt to payment, extracting and validating data for seamless accounting integration.",
     features: [
       'Automated extraction',
       'API integration',
@@ -121,7 +121,7 @@ const services = [
   },
   {
     name: 'Financial Analysis Bot',
-    description: 'Chat with FinGPT about company reports and stock data',
+    description: "Get instant insights from financial data using natural language queries about reports, market trends, and stock information.",
     features: [
       'Financial analysis',
       'Market insights',
@@ -138,7 +138,7 @@ const services = [
   },
   {
     name: 'Marketing Research Agent',
-    description: 'Auto-GPT to research competitors or generate insights',
+    description: "Stay ahead with automated market research that analyzes competitors, trends, and customer behavior for strategic insights.",
     features: [
       'Competitor analysis',
       'Market research',
@@ -155,7 +155,7 @@ const services = [
   },
   {
     name: 'Natural Language BI Agent',
-    description: 'NL to SQL bot to query client dashboards and data',
+    description: "Access business data using everyday language. Ask questions about your dashboards and get instant answers with visualizations.",
     features: [
       'Query generation',
       'Dashboard integration',
@@ -172,7 +172,7 @@ const services = [
   },
   {
     name: 'Voice QA Dashboard',
-    description: 'Transcribe support calls and detect tone/compliance issues',
+    description: "Monitor customer support calls in real-time with quality analysis, compliance checking, and training opportunity identification.",
     features: [
       'Call analysis',
       'Compliance monitoring',
@@ -189,7 +189,7 @@ const services = [
   },
   {
     name: 'Custom Support Chatbot Hosting',
-    description: 'Host and train Haystack chatbot for client FAQs or docs',
+    description: "Deploy an AI chatbot trained on your products and services to provide instant, accurate customer support 24/7.",
     features: [
       'Custom training',
       'Multi-channel support',
@@ -206,7 +206,7 @@ const services = [
   },
   {
     name: 'Data Redaction Pipeline',
-    description: 'PII detection and anonymization via Presidio for compliance',
+    description: "Protect sensitive information by automatically identifying and securely redacting personal data across your documents.",
     features: [
       'PII detection',
       'Data redaction',
@@ -223,7 +223,7 @@ const services = [
   },
   {
     name: 'AI Coding Assistant Setup',
-    description: 'Local Copilot alternative, secured to private repos',
+    description: "Boost development productivity with a secure AI assistant that understands your codebase and helps with improvements.",
     features: [
       'Code assistance',
       'Security controls',
@@ -240,7 +240,7 @@ const services = [
   },
   {
     name: 'Creative Asset Generation',
-    description: 'Use Stable Diffusion to generate visuals for campaigns',
+    description: "Create professional visuals for marketing campaigns automatically, matching your brand style without design team involvement.",
     features: [
       'Image generation',
       'Style customization',
@@ -257,7 +257,7 @@ const services = [
   },
   {
     name: 'Branded Voice Agent Creator',
-    description: 'Clone CEO/brand voice with Coqui and deploy in IVRs or content',
+    description: "Create a consistent brand voice across channels by cloning your CEO's voice or developing a custom voice for various content.",
     features: [
       'Voice cloning',
       'Content generation',
@@ -274,7 +274,7 @@ const services = [
   },
   {
     name: 'Auto-Tag & Caption Media',
-    description: 'Use BLIP to auto-tag product photos or stock libraries',
+    description: "Organize media libraries automatically with smart tagging and captioning for easy search and retrieval of assets.",
     features: [
       'Image analysis',
       'Auto-tagging',
@@ -291,7 +291,7 @@ const services = [
   },
   {
     name: 'Visual QA Automation',
-    description: 'AI defect detector on assembly line footage or images',
+    description: "Ensure product quality with AI-powered visual inspection that monitors production lines and detects defects in real-time.",
     features: [
       'Defect detection',
       'Quality control',
@@ -308,7 +308,7 @@ const services = [
   },
   {
     name: 'Inbox Zero AI Agent',
-    description: 'Auto-email generator for leads, support, recruiting',
+    description: "Keep your inbox organized with automated email handling, response drafting, and workflow management.",
     features: [
       'Email automation',
       'Response generation',
@@ -325,7 +325,7 @@ const services = [
   },
   {
     name: 'Auto Social Publishing Bot',
-    description: 'Scheduled LinkedIn/X/IG post generator from prompts or RSS',
+    description: "Maintain a consistent social media presence with automated post generation and scheduling across platforms.",
     features: [
       'Content generation',
       'Multi-platform posting',
