@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import TransformCTA from '@/components/sections/TransformCTA';
 
 export default function Home() {
   return (
@@ -206,65 +207,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-600 to-emerald-700"></div>
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
-        <div className="container relative">
-          <div className="max-w-4xl mx-auto text-center py-20">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-500/20 text-white mb-8">
-              <span className="animate-pulse mr-2">✨</span>
-              Start Your AI Journey
-            </div>
-            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6 leading-tight">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-emerald-100 mb-12 max-w-2xl mx-auto">
-              Let&apos;s discuss how our enterprise AI solutions can help you achieve your goals. Schedule a consultation with our experts today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-emerald-600 bg-white rounded-lg hover:bg-emerald-50 transition-colors duration-200 shadow-lg hover:shadow-xl"
-              >
-                Schedule a Consultation
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </Link>
-              <Link
-                href="/use-cases"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white border-2 border-white rounded-lg hover:bg-white/10 transition-colors duration-200"
-              >
-                View Use Cases
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-            <div className="mt-12 flex justify-center items-center gap-8 text-sm text-emerald-100">
-              <div className="flex items-center">
-                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                Free Initial Assessment
-              </div>
-              <div className="flex items-center">
-                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                Expert Consultation
-              </div>
-              <div className="flex items-center">
-                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                Custom Solution Design
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Replace the existing CTA section with the new component */}
+      <TransformCTA
+        variant="dark"
+        title="Ready to Transform Your Business?"
+        description="Let's discuss how our enterprise AI solutions can help you achieve your goals. Schedule a consultation with our experts today."
+        primaryButtonText="Schedule a Consultation"
+        primaryButtonLink="/contact"
+        secondaryButtonText="View Use Cases"
+        secondaryButtonLink="/use-cases"
+      />
     </div>
   );
 }

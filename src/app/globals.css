@@ -14,7 +14,7 @@
 
 @layer base {
   body {
-    @apply bg-gradient-to-b from-emerald-50 to-white min-h-screen;
+    @apply bg-gradient-to-b from-emerald-50 to-white min-h-screen text-base sm:text-lg;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -24,51 +24,51 @@
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-emerald-600 border border-transparent rounded-xl shadow-sm hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-colors;
+    @apply inline-flex items-center justify-center px-4 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-medium text-white bg-emerald-600 border border-transparent rounded-xl shadow-sm hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-colors;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-8 py-4 text-base font-medium text-emerald-700 bg-white border border-emerald-300 rounded-xl shadow-sm hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-colors;
+    @apply inline-flex items-center justify-center px-4 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-medium text-emerald-700 bg-white border border-emerald-300 rounded-xl shadow-sm hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-colors;
   }
 
   .nav-link {
-    @apply text-base font-medium text-emerald-700 hover:text-emerald-900 transition-colors whitespace-nowrap;
+    @apply text-sm sm:text-base font-medium text-emerald-700 hover:text-emerald-900 transition-colors whitespace-nowrap;
   }
 
   .nav-button {
-    @apply text-base font-medium text-white bg-emerald-600 hover:bg-emerald-700 px-6 py-2 rounded-lg transition-colors whitespace-nowrap;
+    @apply text-sm sm:text-base font-medium text-white bg-emerald-600 hover:bg-emerald-700 px-4 sm:px-6 py-2 rounded-lg transition-colors whitespace-nowrap;
   }
 
   .input-field {
-    @apply block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-400 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white;
+    @apply block w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base text-gray-900 placeholder-gray-400 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white;
   }
 
   .form-group {
-    @apply space-y-2 mb-6;
+    @apply space-y-1 sm:space-y-2 mb-4 sm:mb-6;
   }
 
   .form-label {
-    @apply block text-sm font-medium text-gray-700;
+    @apply block text-xs sm:text-sm font-medium text-gray-700;
   }
 
   .form-hint {
-    @apply text-sm text-gray-500 mt-1;
+    @apply text-xs sm:text-sm text-gray-500 mt-1;
   }
 
   .form-error {
-    @apply text-sm text-red-600 mt-1;
+    @apply text-xs sm:text-sm text-red-600 mt-1;
   }
 
   .card {
-    @apply bg-white rounded-2xl shadow-sm border border-emerald-100 p-6 sm:p-8 transition-all duration-300;
+    @apply bg-white rounded-2xl shadow-sm border border-emerald-100 p-4 sm:p-6 md:p-8 transition-all duration-300;
   }
 
   .section-title {
-    @apply text-3xl sm:text-4xl md:text-5xl font-bold text-emerald-900 mb-4 sm:mb-6 leading-tight whitespace-nowrap;
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-emerald-900 mb-3 sm:mb-4 md:mb-6 leading-tight;
   }
 
   .section-subtitle {
-    @apply text-lg sm:text-xl text-emerald-700 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed;
+    @apply text-base sm:text-lg md:text-xl text-emerald-700 mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto leading-relaxed;
   }
 
   .container {
@@ -76,27 +76,27 @@
   }
 
   .section {
-    @apply py-12 sm:py-16 md:py-24;
+    @apply py-8 sm:py-12 md:py-16 lg:py-24;
   }
 
   .grid-layout {
-    @apply grid gap-6 sm:gap-8;
+    @apply grid gap-4 sm:gap-6 md:gap-8;
   }
 
   .flex-layout {
-    @apply flex flex-col sm:flex-row gap-6 sm:gap-8;
+    @apply flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8;
   }
 
   .list-item {
-    @apply flex items-center text-emerald-700 text-sm sm:text-base;
+    @apply flex items-center text-emerald-700 text-xs sm:text-sm md:text-base;
   }
 
   .list-icon {
-    @apply w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 text-emerald-500 flex-shrink-0;
+    @apply w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 mr-2 sm:mr-3 text-emerald-500 flex-shrink-0;
   }
 
   .tag {
-    @apply inline-flex items-center px-2.5 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium bg-emerald-50 text-emerald-700;
+    @apply inline-flex items-center px-2 sm:px-2.5 md:px-3 py-0.5 sm:py-1 rounded-full text-xs sm:text-sm font-medium bg-emerald-50 text-emerald-700;
   }
 
   .gradient-text {
@@ -112,39 +112,39 @@
   }
 
   .button-container {
-    @apply flex flex-col sm:flex-row gap-4 mt-6 sm:mt-8;
+    @apply flex flex-col sm:flex-row gap-3 sm:gap-4 mt-4 sm:mt-6 md:mt-8;
   }
 
   .cta-container {
-    @apply flex justify-center mt-6 sm:mt-8;
+    @apply flex justify-center mt-4 sm:mt-6 md:mt-8;
   }
 
   .form-container {
-    @apply max-w-2xl mx-auto w-full;
+    @apply max-w-2xl mx-auto w-full px-4 sm:px-6;
   }
 
   .form-card {
-    @apply card glass p-6 sm:p-8 md:p-12;
+    @apply card glass p-4 sm:p-6 md:p-8 lg:p-12;
   }
 
   .form-header {
-    @apply text-center mb-6 sm:mb-8;
+    @apply text-center mb-4 sm:mb-6 md:mb-8;
   }
 
   .form-title {
-    @apply text-2xl sm:text-3xl font-bold text-emerald-900 mb-2 sm:mb-3 leading-tight;
+    @apply text-xl sm:text-2xl md:text-3xl font-bold text-emerald-900 mb-2 sm:mb-3 leading-tight;
   }
 
   .form-description {
-    @apply text-emerald-700 text-sm sm:text-base;
+    @apply text-emerald-700 text-xs sm:text-sm md:text-base;
   }
 
   .form-footer {
-    @apply mt-6 sm:mt-8 text-center text-xs sm:text-sm text-gray-600;
+    @apply mt-4 sm:mt-6 md:mt-8 text-center text-xs sm:text-sm text-gray-600;
   }
 
   .hero-section {
-    @apply relative py-16 sm:py-20 md:py-24 lg:py-32;
+    @apply relative py-12 sm:py-16 md:py-20 lg:py-24;
   }
 
   .hero-content {
@@ -152,27 +152,27 @@
   }
 
   .feature-grid {
-    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8;
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8;
   }
 
   .testimonial-card {
-    @apply card p-6 sm:p-8;
+    @apply card p-4 sm:p-6 md:p-8;
   }
 
   .pricing-card {
-    @apply card hover-lift p-6 sm:p-8;
+    @apply card hover-lift p-4 sm:p-6 md:p-8;
   }
 
   .footer-section {
-    @apply py-12 sm:py-16 md:py-20;
+    @apply py-8 sm:py-12 md:py-16 lg:py-20;
   }
 
   .footer-grid {
-    @apply grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 sm:gap-12;
+    @apply grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-12;
   }
 
   .footer-link {
-    @apply text-sm sm:text-base text-emerald-700 hover:text-emerald-900 transition-colors;
+    @apply text-xs sm:text-sm md:text-base text-emerald-700 hover:text-emerald-900 transition-colors;
   }
 
   .social-link {
@@ -239,16 +239,16 @@
 
 /* List styles */
 .list-item {
-  @apply flex items-center gap-3 text-emerald-700;
+  @apply flex items-center gap-2 sm:gap-3 text-emerald-700;
 }
 
 .list-icon {
-  @apply w-5 h-5 text-emerald-500 flex-shrink-0;
+  @apply w-4 h-4 sm:w-5 sm:h-5 text-emerald-500 flex-shrink-0;
 }
 
 /* Tag styles */
 .tag {
-  @apply px-4 py-2 rounded-full text-sm font-medium
+  @apply px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-medium
          bg-emerald-50 text-emerald-700
          hover:bg-emerald-100 transition-colors duration-200;
 }

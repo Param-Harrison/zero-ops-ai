@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import Logo from './Logo';
@@ -10,9 +10,28 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const pathname = usePathname();
+  const servicesRef = useRef<HTMLDivElement>(null);
 
   const isActive = (path: string) => pathname === path;
-  const isServicesActive = (path: string) => pathname.startsWith('/services');
+  const isServicesActive = () => pathname.startsWith('/services');
+
+  // Close services dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (servicesRef.current && !servicesRef.current.contains(event.target as Node)) {
+        setIsServicesOpen(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMenuOpen(false);
+    setIsServicesOpen(false);
+  }, [pathname]);
 
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-emerald-100">
@@ -20,98 +39,131 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           <Logo />
 
-          <div className="hidden md:flex items-center space-x-8">
-            <div className="relative group">
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
+            <Link
+              href="/"
+              className={`relative px-2 py-1 text-sm sm:text-base font-medium text-emerald-700 hover:text-emerald-900 transition-colors ${
+                isActive('/') ? 'text-emerald-900' : ''
+              }`}
+            >
+              Home
+              {isActive('/') && (
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-emerald-600 transform origin-left scale-x-100 transition-transform duration-200" />
+              )}
+            </Link>
+            <div className="relative group" ref={servicesRef}>
               <button
                 onClick={() => setIsServicesOpen(!isServicesOpen)}
-                className={`flex items-center space-x-1 transition-colors font-medium ${
-                  isServicesActive('/services') 
-                    ? 'text-emerald-600 border-b-2 border-emerald-600' 
-                    : 'text-emerald-900 hover:text-emerald-600'
+                className={`relative px-2 py-1 text-sm sm:text-base font-medium text-emerald-700 hover:text-emerald-900 transition-colors flex items-center ${
+                  isServicesActive() ? 'text-emerald-900' : ''
                 }`}
               >
-                <span>Services</span>
+                Services
                 <svg
-                  className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`}
+                  className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${
+                    isServicesOpen ? 'rotate-180' : ''
+                  }`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
+                {isServicesActive() && (
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-emerald-600 transform origin-left scale-x-100 transition-transform duration-200" />
+                )}
               </button>
-              <div
-                className={`absolute left-0 mt-2 w-48 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5 transition-all duration-200 ${
-                  isServicesOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
-                }`}
-              >
-                <div className="py-1">
-                  <Link
-                    href="/services"
-                    className="block px-4 py-2 text-sm text-emerald-900 hover:bg-emerald-50"
-                    onClick={() => setIsServicesOpen(false)}
+              <AnimatePresence>
+                {isServicesOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute left-0 mt-2 w-56 rounded-lg bg-white shadow-lg border border-emerald-100 overflow-hidden"
                   >
-                    All Services
-                  </Link>
-                  <Link
-                    href="/services/rag-as-a-service"
-                    className="block px-4 py-2 text-sm text-emerald-900 hover:bg-emerald-50"
-                    onClick={() => setIsServicesOpen(false)}
-                  >
-                    RAG-as-a-Service
-                  </Link>
-                  <Link
-                    href="/services/ai-agent-solutions"
-                    className="block px-4 py-2 text-sm text-emerald-900 hover:bg-emerald-50"
-                    onClick={() => setIsServicesOpen(false)}
-                  >
-                    AI Agents
-                  </Link>
-                  <Link
-                    href="/services/mvp-as-a-service"
-                    className="block px-4 py-2 text-sm text-emerald-900 hover:bg-emerald-50"
-                    onClick={() => setIsServicesOpen(false)}
-                  >
-                    MVP as a Service
-                  </Link>
-                </div>
-              </div>
+                    <div className="py-2">
+                      <Link
+                        href="/services"
+                        className={`block px-4 py-2.5 text-sm text-emerald-700 hover:bg-emerald-50 transition-colors ${
+                          isActive('/services') ? 'bg-emerald-50 text-emerald-900 font-medium' : ''
+                        }`}
+                      >
+                        All Services
+                      </Link>
+                      <Link
+                        href="/services/rag-as-a-service"
+                        className={`block px-4 py-2.5 text-sm text-emerald-700 hover:bg-emerald-50 transition-colors ${
+                          isActive('/services/rag-as-a-service') ? 'bg-emerald-50 text-emerald-900 font-medium' : ''
+                        }`}
+                      >
+                        RAG as a Service
+                      </Link>
+                      <Link
+                        href="/services/ai-agent-solutions"
+                        className={`block px-4 py-2.5 text-sm text-emerald-700 hover:bg-emerald-50 transition-colors ${
+                          isActive('/services/ai-agent-solutions') ? 'bg-emerald-50 text-emerald-900 font-medium' : ''
+                        }`}
+                      >
+                        AI Agent Solutions
+                      </Link>
+                      <Link
+                        href="/services/mvp-as-a-service"
+                        className={`block px-4 py-2.5 text-sm text-emerald-700 hover:bg-emerald-50 transition-colors ${
+                          isActive('/services/mvp-as-a-service') ? 'bg-emerald-50 text-emerald-900 font-medium' : ''
+                        }`}
+                      >
+                        MVP as a Service
+                      </Link>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
-            <Link 
-              href="/use-cases" 
-              className={`transition-colors font-medium ${
-                isActive('/use-cases') 
-                  ? 'text-emerald-600 border-b-2 border-emerald-600' 
-                  : 'text-emerald-900 hover:text-emerald-600'
+            <Link
+              href="/use-cases"
+              className={`relative px-2 py-1 text-sm sm:text-base font-medium text-emerald-700 hover:text-emerald-900 transition-colors ${
+                isActive('/use-cases') ? 'text-emerald-900' : ''
               }`}
             >
               Use Cases
+              {isActive('/use-cases') && (
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-emerald-600 transform origin-left scale-x-100 transition-transform duration-200" />
+              )}
             </Link>
-            <Link 
-              href="/industries" 
-              className={`transition-colors font-medium ${
-                isActive('/industries') 
-                  ? 'text-emerald-600 border-b-2 border-emerald-600' 
-                  : 'text-emerald-900 hover:text-emerald-600'
+            <Link
+              href="/industries"
+              className={`relative px-2 py-1 text-sm sm:text-base font-medium text-emerald-700 hover:text-emerald-900 transition-colors ${
+                isActive('/industries') ? 'text-emerald-900' : ''
               }`}
             >
               Industries
+              {isActive('/industries') && (
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-emerald-600 transform origin-left scale-x-100 transition-transform duration-200" />
+              )}
             </Link>
-            <Link
-              href="/contact"
-              className="btn-primary h-9 px-6 flex items-center text-sm font-medium rounded-lg shadow-sm hover:shadow-md transition-all duration-200 bg-emerald-600 hover:bg-emerald-700 text-white"
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center justify-center px-4 sm:px-6 py-2 text-sm sm:text-base font-medium text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg transition-colors duration-200 shadow-sm hover:shadow-md"
             >
-              Get Started
+              Contact Us
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-emerald-50 transition-colors"
+            className="md:hidden p-2 rounded-lg text-emerald-700 hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-colors"
+            aria-label="Toggle menu"
           >
             <svg
-              className="w-6 h-6 text-emerald-900"
+              className="w-6 h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -145,57 +197,109 @@ export default function Header() {
               transition={{ duration: 0.2 }}
               className="md:hidden overflow-hidden"
             >
-              <div className="flex flex-col space-y-4 py-4">
-                <div className="space-y-2">
+              <div className="flex flex-col space-y-1 py-4">
+                <Link
+                  href="/"
+                  className={`px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
+                    isActive('/')
+                      ? 'text-emerald-900 bg-emerald-50'
+                      : 'text-emerald-700 hover:bg-emerald-50'
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Home
+                </Link>
+                <div className="space-y-1">
                   <button
                     onClick={() => setIsServicesOpen(!isServicesOpen)}
-                    className={`w-full text-left transition-colors font-medium px-2 py-1 ${
-                      isServicesActive('/services') 
-                        ? 'text-emerald-600 bg-emerald-50' 
-                        : 'text-emerald-900 hover:text-emerald-600'
+                    className={`w-full text-left px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
+                      isServicesActive()
+                        ? 'text-emerald-900 bg-emerald-50'
+                        : 'text-emerald-700 hover:bg-emerald-50'
                     }`}
                   >
-                    Services
-                  </button>
-                  {isServicesOpen && (
-                    <div className="pl-4 space-y-2">
-                      <Link
-                        href="/services"
-                        className="block px-2 py-1 text-emerald-900 hover:text-emerald-600"
-                        onClick={() => setIsMenuOpen(false)}
+                    <div className="flex items-center justify-between">
+                      <span>Services</span>
+                      <svg
+                        className={`w-4 h-4 transform transition-transform duration-200 ${
+                          isServicesOpen ? 'rotate-180' : ''
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
                       >
-                        All Services
-                      </Link>
-                      <Link
-                        href="/services/rag-as-a-service"
-                        className="block px-2 py-1 text-emerald-900 hover:text-emerald-600"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        RAG-as-a-Service
-                      </Link>
-                      <Link
-                        href="/services/ai-agent-solutions"
-                        className="block px-2 py-1 text-emerald-900 hover:text-emerald-600"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        AI Agents
-                      </Link>
-                      <Link
-                        href="/services/mvp-as-a-service"
-                        className="block px-2 py-1 text-emerald-900 hover:text-emerald-600"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        MVP as a Service
-                      </Link>
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
                     </div>
-                  )}
+                  </button>
+                  <AnimatePresence>
+                    {isServicesOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="pl-4 space-y-1"
+                      >
+                        <Link
+                          href="/services"
+                          className={`block px-4 py-3 text-sm rounded-lg transition-colors ${
+                            isActive('/services')
+                              ? 'text-emerald-900 bg-emerald-50 font-medium'
+                              : 'text-emerald-700 hover:bg-emerald-50'
+                          }`}
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          All Services
+                        </Link>
+                        <Link
+                          href="/services/rag-as-a-service"
+                          className={`block px-4 py-3 text-sm rounded-lg transition-colors ${
+                            isActive('/services/rag-as-a-service')
+                              ? 'text-emerald-900 bg-emerald-50 font-medium'
+                              : 'text-emerald-700 hover:bg-emerald-50'
+                          }`}
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          RAG as a Service
+                        </Link>
+                        <Link
+                          href="/services/ai-agent-solutions"
+                          className={`block px-4 py-3 text-sm rounded-lg transition-colors ${
+                            isActive('/services/ai-agent-solutions')
+                              ? 'text-emerald-900 bg-emerald-50 font-medium'
+                              : 'text-emerald-700 hover:bg-emerald-50'
+                          }`}
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          AI Agent Solutions
+                        </Link>
+                        <Link
+                          href="/services/mvp-as-a-service"
+                          className={`block px-4 py-3 text-sm rounded-lg transition-colors ${
+                            isActive('/services/mvp-as-a-service')
+                              ? 'text-emerald-900 bg-emerald-50 font-medium'
+                              : 'text-emerald-700 hover:bg-emerald-50'
+                          }`}
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          MVP as a Service
+                        </Link>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
                 <Link
                   href="/use-cases"
-                  className={`transition-colors font-medium px-2 py-1 ${
-                    isActive('/use-cases') 
-                      ? 'text-emerald-600 bg-emerald-50' 
-                      : 'text-emerald-900 hover:text-emerald-600'
+                  className={`px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
+                    isActive('/use-cases')
+                      ? 'text-emerald-900 bg-emerald-50'
+                      : 'text-emerald-700 hover:bg-emerald-50'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -203,10 +307,10 @@ export default function Header() {
                 </Link>
                 <Link
                   href="/industries"
-                  className={`transition-colors font-medium px-2 py-1 ${
-                    isActive('/industries') 
-                      ? 'text-emerald-600 bg-emerald-50' 
-                      : 'text-emerald-900 hover:text-emerald-600'
+                  className={`px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
+                    isActive('/industries')
+                      ? 'text-emerald-900 bg-emerald-50'
+                      : 'text-emerald-700 hover:bg-emerald-50'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -214,10 +318,10 @@ export default function Header() {
                 </Link>
                 <Link
                   href="/contact"
-                  className="btn-primary h-9 px-6 flex items-center justify-center text-sm font-medium rounded-lg shadow-sm hover:shadow-md transition-all duration-200 bg-emerald-600 hover:bg-emerald-700 text-white"
+                  className="px-4 py-3 text-sm font-medium text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg transition-colors mx-4"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Get Started
+                  Contact Us
                 </Link>
               </div>
             </motion.div>
