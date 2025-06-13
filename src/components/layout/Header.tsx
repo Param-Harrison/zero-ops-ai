@@ -63,7 +63,7 @@ export default function Header() {
               href="/contact"
               className="btn-primary h-9 px-6 flex items-center text-sm font-medium rounded-lg shadow-sm hover:shadow-md transition-all duration-200 bg-emerald-600 hover:bg-emerald-700 text-white"
             >
-              Book a Demo
+              Get Started
             </Link>
           </div>
 
@@ -157,7 +157,7 @@ export default function Header() {
                   className="btn-primary h-9 px-6 flex items-center justify-center text-sm font-medium rounded-lg shadow-sm hover:shadow-md transition-all duration-200 bg-emerald-600 hover:bg-emerald-700 text-white"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Book a Demo
+                  Get Started
                 </Link>
               </div>
             </motion.div>

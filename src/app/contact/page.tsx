@@ -154,9 +154,9 @@ export default function Contact() {
         <div className="form-container">
           <div className="form-card">
             <div className="form-header">
-              <h1 className="form-title">Book a Demo</h1>
+              <h1 className="form-title">Book a Consultation</h1>
               <p className="form-description">
-                Let&apos;s discuss how ZeroOpsAI can transform your business operations.
+                Let&apos;s explore how ZeroOpsAI can help optimize your business operations.
               </p>
             </div>
 
@@ -287,7 +287,7 @@ export default function Contact() {
 
               <div className="button-container">
                 <button type="submit" className="btn-primary w-full">
-                  Book Demo
+                  Book Consultation
                 </button>
               </div>
             </form>

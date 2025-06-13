@@ -258,7 +258,7 @@ export default function Products() {
                 href="/contact"
                 className="btn-primary w-full sm:w-auto"
               >
-                Book a Demo
+                Get Started
               </Link>
               <Link
                 href="/services"
@@ -353,7 +353,7 @@ export default function Products() {
                   href="/contact"
                   className="btn-primary w-full sm:w-auto"
                 >
-                  Book a Demo
+                  Get Started
                 </Link>
                 <Link
                   href="/services"
