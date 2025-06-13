@@ -1,310 +1,156 @@
 'use client';
 
-import { useState } from 'react';
-import Link from 'next/link';
-
-const interestCategories = [
-  {
-    id: 'product',
-    name: 'AI Products',
-    description: 'Ready-to-deploy AI solutions for specific business needs'
-  },
-  {
-    id: 'service',
-    name: 'AI Services',
-    description: 'Custom AI development and implementation services'
-  },
-  {
-    id: 'custom',
-    name: 'Custom Solution',
-    description: 'Need something specific? Let\'s build it together'
-  }
-];
-
-const products = [
-  {
-    id: 'zerodocs',
-    name: 'ZeroDocs AI',
-    description: 'Document processing and intelligent Q&A system'
-  },
-  {
-    id: 'zerowork',
-    name: 'ZeroWork AI',
-    description: 'Workflow automation and process optimization'
-  },
-  {
-    id: 'zeroparse',
-    name: 'ZeroParse AI',
-    description: 'Intelligent text extraction and data parsing'
-  },
-  {
-    id: 'zeromeet',
-    name: 'ZeroMeet AI',
-    description: 'Meeting intelligence and transcription'
-  },
-  {
-    id: 'zerohire',
-    name: 'ZeroHire AI',
-    description: 'AI-powered recruitment and candidate screening'
-  },
-  {
-    id: 'zerolegal',
-    name: 'ZeroLegal AI',
-    description: 'Legal document analysis and contract review'
-  },
-  {
-    id: 'zeroinvoice',
-    name: 'ZeroInvoice AI',
-    description: 'Automated invoice processing and data extraction'
-  },
-  {
-    id: 'zerofinance',
-    name: 'ZeroFinance AI',
-    description: 'Financial document processing and analysis'
-  },
-  {
-    id: 'zerotask',
-    name: 'ZeroTask AI',
-    description: 'Task automation and workflow management'
-  },
-  {
-    id: 'zeroquery',
-    name: 'ZeroQuery AI',
-    description: 'Natural language database querying'
-  },
-  {
-    id: 'zerocall',
-    name: 'ZeroCall AI',
-    description: 'Call center automation and analytics'
-  },
-  {
-    id: 'zerosupport',
-    name: 'ZeroSupport AI',
-    description: 'Customer support automation and ticket routing'
-  },
-  {
-    id: 'zeroprivacy',
-    name: 'ZeroPrivacy AI',
-    description: 'Data privacy and compliance automation'
-  },
-  {
-    id: 'zerocode',
-    name: 'ZeroCode AI',
-    description: 'Code generation and development automation'
-  },
-  {
-    id: 'zeroimage',
-    name: 'ZeroImage AI',
-    description: 'Image processing and analysis'
-  },
-  {
-    id: 'zerovoice',
-    name: 'ZeroVoice AI',
-    description: 'Voice processing and speech recognition'
-  },
-  {
-    id: 'zeromedia',
-    name: 'ZeroMedia AI',
-    description: 'Media content analysis and processing'
-  },
-  {
-    id: 'zeroquality',
-    name: 'ZeroQuality AI',
-    description: 'Quality assurance and testing automation'
-  },
-  {
-    id: 'zeromail',
-    name: 'ZeroMail AI',
-    description: 'Email processing and response automation'
-  },
-  {
-    id: 'zerosocial',
-    name: 'ZeroSocial AI',
-    description: 'Social media monitoring and engagement'
-  }
-];
-
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    jobTitle: '',
-    interestCategory: '',
-    product: '',
-    message: ''
-  });
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    // TODO: Implement form submission
-    console.log('Form submitted:', formData);
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
   return (
-    <div className="section bg-gradient-to-b from-emerald-50 to-white">
-      <div className="container">
-        <div className="form-container">
-          <div className="form-card">
-            <div className="form-header">
-              <h1 className="form-title">Book a Demo</h1>
-              <p className="form-description">
-                Let&apos;s discuss how ZeroOpsAI can transform your business operations.
+    <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white py-8 sm:py-12 md:py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
+          {/* Left Column - Information */}
+          <div className="space-y-6 sm:space-y-8">
+            <div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-emerald-900 mb-4 sm:mb-6">
+                Let&apos;s Build Something Amazing Together
+              </h1>
+              <p className="text-lg sm:text-xl text-emerald-700 mb-6 sm:mb-8">
+                Tell us about your project and we&apos;ll help you transform your business with AI.
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8">
+              <h2 className="text-xl sm:text-2xl font-semibold text-emerald-900 mb-4 sm:mb-6">Why Choose Us?</h2>
+              <div className="space-y-4 sm:space-y-6">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-emerald-100 flex items-center justify-center text-emerald-600">
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-base sm:text-lg font-medium text-emerald-900">Rapid Development</h3>
+                    <p className="mt-1 text-sm sm:text-base text-emerald-700">
+                      Get your AI solution to market faster with our streamlined development process.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-emerald-100 flex items-center justify-center text-emerald-600">
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-base sm:text-lg font-medium text-emerald-900">Enterprise Ready</h3>
+                    <p className="mt-1 text-sm sm:text-base text-emerald-700">
+                      Built for scale with enterprise-grade security and reliability.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-emerald-100 flex items-center justify-center text-emerald-600">
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+                    </svg>
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-base sm:text-lg font-medium text-emerald-900">Custom Solutions</h3>
+                    <p className="mt-1 text-sm sm:text-base text-emerald-700">
+                      Tailored AI solutions that address your specific business needs.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column - Contact Form */}
+          <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8">
+            <form className="space-y-4" action="/api/contact" method="POST">
               <div className="form-group">
-                <label htmlFor="name" className="form-label">
-                  Full Name
-                </label>
+                <label htmlFor="name" className="form-label">Name</label>
                 <input
                   type="text"
                   id="name"
                   name="name"
                   className="input-field"
-                  placeholder="John Doe"
+                  placeholder="Your name"
                   required
-                  onChange={handleChange}
+                  minLength={2}
+                  maxLength={50}
+                  pattern="[A-Za-z\s\-']+"
+                  title="Please enter a valid name (letters, spaces, hyphens, and apostrophes only)"
                 />
               </div>
 
               <div className="form-group">
-                <label htmlFor="email" className="form-label">
-                  Work Email
-                </label>
+                <label htmlFor="email" className="form-label">Work Email</label>
                 <input
                   type="email"
                   id="email"
                   name="email"
-                  pattern="^[a-zA-Z0-9._%+-]+@(?!gmail\.com)(?!yahoo\.com)(?!hotmail\.com)(?!.*@.*\.com)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-                  title="Please use your company email address"
                   className="input-field"
-                  placeholder="john@company.com"
+                  placeholder="you@company.com"
                   required
-                  onChange={handleChange}
+                  pattern="[a-zA-Z0-9._%+-]+@(?!gmail\.com|yahoo\.com|hotmail\.com|outlook\.com|aol\.com|icloud\.com|mail\.com)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                  title="Please use your work email address"
                 />
-                <p className="mt-1 text-sm text-gray-500">
-                  Please use your company email address
-                </p>
               </div>
 
               <div className="form-group">
-                <label htmlFor="company" className="form-label">
-                  Company Name
-                </label>
+                <label htmlFor="company" className="form-label">Company</label>
                 <input
                   type="text"
                   id="company"
                   name="company"
                   className="input-field"
-                  placeholder="Acme Inc."
+                  placeholder="Your company name"
                   required
-                  onChange={handleChange}
+                  minLength={2}
+                  maxLength={100}
                 />
               </div>
 
               <div className="form-group">
-                <label htmlFor="jobTitle" className="form-label">
-                  Job Title
-                </label>
-                <input
-                  type="text"
-                  id="jobTitle"
-                  name="jobTitle"
-                  className="input-field"
-                  placeholder="CTO"
-                  required
-                  onChange={handleChange}
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="interestCategory" className="form-label">
-                  What are you interested in?
-                </label>
+                <label htmlFor="projectType" className="form-label">Project Type</label>
                 <select
-                  id="interestCategory"
-                  name="interestCategory"
+                  id="projectType"
+                  name="projectType"
                   className="input-field"
                   required
-                  onChange={handleChange}
                 >
-                  <option value="">Select an option</option>
-                  {interestCategories.map((category) => (
-                    <option key={category.id} value={category.id}>
-                      {category.name} - {category.description}
-                    </option>
-                  ))}
+                  <option value="">Select a project type</option>
+                  <option value="mvp">MVP Development</option>
+                  <option value="ai-agent">AI Agent Solution</option>
+                  <option value="rag">RAG Implementation</option>
+                  <option value="other">Other</option>
                 </select>
               </div>
 
-              {formData.interestCategory === 'product' && (
-                <div className="form-group">
-                  <label htmlFor="product" className="form-label">
-                    Which product interests you?
-                  </label>
-                  <select
-                    id="product"
-                    name="product"
-                    className="input-field"
-                    required
-                    onChange={handleChange}
-                  >
-                    <option value="">Select a product</option>
-                    {products.map((product) => (
-                      <option key={product.id} value={product.id}>
-                        {product.name} - {product.description}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-              )}
-
               <div className="form-group">
-                <label htmlFor="message" className="form-label">
-                  Additional Information
-                </label>
+                <label htmlFor="message" className="form-label">Project Details</label>
                 <textarea
                   id="message"
                   name="message"
                   rows={4}
                   className="input-field"
-                  placeholder="Tell us about your specific needs or challenges..."
-                  onChange={handleChange}
-                />
-                <p className="form-hint">
-                  Optional: Share any specific requirements or questions you have.
-                </p>
+                  placeholder="Tell us about your project..."
+                  required
+                  minLength={10}
+                  maxLength={1000}
+                ></textarea>
               </div>
 
-              <div className="button-container">
-                <button type="submit" className="btn-primary w-full">
-                  Book Demo
+              <div className="form-group">
+                <button
+                  type="submit"
+                  className="btn-primary w-full"
+                >
+                  Schedule Consultation
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
                 </button>
               </div>
             </form>
-
-            <div className="form-footer">
-              <p>
-                By submitting this form, you agree to our{' '}
-                <Link href="/privacy" className="text-emerald-600 hover:text-emerald-700">
-                  Privacy Policy
-                </Link>{' '}
-                and{' '}
-                <Link href="/terms" className="text-emerald-600 hover:text-emerald-700">
-                  Terms of Service
-                </Link>
-                .
-              </p>
-            </div>
           </div>
         </div>
       </div>
