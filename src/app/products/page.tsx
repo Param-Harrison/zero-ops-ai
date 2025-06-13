@@ -258,13 +258,19 @@ export default function Products() {
                 href="/contact"
                 className="btn-primary w-full sm:w-auto"
               >
-                Get Started
-              </Link>
-              <Link
+                Book a Call Now
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+            </Link>
+            <Link
                 href="/services"
                 className="btn-secondary w-full sm:w-auto"
               >
                 View Services
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </Link>
             </div>
           </div>
