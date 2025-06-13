@@ -9,19 +9,19 @@ export default function Home() {
         <div className="container relative">
           <div className="max-w-4xl mx-auto text-center py-20 sm:py-24">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-emerald-900 mb-6 sm:mb-8">
-              Enterprise AI Solutions
+              AI Solutions Agency
               <br />
-              <span className="text-emerald-600">Built for Security & Scale</span>
+              <span className="text-emerald-600">From Concept to Production</span>
             </h1>
             <p className="text-xl sm:text-2xl text-emerald-700 mb-8 sm:mb-12 max-w-3xl mx-auto">
-              Transform your business with our comprehensive AI services, from rapid MVP development to enterprise-grade AI solutions.
+              We transform your AI ideas into production-ready solutions. From rapid MVPs to enterprise-grade AI systems, we deliver results that drive business value.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 href="/contact"
                 className="btn-primary text-lg px-8 py-4"
               >
-                Schedule a Consultation
+                Start Your Project
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
@@ -30,7 +30,7 @@ export default function Home() {
                 href="/services"
                 className="btn-secondary text-lg px-8 py-4"
               >
-                Explore Our Services
+                Explore Services
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -39,15 +39,15 @@ export default function Home() {
             <div className="flex flex-wrap justify-center gap-8 sm:gap-12 text-emerald-700">
               <div className="flex items-center">
                 <svg className="w-6 h-6 mr-2 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
-                Enterprise-Grade Security
+                Rapid Development
               </div>
               <div className="flex items-center">
                 <svg className="w-6 h-6 mr-2 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
-                Private Deployment
+                Enterprise Ready
               </div>
               <div className="flex items-center">
                 <svg className="w-6 h-6 mr-2 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,80 +60,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Products Section */}
+      {/* Services Section */}
       <section className="section bg-white">
         <div className="container">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="section-title">
-              Our Enterprise AI Products
+              Our Services
             </h2>
             <p className="section-subtitle">
-              Ready-to-deploy AI solutions for enterprise needs
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {[
-              {
-                name: 'ZeroDocs AI',
-                description: 'Enterprise document intelligence platform for secure, local Q&A across your knowledge base.',
-                features: ['Secure processing', 'Local deployment', 'Custom training'],
-                link: '/products#zerodocs-ai'
-              },
-              {
-                name: 'ZeroWork AI',
-                description: 'Enterprise workflow automation platform that integrates with your existing tools.',
-                features: ['Multi-platform', 'Custom workflows', 'Real-time sync'],
-                link: '/products#zerowork-ai'
-              },
-              {
-                name: 'ZeroMeet AI',
-                description: 'Enterprise meeting intelligence platform for transcription and insights.',
-                features: ['Real-time transcription', 'Action items', 'Meeting analytics'],
-                link: '/products#zeromeet-ai'
-              }
-            ].map((product, index) => (
-              <Link key={index} href={product.link} className="card p-8 hover-lift">
-                <h3 className="text-2xl font-bold text-emerald-900 mb-4">
-                  {product.name}
-                </h3>
-                <p className="text-emerald-700 mb-6">{product.description}</p>
-                <ul className="space-y-3">
-                  {product.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-emerald-700">
-                      <svg className="w-5 h-5 mr-3 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </Link>
-            ))}
-          </div>
-          <div className="text-center">
-            <Link
-              href="/products"
-              className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium text-emerald-600 bg-emerald-50 rounded-lg hover:bg-emerald-100 transition-colors duration-200"
-            >
-              View All Products
-              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="section bg-emerald-50">
-        <div className="container">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="section-title">
-              Our AI Services
-            </h2>
-            <p className="section-subtitle">
-              Custom AI solutions tailored to your enterprise needs
+              End-to-end AI solutions for your business needs
             </p>
           </div>
 
@@ -143,36 +78,54 @@ export default function Home() {
                 name: 'MVP as a Service',
                 description: 'Transform your idea into a production-ready AI product in weeks, not months.',
                 features: ['Rapid prototyping', 'Production deployment', 'Ongoing support'],
-                link: '/services/mvp'
+                link: '/services/mvp',
+                icon: (
+                  <svg className="w-12 h-12 text-emerald-500 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                )
               },
               {
                 name: 'RAG as a Service',
                 description: 'Build intelligent document processing and knowledge management systems.',
                 features: ['Document processing', 'Knowledge base creation', 'Custom embeddings'],
-                link: '/services/rag'
+                link: '/services/rag',
+                icon: (
+                  <svg className="w-12 h-12 text-emerald-500 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                )
               },
               {
                 name: 'AI Agents',
                 description: 'Deploy autonomous AI agents that integrate with your existing tools and workflows.',
                 features: ['Multi-platform integration', 'Custom workflows', 'Real-time monitoring'],
-                link: '/services/agents'
+                link: '/services/agents',
+                icon: (
+                  <svg className="w-12 h-12 text-emerald-500 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                )
               }
             ].map((service, index) => (
-              <Link key={index} href={service.link} className="card p-8 hover-lift">
-                <h3 className="text-2xl font-bold text-emerald-900 mb-4">
-                  {service.name}
-                </h3>
-                <p className="text-emerald-700 mb-6">{service.description}</p>
-                <ul className="space-y-3">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-emerald-700">
-                      <svg className="w-5 h-5 mr-3 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+              <Link key={index} href={service.link} className="card p-8 hover-lift group">
+                <div className="text-center">
+                  {service.icon}
+                  <h3 className="text-2xl font-bold text-emerald-900 mb-4 group-hover:text-emerald-700">
+                    {service.name}
+                  </h3>
+                  <p className="text-emerald-700 mb-6">{service.description}</p>
+                  <ul className="space-y-3">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-emerald-700">
+                        <svg className="w-5 h-5 mr-3 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </Link>
             ))}
           </div>
@@ -190,118 +143,65 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Industries Section */}
-      <section className="section bg-white">
+      {/* Process Section */}
+      <section className="section bg-emerald-50">
         <div className="container">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="section-title">
-              Industries We Serve
+              Our Process
             </h2>
             <p className="section-subtitle">
-              Tailored AI solutions for your industry-specific challenges
+              From concept to production in weeks
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
             {[
               {
-                name: 'Legal',
+                name: 'Discovery',
+                description: 'We understand your requirements and define success metrics.',
                 icon: (
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
-                ),
-                link: '/industries#legal'
+                )
               },
               {
-                name: 'Healthcare',
+                name: 'Design',
+                description: 'We create a detailed solution architecture and implementation plan.',
                 icon: (
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
                   </svg>
-                ),
-                link: '/industries#healthcare'
+                )
               },
               {
-                name: 'Finance',
+                name: 'Development',
+                description: 'We build and test your solution with regular progress updates.',
                 icon: (
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                   </svg>
-                ),
-                link: '/industries#finance'
+                )
               },
               {
-                name: 'Manufacturing',
+                name: 'Deployment',
+                description: 'We deploy to production and provide ongoing support.',
                 icon: (
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                ),
-                link: '/industries#manufacturing'
-              },
-              {
-                name: 'Retail',
-                icon: (
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-                  </svg>
-                ),
-                link: '/industries#retail'
-              },
-              {
-                name: 'Education',
-                icon: (
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                  </svg>
-                ),
-                link: '/industries#education-edtech'
-              },
-              {
-                name: 'Real Estate',
-                icon: (
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                  </svg>
-                ),
-                link: '/industries#real-estate'
-              },
-              {
-                name: 'Technology',
-                icon: (
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                ),
-                link: '/industries#technology'
+                )
               }
-            ].map((industry, index) => (
-              <Link
-                key={index}
-                href={industry.link}
-                className="group flex flex-col items-center p-6 bg-emerald-50 rounded-lg hover:bg-emerald-100 transition-colors duration-200"
-              >
-                <div className="text-emerald-600 group-hover:text-emerald-700 mb-4">
-                  {industry.icon}
+            ].map((step, index) => (
+              <div key={index} className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 mb-4">
+                  {step.icon}
                 </div>
-                <h3 className="text-lg font-medium text-emerald-900 group-hover:text-emerald-800">
-                  {industry.name}
-                </h3>
-              </Link>
+                <h3 className="text-xl font-bold text-emerald-900 mb-2">{step.name}</h3>
+                <p className="text-emerald-700">{step.description}</p>
+              </div>
             ))}
-          </div>
-          <div className="text-center">
-            <Link
-              href="/industries"
-              className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium text-emerald-600 bg-white border-2 border-emerald-600 rounded-lg hover:bg-emerald-50 transition-colors duration-200"
-            >
-              Explore All Industries
-              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </Link>
           </div>
         </div>
       </section>
