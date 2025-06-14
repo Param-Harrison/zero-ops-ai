@@ -34,121 +34,126 @@ export default function Header() {
   }, [pathname]);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-emerald-100">
-      <nav className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-emerald-100 shadow-sm">
+      <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           <Logo />
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
-            <Link
-              href="/"
-              className={`relative px-3 py-2 text-sm sm:text-base font-medium text-emerald-700 hover:text-emerald-900 transition-all duration-300 ${
-                isActive('/') 
-                  ? 'text-emerald-900 bg-emerald-50/80 rounded-lg shadow-[inset_0_0_0_1px_rgba(16,185,129,0.2)]' 
-                  : 'hover:bg-emerald-50/40 rounded-lg'
-              }`}
-            >
-              Home
-            </Link>
-            <div className="relative group" ref={servicesRef}>
-              <button
-                onClick={() => setIsServicesOpen(!isServicesOpen)}
-                className={`relative px-3 py-2 text-sm sm:text-base font-medium text-emerald-700 hover:text-emerald-900 transition-all duration-300 flex items-center ${
-                  isServicesActive() 
+          <div className="hidden md:flex items-center">
+            <div className="flex items-center space-x-1 lg:space-x-2">
+              <Link
+                href="/"
+                className={`relative px-4 py-2 text-sm lg:text-base font-medium text-emerald-700 hover:text-emerald-900 transition-all duration-300 ${
+                  isActive('/') 
                     ? 'text-emerald-900 bg-emerald-50/80 rounded-lg shadow-[inset_0_0_0_1px_rgba(16,185,129,0.2)]' 
                     : 'hover:bg-emerald-50/40 rounded-lg'
                 }`}
               >
-                Services
-                <svg
-                  className={`w-4 h-4 ml-1.5 transform transition-transform duration-300 ${
-                    isServicesOpen ? 'rotate-180' : ''
+                Home
+              </Link>
+              <div className="relative group" ref={servicesRef}>
+                <button
+                  onClick={() => setIsServicesOpen(!isServicesOpen)}
+                  className={`relative px-4 py-2 text-sm lg:text-base font-medium text-emerald-700 hover:text-emerald-900 transition-all duration-300 flex items-center ${
+                    isServicesActive() 
+                      ? 'text-emerald-900 bg-emerald-50/80 rounded-lg shadow-[inset_0_0_0_1px_rgba(16,185,129,0.2)]' 
+                      : 'hover:bg-emerald-50/40 rounded-lg'
                   }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-              <AnimatePresence>
-                {isServicesOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute left-0 mt-2 w-56 rounded-lg bg-white shadow-lg border border-emerald-100 overflow-hidden"
+                  Services
+                  <svg
+                    className={`w-4 h-4 ml-1.5 transform transition-transform duration-300 ${
+                      isServicesOpen ? 'rotate-180' : ''
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
                   >
-                    <div className="py-2">
-                      <Link
-                        href="/services"
-                        className={`block px-4 py-2.5 text-sm text-emerald-700 hover:bg-emerald-50 transition-colors ${
-                          isActive('/services') ? 'bg-emerald-50 text-emerald-900 font-medium' : ''
-                        }`}
-                      >
-                        All Services
-                      </Link>
-                      <Link
-                        href="/services/rag-as-a-service"
-                        className={`block px-4 py-2.5 text-sm text-emerald-700 hover:bg-emerald-50 transition-colors ${
-                          isActive('/services/rag-as-a-service') ? 'bg-emerald-50 text-emerald-900 font-medium' : ''
-                        }`}
-                      >
-                        RAG as a Service
-                      </Link>
-                      <Link
-                        href="/services/ai-agent-solutions"
-                        className={`block px-4 py-2.5 text-sm text-emerald-700 hover:bg-emerald-50 transition-colors ${
-                          isActive('/services/ai-agent-solutions') ? 'bg-emerald-50 text-emerald-900 font-medium' : ''
-                        }`}
-                      >
-                        AI Agent Solutions
-                      </Link>
-                      <Link
-                        href="/services/mvp-as-a-service"
-                        className={`block px-4 py-2.5 text-sm text-emerald-700 hover:bg-emerald-50 transition-colors ${
-                          isActive('/services/mvp-as-a-service') ? 'bg-emerald-50 text-emerald-900 font-medium' : ''
-                        }`}
-                      >
-                        MVP as a Service
-                      </Link>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                <AnimatePresence>
+                  {isServicesOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute left-0 mt-2 w-56 rounded-lg bg-white shadow-lg border border-emerald-100 overflow-hidden"
+                    >
+                      <div className="py-2">
+                        <Link
+                          href="/services"
+                          className={`block px-4 py-2.5 text-sm text-emerald-700 hover:bg-emerald-50 transition-colors ${
+                            isActive('/services') ? 'bg-emerald-50 text-emerald-900 font-medium' : ''
+                          }`}
+                        >
+                          All Services
+                        </Link>
+                        <Link
+                          href="/services/rag-as-a-service"
+                          className={`block px-4 py-2.5 text-sm text-emerald-700 hover:bg-emerald-50 transition-colors ${
+                            isActive('/services/rag-as-a-service') ? 'bg-emerald-50 text-emerald-900 font-medium' : ''
+                          }`}
+                        >
+                          RAG as a Service
+                        </Link>
+                        <Link
+                          href="/services/ai-agent-solutions"
+                          className={`block px-4 py-2.5 text-sm text-emerald-700 hover:bg-emerald-50 transition-colors ${
+                            isActive('/services/ai-agent-solutions') ? 'bg-emerald-50 text-emerald-900 font-medium' : ''
+                          }`}
+                        >
+                          AI Agent Solutions
+                        </Link>
+                        <Link
+                          href="/services/mvp-as-a-service"
+                          className={`block px-4 py-2.5 text-sm text-emerald-700 hover:bg-emerald-50 transition-colors ${
+                            isActive('/services/mvp-as-a-service') ? 'bg-emerald-50 text-emerald-900 font-medium' : ''
+                          }`}
+                        >
+                          MVP as a Service
+                        </Link>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+              <Link
+                href="/use-cases"
+                className={`relative px-4 py-2 text-sm lg:text-base font-medium text-emerald-700 hover:text-emerald-900 transition-all duration-300 ${
+                  isActive('/use-cases') 
+                    ? 'text-emerald-900 bg-emerald-50/80 rounded-lg shadow-[inset_0_0_0_1px_rgba(16,185,129,0.2)]' 
+                    : 'hover:bg-emerald-50/40 rounded-lg'
+                }`}
+              >
+                Use Cases
+              </Link>
+              <Link
+                href="/industries"
+                className={`relative px-4 py-2 text-sm lg:text-base font-medium text-emerald-700 hover:text-emerald-900 transition-all duration-300 ${
+                  isActive('/industries') 
+                    ? 'text-emerald-900 bg-emerald-50/80 rounded-lg shadow-[inset_0_0_0_1px_rgba(16,185,129,0.2)]' 
+                    : 'hover:bg-emerald-50/40 rounded-lg'
+                }`}
+              >
+                Industries
+              </Link>
             </div>
-            <Link
-              href="/use-cases"
-              className={`relative px-3 py-2 text-sm sm:text-base font-medium text-emerald-700 hover:text-emerald-900 transition-all duration-300 ${
-                isActive('/use-cases') 
-                  ? 'text-emerald-900 bg-emerald-50/80 rounded-lg shadow-[inset_0_0_0_1px_rgba(16,185,129,0.2)]' 
-                  : 'hover:bg-emerald-50/40 rounded-lg'
-              }`}
-            >
-              Use Cases
-            </Link>
-            <Link
-              href="/industries"
-              className={`relative px-3 py-2 text-sm sm:text-base font-medium text-emerald-700 hover:text-emerald-900 transition-all duration-300 ${
-                isActive('/industries') 
-                  ? 'text-emerald-900 bg-emerald-50/80 rounded-lg shadow-[inset_0_0_0_1px_rgba(16,185,129,0.2)]' 
-                  : 'hover:bg-emerald-50/40 rounded-lg'
-              }`}
-            >
-              Industries
-            </Link>
             <Link 
               href="/contact" 
-              className="inline-flex items-center justify-center px-4 sm:px-6 py-2 text-sm sm:text-base font-medium text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg transition-colors duration-200 shadow-sm hover:shadow-md"
+              className="ml-6 inline-flex items-center justify-center px-5 py-2 text-sm lg:text-base font-medium text-white bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-700 hover:to-emerald-600 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md hover:scale-105 transform"
             >
-              Contact Us
+              Book a Consultation
+              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
             </Link>
           </div>
 
@@ -314,10 +319,13 @@ export default function Header() {
                 </Link>
                 <Link
                   href="/contact"
-                  className="px-4 py-3 text-sm font-medium text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg transition-colors mx-4"
+                  className="mx-4 mt-2 px-4 py-3 text-sm font-medium text-white bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-700 hover:to-emerald-600 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md hover:scale-105 transform inline-flex items-center justify-center"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Contact Us
+                  Get Started Free
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
                 </Link>
               </div>
             </motion.div>

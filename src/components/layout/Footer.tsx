@@ -2,15 +2,15 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-emerald-50 border-t border-emerald-100">
-      <div className="container mx-auto px-4 py-12 sm:py-16 md:py-20">
+    <footer className="bg-gradient-to-b from-white to-emerald-50 border-t border-emerald-100">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 md:gap-16">
           <div className="space-y-4 sm:space-y-6">
-            <h3 className="text-xl sm:text-2xl font-bold">
+            <h3 className="text-2xl sm:text-3xl font-bold">
               <span className="gradient-text">ZeroOps</span>
               <span className="text-emerald-600">AI</span>
             </h3>
-            <p className="text-emerald-700 text-sm sm:text-base">
+            <p className="text-emerald-700 text-sm sm:text-base leading-relaxed">
               Private AI agents for work that matters. Built on open source, deployed securely.
             </p>
             <div className="flex space-x-4 sm:space-x-6">
@@ -18,7 +18,7 @@ export default function Footer() {
                 href="https://twitter.com/zeroopsai"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-emerald-600 hover:text-emerald-700 transition-colors"
+                className="text-emerald-600 hover:text-emerald-700 transition-colors duration-200 p-2"
                 aria-label="Twitter"
               >
                 <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -29,7 +29,7 @@ export default function Footer() {
                 href="https://linkedin.com/company/zeroopsai"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-emerald-600 hover:text-emerald-700 transition-colors"
+                className="text-emerald-600 hover:text-emerald-700 transition-colors duration-200 p-2"
                 aria-label="LinkedIn"
               >
                 <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -40,7 +40,7 @@ export default function Footer() {
                 href="https://github.com/zeroopsai"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-emerald-600 hover:text-emerald-700 transition-colors"
+                className="text-emerald-600 hover:text-emerald-700 transition-colors duration-200 p-2"
                 aria-label="GitHub"
               >
                 <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -56,29 +56,29 @@ export default function Footer() {
 
           <div>
             <h4 className="font-semibold text-emerald-900 mb-4 sm:mb-6 text-base sm:text-lg">Solutions</h4>
-            <ul className="space-y-2 sm:space-y-3">
+            <ul className="space-y-3 sm:space-y-4">
               <li>
-                <Link href="/services" className="text-emerald-700 hover:text-emerald-900 transition-colors text-sm sm:text-base">
+                <Link href="/services" className="text-emerald-700 hover:text-emerald-900 transition-colors duration-200 text-sm sm:text-base">
                   All Services
                 </Link>
               </li>
               <li>
-                <Link href="/services/rag-as-a-service" className="text-emerald-700 hover:text-emerald-900 transition-colors text-sm sm:text-base">
+                <Link href="/services/rag-as-a-service" className="text-emerald-700 hover:text-emerald-900 transition-colors duration-200 text-sm sm:text-base">
                   RAG-as-a-Service
                 </Link>
               </li>
               <li>
-                <Link href="/services/ai-agent-solutions" className="text-emerald-700 hover:text-emerald-900 transition-colors text-sm sm:text-base">
+                <Link href="/services/ai-agent-solutions" className="text-emerald-700 hover:text-emerald-900 transition-colors duration-200 text-sm sm:text-base">
                   AI Agents
                 </Link>
               </li>
               <li>
-                <Link href="/services/mvp-as-a-service" className="text-emerald-700 hover:text-emerald-900 transition-colors text-sm sm:text-base">
+                <Link href="/services/mvp-as-a-service" className="text-emerald-700 hover:text-emerald-900 transition-colors duration-200 text-sm sm:text-base">
                   MVP as a Service
                 </Link>
               </li>
               <li>
-                <Link href="/use-cases" className="text-emerald-700 hover:text-emerald-900 transition-colors text-sm sm:text-base">
+                <Link href="/use-cases" className="text-emerald-700 hover:text-emerald-900 transition-colors duration-200 text-sm sm:text-base">
                   Use Cases
                 </Link>
               </li>
@@ -87,14 +87,14 @@ export default function Footer() {
 
           <div>
             <h4 className="font-semibold text-emerald-900 mb-4 sm:mb-6 text-base sm:text-lg">Company</h4>
-            <ul className="space-y-2 sm:space-y-3">
+            <ul className="space-y-3 sm:space-y-4">
               <li>
-                <Link href="/industries" className="text-emerald-700 hover:text-emerald-900 transition-colors text-sm sm:text-base">
+                <Link href="/industries" className="text-emerald-700 hover:text-emerald-900 transition-colors duration-200 text-sm sm:text-base">
                   Industries
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-emerald-700 hover:text-emerald-900 transition-colors text-sm sm:text-base">
+                <Link href="/contact" className="text-emerald-700 hover:text-emerald-900 transition-colors duration-200 text-sm sm:text-base">
                   Contact
                 </Link>
               </li>
@@ -103,19 +103,19 @@ export default function Footer() {
 
           <div>
             <h4 className="font-semibold text-emerald-900 mb-4 sm:mb-6 text-base sm:text-lg">Legal</h4>
-            <ul className="space-y-2 sm:space-y-3">
+            <ul className="space-y-3 sm:space-y-4">
               <li>
-                <Link href="/privacy" className="text-emerald-700 hover:text-emerald-900 transition-colors text-sm sm:text-base">
+                <Link href="/privacy" className="text-emerald-700 hover:text-emerald-900 transition-colors duration-200 text-sm sm:text-base">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="text-emerald-700 hover:text-emerald-900 transition-colors text-sm sm:text-base">
+                <Link href="/terms" className="text-emerald-700 hover:text-emerald-900 transition-colors duration-200 text-sm sm:text-base">
                   Terms of Service
                 </Link>
               </li>
               <li>
-                <Link href="/security" className="text-emerald-700 hover:text-emerald-900 transition-colors text-sm sm:text-base">
+                <Link href="/security" className="text-emerald-700 hover:text-emerald-900 transition-colors duration-200 text-sm sm:text-base">
                   Security
                 </Link>
               </li>
@@ -129,13 +129,13 @@ export default function Footer() {
               © {new Date().getFullYear()} Secret SaaS OÜ. All rights reserved.
             </p>
             <div className="flex space-x-6 sm:space-x-8">
-              <Link href="/privacy" className="text-emerald-700 hover:text-emerald-900 transition-colors text-sm sm:text-base">
+              <Link href="/privacy" className="text-emerald-700 hover:text-emerald-900 transition-colors duration-200 text-sm sm:text-base">
                 Privacy
               </Link>
-              <Link href="/terms" className="text-emerald-700 hover:text-emerald-900 transition-colors text-sm sm:text-base">
+              <Link href="/terms" className="text-emerald-700 hover:text-emerald-900 transition-colors duration-200 text-sm sm:text-base">
                 Terms
               </Link>
-              <Link href="/security" className="text-emerald-700 hover:text-emerald-900 transition-colors text-sm sm:text-base">
+              <Link href="/security" className="text-emerald-700 hover:text-emerald-900 transition-colors duration-200 text-sm sm:text-base">
                 Security
               </Link>
             </div>
