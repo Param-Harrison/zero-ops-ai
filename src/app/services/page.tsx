@@ -22,7 +22,12 @@ const services = [
       'Better knowledge retention'
     ],
     industries: ['Legal', 'Healthcare', 'Financial Services', 'SaaS', 'Manufacturing', 'Education'],
-    link: '/services/rag-as-a-service'
+    link: '/services/rag-as-a-service',
+    icon: (
+      <svg className="w-12 h-12 text-emerald-500 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      </svg>
+    )
   },
   {
     name: 'AI Agents',
@@ -44,7 +49,12 @@ const services = [
       'Scalable automation'
     ],
     industries: ['Manufacturing', 'Healthcare', 'Finance', 'Technology', 'Retail', 'Logistics'],
-    link: '/services/ai-agents'
+    link: '/services/ai-agents',
+    icon: (
+      <svg className="w-12 h-12 text-emerald-500 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+    )
   },
   {
     name: 'MVP as a Service',
@@ -66,7 +76,12 @@ const services = [
       'Foundation for scaling'
     ],
     industries: ['Startups', 'SaaS', 'E-commerce', 'FinTech', 'Healthcare', 'Education'],
-    link: '/services/mvp-as-a-service'
+    link: '/services/mvp-as-a-service',
+    icon: (
+      <svg className="w-12 h-12 text-emerald-500 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+      </svg>
+    )
   },
   {
     name: 'AI Training & Workshops',
@@ -88,7 +103,12 @@ const services = [
       'Reduced dependency'
     ],
     industries: ['Technology', 'Education', 'Healthcare', 'Finance', 'Manufacturing', 'Retail'],
-    link: '/services/training'
+    link: '/services/training',
+    icon: (
+      <svg className="w-12 h-12 text-emerald-500 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+      </svg>
+    )
   },
   {
     name: 'Custom App Development',
@@ -110,102 +130,124 @@ const services = [
       'Future-proof technology'
     ],
     industries: ['Technology', 'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Education'],
-    link: '/services/custom-apps'
+    link: '/services/custom-apps',
+    icon: (
+      <svg className="w-12 h-12 text-emerald-500 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+      </svg>
+    )
   }
 ];
 
 export default function Services() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white py-20">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12 sm:mb-16">
-          <h1 className="section-title">Our Services</h1>
-          <p className="section-subtitle max-w-3xl mx-auto">
-            We provide comprehensive technology solutions to help businesses transform and grow.
-            From AI-powered automation to custom software development, we've got you covered.
-          </p>
-          <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-            <Link
-              href="/contact"
-              className="btn-primary w-full sm:w-auto"
-            >
-              Schedule Consultation
-              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </Link>
+    <div className="flex flex-col min-h-screen">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-emerald-50 via-white to-emerald-50">
+        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        <div className="container relative">
+          <div className="max-w-4xl mx-auto text-center py-20 sm:py-24">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-emerald-900 mb-6 sm:mb-8">
+              Our Services
+              <br />
+              <span className="text-emerald-600">Comprehensive AI Solutions</span>
+            </h1>
+            <p className="text-xl sm:text-2xl text-emerald-700 mb-8 sm:mb-12 max-w-3xl mx-auto">
+              We provide comprehensive technology solutions to help businesses transform and grow.
+              From AI-powered automation to custom software development, we&apos;ve got you covered.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="btn-primary text-lg px-8 py-4"
+              >
+                Schedule Consultation
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </Link>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="card group hover:border-emerald-200 transition-all duration-200 hover:shadow-lg"
-            >
-              <div className="flex flex-col h-full">
-                <h2 className="text-xl font-bold text-emerald-900 mb-4">
-                  {service.name}
-                </h2>
-                <p className="text-emerald-700 mb-4">{service.description}</p>
-                
-                <div className="mb-4">
-                  <h3 className="text-sm font-semibold text-emerald-800 mb-2">Key Features</h3>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-emerald-700">
-                        <svg className="w-5 h-5 mr-3 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+      {/* Services Section */}
+      <section className="section bg-white">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <Link
+                key={index}
+                href={service.link}
+                className="card p-8 hover-lift group"
+              >
+                <div className="flex flex-col h-full">
+                  <div className="flex flex-col items-center mb-6">
+                    {service.icon}
+                    <h2 className="text-2xl font-bold text-emerald-900 mb-4 group-hover:text-emerald-700">
+                      {service.name}
+                    </h2>
+                    <p className="text-emerald-700 text-center mb-6">{service.description}</p>
+                  </div>
+                  
+                  <div className="mb-6">
+                    <h3 className="text-sm font-semibold text-emerald-800 mb-3">Key Features</h3>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-emerald-700">
+                          <svg className="w-5 h-5 mr-3 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
-                <div className="mb-4">
-                  <h3 className="text-sm font-semibold text-emerald-800 mb-2">Benefits</h3>
-                  <ul className="space-y-2">
-                    {service.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-emerald-700">
-                        <svg className="w-5 h-5 mr-3 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                  <div className="mb-6">
+                    <h3 className="text-sm font-semibold text-emerald-800 mb-3">Benefits</h3>
+                    <ul className="space-y-2">
+                      {service.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-center text-emerald-700">
+                          <svg className="w-5 h-5 mr-3 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
-                <div className="mb-6">
-                  <h3 className="text-sm font-semibold text-emerald-800 mb-2">Ideal For</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {service.industries.map((industry, industryIndex) => (
-                      <span
-                        key={industryIndex}
-                        className="px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full text-sm"
-                      >
-                        {industry}
-                      </span>
-                    ))}
+                  <div className="mt-auto">
+                    <h3 className="text-sm font-semibold text-emerald-800 mb-3">Ideal For</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {service.industries.map((industry, industryIndex) => (
+                        <span
+                          key={industryIndex}
+                          className="px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full text-sm"
+                        >
+                          {industry}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          ))}
+              </Link>
+            ))}
+          </div>
         </div>
+      </section>
 
-        {/* Replace the existing CTA section with the new component */}
-        <TransformCTA
-          variant="light"
-          title="Ready to Transform Your Business?"
-          description="Choose from our comprehensive suite of AI services and start your transformation journey today. Let&apos;s build your future together."
-          primaryButtonText="Schedule a Consultation"
-          primaryButtonLink="/contact"
-          secondaryButtonText="View Use Cases"
-          secondaryButtonLink="/use-cases"
-        />
-      </div>
+      {/* CTA Section */}
+      <TransformCTA
+        variant="light"
+        title="Ready to Transform Your Business?"
+        description="Choose from our comprehensive suite of AI services and start your transformation journey today. Let&apos;s build your future together."
+        primaryButtonText="Schedule a Consultation"
+        primaryButtonLink="/contact"
+        secondaryButtonText="View Use Cases"
+        secondaryButtonLink="/use-cases"
+      />
     </div>
   );
 } 
