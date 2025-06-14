@@ -248,16 +248,18 @@ export default function UseCases() {
           ))}
         </div>
 
-        {/* Replace the existing CTA section with the new component */}
-        <TransformCTA
-          variant="light"
-          title="Ready to Transform Your Business?"
-          description="Discover how our AI solutions can revolutionize your business operations. Let&apos;s build your future together."
-          primaryButtonText="Schedule a Consultation"
-          primaryButtonLink="/contact"
-          secondaryButtonText="View Industries"
-          secondaryButtonLink="/industries"
-        />
+        {/* CTA Section */}
+        <div className="mt-20">
+          <TransformCTA
+            variant="light"
+            title="Ready to Transform Your Business?"
+            description="Discover how our AI solutions can revolutionize your business operations. Let&apos;s build your future together."
+            primaryButtonText="Schedule a Consultation"
+            primaryButtonLink="/contact"
+            secondaryButtonText="View Industries"
+            secondaryButtonLink="/industries"
+          />
+        </div>
       </div>
     </div>
   );
