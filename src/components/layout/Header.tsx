@@ -43,25 +43,26 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
             <Link
               href="/"
-              className={`relative px-2 py-1 text-sm sm:text-base font-medium text-emerald-700 hover:text-emerald-900 transition-colors ${
-                isActive('/') ? 'text-emerald-900' : ''
+              className={`relative px-3 py-2 text-sm sm:text-base font-medium text-emerald-700 hover:text-emerald-900 transition-all duration-300 ${
+                isActive('/') 
+                  ? 'text-emerald-900 bg-emerald-50/80 rounded-lg shadow-[inset_0_0_0_1px_rgba(16,185,129,0.2)]' 
+                  : 'hover:bg-emerald-50/40 rounded-lg'
               }`}
             >
               Home
-              {isActive('/') && (
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-emerald-600 transform origin-left scale-x-100 transition-transform duration-200" />
-              )}
             </Link>
             <div className="relative group" ref={servicesRef}>
               <button
                 onClick={() => setIsServicesOpen(!isServicesOpen)}
-                className={`relative px-2 py-1 text-sm sm:text-base font-medium text-emerald-700 hover:text-emerald-900 transition-colors flex items-center ${
-                  isServicesActive() ? 'text-emerald-900' : ''
+                className={`relative px-3 py-2 text-sm sm:text-base font-medium text-emerald-700 hover:text-emerald-900 transition-all duration-300 flex items-center ${
+                  isServicesActive() 
+                    ? 'text-emerald-900 bg-emerald-50/80 rounded-lg shadow-[inset_0_0_0_1px_rgba(16,185,129,0.2)]' 
+                    : 'hover:bg-emerald-50/40 rounded-lg'
                 }`}
               >
                 Services
                 <svg
-                  className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${
+                  className={`w-4 h-4 ml-1.5 transform transition-transform duration-300 ${
                     isServicesOpen ? 'rotate-180' : ''
                   }`}
                   fill="none"
@@ -75,9 +76,6 @@ export default function Header() {
                     d="M19 9l-7 7-7-7"
                   />
                 </svg>
-                {isServicesActive() && (
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-emerald-600 transform origin-left scale-x-100 transition-transform duration-200" />
-                )}
               </button>
               <AnimatePresence>
                 {isServicesOpen && (
@@ -128,25 +126,23 @@ export default function Header() {
             </div>
             <Link
               href="/use-cases"
-              className={`relative px-2 py-1 text-sm sm:text-base font-medium text-emerald-700 hover:text-emerald-900 transition-colors ${
-                isActive('/use-cases') ? 'text-emerald-900' : ''
+              className={`relative px-3 py-2 text-sm sm:text-base font-medium text-emerald-700 hover:text-emerald-900 transition-all duration-300 ${
+                isActive('/use-cases') 
+                  ? 'text-emerald-900 bg-emerald-50/80 rounded-lg shadow-[inset_0_0_0_1px_rgba(16,185,129,0.2)]' 
+                  : 'hover:bg-emerald-50/40 rounded-lg'
               }`}
             >
               Use Cases
-              {isActive('/use-cases') && (
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-emerald-600 transform origin-left scale-x-100 transition-transform duration-200" />
-              )}
             </Link>
             <Link
               href="/industries"
-              className={`relative px-2 py-1 text-sm sm:text-base font-medium text-emerald-700 hover:text-emerald-900 transition-colors ${
-                isActive('/industries') ? 'text-emerald-900' : ''
+              className={`relative px-3 py-2 text-sm sm:text-base font-medium text-emerald-700 hover:text-emerald-900 transition-all duration-300 ${
+                isActive('/industries') 
+                  ? 'text-emerald-900 bg-emerald-50/80 rounded-lg shadow-[inset_0_0_0_1px_rgba(16,185,129,0.2)]' 
+                  : 'hover:bg-emerald-50/40 rounded-lg'
               }`}
             >
               Industries
-              {isActive('/industries') && (
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-emerald-600 transform origin-left scale-x-100 transition-transform duration-200" />
-              )}
             </Link>
             <Link 
               href="/contact" 
