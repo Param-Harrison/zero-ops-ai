@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const features = [
   {
@@ -68,22 +69,25 @@ export default function AIAgents() {
             <p className="mt-6 text-xl text-emerald-100 max-w-3xl mx-auto animate-fade-in-delay">
               Empower your business with intelligent AI agents that automate tasks, optimize processes, and drive efficiency. Our solutions combine cutting-edge AI with practical business applications.
             </p>
-            <div className="mt-10 flex justify-center gap-4">
-              <a
+            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
                 href="/contact"
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-emerald-600 bg-white hover:bg-emerald-50 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-emerald-700 bg-white hover:bg-emerald-50"
               >
                 Get Started
                 <svg className="ml-2 -mr-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/use-cases"
-                className="inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-emerald-500 transition-all duration-300"
+                className="inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-emerald-500"
               >
                 View Use Cases
-              </a>
+                <svg className="ml-2 -mr-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
             </div>
           </div>
         </div>
@@ -97,46 +101,46 @@ export default function AIAgents() {
               Why Choose Our AI Agents?
             </h2>
             <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
-              Experience the power of intelligent automation with our enterprise-grade AI agents
+              Enterprise-grade autonomous AI solutions
             </p>
           </div>
           <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl border border-gray-100">
-              <div className="px-6 py-8">
+            <div className="card p-8 hover-lift group">
+              <div className="flex flex-col">
                 <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 text-white mb-4">
                   <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-medium text-gray-900">Intelligent Automation</h3>
-                <p className="mt-2 text-base text-gray-500">
-                  Automate complex tasks with AI agents that understand context and make smart decisions
+                <h3 className="text-lg font-medium text-emerald-900 group-hover:text-emerald-700">Autonomous Operation</h3>
+                <p className="mt-2 text-base text-emerald-700">
+                  Self-learning agents that adapt to your needs
                 </p>
               </div>
             </div>
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl border border-gray-100">
-              <div className="px-6 py-8">
+            <div className="card p-8 hover-lift group">
+              <div className="flex flex-col">
                 <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 text-white mb-4">
                   <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-medium text-gray-900">Enterprise Ready</h3>
-                <p className="mt-2 text-base text-gray-500">
-                  Built for scale with enterprise-grade security and reliability
+                <h3 className="text-lg font-medium text-emerald-900 group-hover:text-emerald-700">Enterprise Security</h3>
+                <p className="mt-2 text-base text-emerald-700">
+                  SOC 2 compliant infrastructure for data protection
                 </p>
               </div>
             </div>
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl border border-gray-100">
-              <div className="px-6 py-8">
+            <div className="card p-8 hover-lift group">
+              <div className="flex flex-col">
                 <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 text-white mb-4">
                   <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-medium text-gray-900">Easy Integration</h3>
-                <p className="mt-2 text-base text-gray-500">
-                  Seamlessly integrate with your existing systems and workflows
+                <h3 className="text-lg font-medium text-emerald-900 group-hover:text-emerald-700">Seamless Integration</h3>
+                <p className="mt-2 text-base text-emerald-700">
+                  Ready-to-use with your existing tools and workflows
                 </p>
               </div>
             </div>
@@ -149,23 +153,23 @@ export default function AIAgents() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              Powerful Features
+              Key Features
             </h2>
             <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
-              Everything you need to build intelligent automation systems
+              Everything you need for autonomous AI systems
             </p>
           </div>
           <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl border border-gray-100">
-                <div className="px-6 py-8">
+              <div key={index} className="card p-8 hover-lift group">
+                <div className="flex flex-col">
                   <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 text-white mb-4">
                     <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={feature.icon} />
                     </svg>
                   </div>
-                  <h3 className="text-lg font-medium text-gray-900">{feature.name}</h3>
-                  <p className="mt-2 text-base text-gray-500">{feature.description}</p>
+                  <h3 className="text-lg font-medium text-emerald-900 group-hover:text-emerald-700">{feature.name}</h3>
+                  <p className="mt-2 text-base text-emerald-700">{feature.description}</p>
                 </div>
               </div>
             ))}
@@ -181,20 +185,20 @@ export default function AIAgents() {
               Use Cases
             </h2>
             <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
-              See how leading companies are using our AI agents
+              Real-world applications of our AI agents
             </p>
           </div>
           <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {useCases.map((useCase, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl border border-gray-100">
-                <div className="px-6 py-8">
+              <div key={index} className="card p-8 hover-lift group">
+                <div className="flex flex-col">
                   <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 text-white mb-4">
                     <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={useCase.icon} />
                     </svg>
                   </div>
-                  <h3 className="text-lg font-medium text-gray-900">{useCase.name}</h3>
-                  <p className="mt-2 text-base text-gray-500">{useCase.description}</p>
+                  <h3 className="text-lg font-medium text-emerald-900 group-hover:text-emerald-700">{useCase.name}</h3>
+                  <p className="mt-2 text-base text-emerald-700">{useCase.description}</p>
                 </div>
               </div>
             ))}
@@ -202,7 +206,7 @@ export default function AIAgents() {
         </div>
       </div>
 
-      {/* CTA Section with Gradient Background */}
+      {/* CTA Section */}
       <div className="relative overflow-hidden bg-gradient-to-r from-emerald-600 via-teal-500 to-emerald-600">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600 via-teal-500 to-emerald-600 mix-blend-multiply" />
@@ -216,19 +220,25 @@ export default function AIAgents() {
             <p className="mt-4 text-xl text-emerald-100 max-w-2xl mx-auto">
               Get started with our AI agent solutions today and transform your operations.
             </p>
-            <div className="mt-8 flex justify-center gap-4">
-              <a
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
                 href="/contact"
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-emerald-600 bg-white hover:bg-emerald-50 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-emerald-700 bg-white hover:bg-emerald-50"
               >
                 Schedule a Demo
-              </a>
-              <a
+                <svg className="ml-2 -mr-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+              <Link
                 href="/use-cases"
-                className="inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-emerald-500 transition-all duration-300"
+                className="inline-flex items-center justify-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-emerald-500"
               >
                 View Use Cases
-              </a>
+                <svg className="ml-2 -mr-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
             </div>
           </div>
         </div>
