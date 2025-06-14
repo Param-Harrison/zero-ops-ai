@@ -86,7 +86,7 @@ export default function RAGService() {
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-emerald-700 bg-white hover:bg-emerald-50"
+                className="inline-flex items-center justify-center text-center w-full sm:w-auto px-6 py-3 border border-transparent text-base font-medium rounded-md text-emerald-700 bg-white hover:bg-emerald-50"
               >
                 Get Started
                 <svg className="ml-2 -mr-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -95,7 +95,7 @@ export default function RAGService() {
               </Link>
               <Link
                 href="/use-cases"
-                className="inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-emerald-500"
+                className="inline-flex items-center justify-center text-center w-full sm:w-auto px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-emerald-500"
               >
                 View Use Cases
                 <svg className="ml-2 -mr-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
