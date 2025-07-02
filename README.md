@@ -9,6 +9,7 @@ A modern website for ZeroOpsAI, an AI agency offering modular AI agents and serv
 - SEO optimized
 - Fast page loads
 - Mobile-first approach
+- **Telegram integration for contact form notifications**
 
 ## Tech Stack
 
@@ -32,13 +33,38 @@ A modern website for ZeroOpsAI, an AI agency offering modular AI agents and serv
    npm install
    ```
 
-3. Run the development server:
+3. Set up Telegram Bot (for contact form notifications):
+
+   ### Step 1: Create Your Telegram Bot
+
+   1. Open Telegram and search for `@BotFather`
+   2. Send `/start`, then `/newbot`
+   3. Follow prompts to create a bot and get your **bot token**
+   4. Save the bot token (format: `123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11`)
+
+   ### Step 2: Get Your Chat ID
+
+   1. Start a chat with your bot (send "Hi")
+   2. Visit: `https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getUpdates`
+   3. Find your `chat_id` in the response (e.g., `123456789`)
+   4. Save this `chat_id`
+
+   ### Step 3: Configure Environment Variables
+
+   Create a `.env.local` file in the root directory:
+
+   ```env
+   TELEGRAM_BOT_TOKEN=your_bot_token_here
+   TELEGRAM_CHAT_ID=your_chat_id_here
+   ```
+
+4. Run the development server:
 
    ```bash
    npm run dev
    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Project Structure
 
@@ -50,6 +76,8 @@ src/
 │   ├── use-cases/         # Use cases page
 │   ├── industries/        # Industry solutions page
 │   ├── contact/           # Contact/demo request page
+│   ├── api/               # API routes
+│   │   └── contact/       # Contact form API with Telegram integration
 │   └── page.tsx           # Homepage
 ├── components/            # React components
 │   ├── layout/           # Layout components
@@ -74,7 +102,10 @@ The site is optimized for deployment on Vercel:
 
 1. Push your code to GitHub
 2. Import the project in Vercel
-3. Deploy
+3. Add environment variables in Vercel dashboard:
+   - `TELEGRAM_BOT_TOKEN`
+   - `TELEGRAM_CHAT_ID`
+4. Deploy
 
 ### Option 2: Coolify
 
@@ -87,9 +118,11 @@ To deploy on Coolify:
    - Build Command: `npm run build`
    - Start Command: `npm start`
    - Node.js version: 18 (or higher)
-   - Environment Variables (if needed):
+   - Environment Variables:
      ```
      NODE_ENV=production
+     TELEGRAM_BOT_TOKEN=your_bot_token_here
+     TELEGRAM_CHAT_ID=your_chat_id_here
      ```
 5. Deploy the service
 
