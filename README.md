@@ -138,6 +138,6 @@ Note: Make sure your Coolify instance has sufficient resources allocated for the
 
 ## Contact
 
-Secret SaaS OÜ - [contact@zeroopsai.com](mailto:contact@zeroopsai.com)
+Secret SaaS OÜ - [param@learnwithparam.com](mailto:param@learnwithparam.com)
 
 Project Link: [https://github.com/yourusername/zero-ops-ai](https://github.com/Param-Harrison/zero-ops-ai)

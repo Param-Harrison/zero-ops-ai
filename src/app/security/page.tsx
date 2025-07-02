@@ -62,7 +62,7 @@ export default function SecurityPage() {
           <h2 className="text-2xl font-semibold mb-4">Reporting Security Issues</h2>
           <p className="mb-4">
             If you discover a security vulnerability, please report it to our security team at
-            security@zeroopsai.com. We take all security reports seriously and will respond promptly.
+            support@learnwithparam.com. We take all security reports seriously and will respond promptly.
           </p>
         </section>
       </div>
