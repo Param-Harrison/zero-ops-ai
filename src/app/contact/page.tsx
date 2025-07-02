@@ -5,12 +5,14 @@ import { useState, useRef } from 'react';
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
   const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
+    setErrorMessage('');
 
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData.entries());
@@ -24,7 +26,13 @@ export default function Contact() {
         body: JSON.stringify(data),
       });
 
-      if (!response.ok) throw new Error('Failed to submit');
+      const result = await response.json();
+
+      if (!response.ok) {
+        setSubmitStatus('error');
+        setErrorMessage(result.error || 'Failed to submit form');
+        return;
+      }
       
       setSubmitStatus('success');
       if (formRef.current) {
@@ -33,6 +41,7 @@ export default function Contact() {
     } catch (err) {
       console.error('Form submission error:', err);
       setSubmitStatus('error');
+      setErrorMessage('Network error. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -127,8 +136,6 @@ export default function Contact() {
                   className="w-full px-4 py-2.5 rounded-lg border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-200"
                   placeholder="you@company.com"
                   required
-                  pattern="[a-zA-Z0-9._%+-]+@(?!gmail\.com|yahoo\.com|hotmail\.com|outlook\.com|aol\.com|icloud\.com|mail\.com)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
-                  title="Please use your work email address"
                 />
               </div>
 
@@ -168,7 +175,7 @@ export default function Contact() {
 
               {submitStatus === 'error' && (
                 <div className="p-4 rounded-lg bg-red-50 text-red-700">
-                  Sorry, there was an error submitting your message. Please try again.
+                  {errorMessage}
                 </div>
               )}
 

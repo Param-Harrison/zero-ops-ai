@@ -13,11 +13,11 @@ export async function POST(request: Request) {
       );
     }
 
-    // Validate email format
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@(?!gmail\.com|yahoo\.com|hotmail\.com|outlook\.com|aol\.com|icloud\.com|mail\.com)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    // Validate email format (basic validation)
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       return NextResponse.json(
-        { error: 'Please use a valid work email address' },
+        { error: 'Please enter a valid email address' },
         { status: 400 }
       );
     }
