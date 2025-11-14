@@ -1,3 +1,5 @@
+// Import polyfill first to ensure localStorage is available during SSR
+import "@/lib/storage-polyfill";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
